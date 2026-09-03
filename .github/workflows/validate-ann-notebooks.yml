@@ -31,6 +31,30 @@ jobs:
           pip install -r artificial-neural-networks/requirements.txt
           pip install nbconvert
 
+      - name: Validate notebook Markdown
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          failures = []
+          for path in sorted(Path('artificial-neural-networks').glob('*.ipynb')):
+              notebook = json.loads(path.read_text(encoding='utf-8'))
+              for index, cell in enumerate(notebook.get('cells', [])):
+                  if cell.get('cell_type') != 'markdown':
+                      continue
+                  source = ''.join(cell.get('source', []))
+                  # GitHub/Jupyter are most consistent when Markdown math uses
+                  # $...$ and $$...$$ instead of LaTeX-only \(...\) / \[...\].
+                  if '\\(' in source or '\\)' in source or '\\[' in source or '\\]' in source:
+                      failures.append(f'{path}: markdown cell {index} uses renderer-fragile math delimiters')
+
+          if failures:
+              raise SystemExit('\n'.join(failures))
+
+          print('Markdown validation passed for every ANN notebook.')
+          PY
+
       - name: Execute every ANN notebook
         run: |
           set -euo pipefail
