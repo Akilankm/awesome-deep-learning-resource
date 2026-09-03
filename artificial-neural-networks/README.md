@@ -1,86 +1,62 @@
-# Artificial Neural Networks — Visual Learning Track
+# Artificial Neural Networks — Gold-Standard Visual Learning Track
 
-> A first-principles, executable path from **one artificial neuron** to **backpropagation, learned representations, real data, and PyTorch**.
+> **Objective:** make artificial neural networks mechanically transparent, visually intuitive, mathematically rigorous, executable, and connected to production/business decisions.
 
-The notebooks are intentionally ordered. Each one introduces only the abstractions needed for the next step.
+The notebooks use **real handwritten digit data** for the core mechanics. Each notebook contains the calculations inside the notebook rather than hiding the learning logic behind utility modules.
 
-## Core learning path
+## Learning path
 
-| # | Notebook | Core idea | What you should see |
-|---:|---|---|---|
-| 01 | [Artificial Neuron](./01_artificial_neuron.ipynb) | weights, bias, activation | slope, translation, decision boundaries |
-| 02 | [Feed-Forward Network](./02_feed_forward_network.ipynb) | layers and forward propagation | activation flow and representation space |
-| 03 | [Loss and Learning Objective](./03_loss_and_learning_objective.ipynb) | MSE and binary cross-entropy | loss curves and a 3D parameter-loss surface |
-| 04 | [Gradients and Gradient Descent](./04_gradients_and_gradient_descent.ipynb) | derivatives and optimization | downhill parameter updates and learning-rate behavior |
-| 05 | [Backpropagation From Scratch](./05_backpropagation_from_scratch.ipynb) | chain rule through a network | forward graph, backward gradients, gradient checking |
-| 06 | [Train an MLP From Scratch](./06_train_mlp_from_scratch.ipynb) | complete learning loop | learned nonlinear decision boundary |
-| 07 | [PyTorch Autograd and Modules](./07_pytorch_autograd_and_modules.ipynb) | autograd and `nn.Module` | framework mapping to first principles |
-| 08 | [Training Dynamics and Failure Modes](./08_training_dynamics_and_failure_modes.ipynb) | optimization pathologies | saturation, gradient flow, overfitting |
-
-## Real-data visual extension
-
-These notebooks use **scikit-learn's real handwritten digits dataset** so the ideas are no longer only synthetic.
-
-| # | Notebook | What it teaches visually |
+| # | Notebook | Main question |
 |---:|---|---|
-| 10 | [Real Data Walkthrough — Handwritten Digits](./10_real_data_digits_walkthrough.ipynb) | real image → interpretable features → weighted contributions → neuron activation |
-| 11 | [Representation Learning on Real Digits](./11_representation_learning_on_real_digits.ipynb) | the same samples physically move in a 2D hidden representation as backprop changes weights |
+| 00 | [Visual roadmap + business context](./00_ann_visual_roadmap_and_business_context.ipynb) | How do all ANN concepts fit together? |
+| 01 | [Artificial neuron](./01_artificial_neuron.ipynb) | What exactly do weight, bias, and activation do? |
+| 02 | [Feed-forward network](./02_feed_forward_network.ipynb) | What happens to one real sample layer by layer? |
+| 03 | [Loss](./03_loss_and_learning_objective.ipynb) | How is “wrong” converted into a scalar objective? |
+| 04 | [Gradients + gradient descent](./04_gradients_and_gradient_descent.ipynb) | How does a parameter know which direction to move? |
+| 05 | [Backpropagation from scratch](./05_backpropagation_from_scratch.ipynb) | How does loss sensitivity reach every weight? |
+| 06 | [Train MLP from scratch](./06_train_mlp_from_scratch.ipynb) | How do forward/backward/update form a real training loop? |
+| 07 | [Representation learning on real digits](./07_representation_learning_on_real_digits.ipynb) | How do hidden coordinates change during learning? |
+| 08 | [Training dynamics + failure modes](./08_training_dynamics_and_failure_modes.ipynb) | Why can mathematically correct networks still train badly? |
+| 09 | [PyTorch equivalence](./09_pytorch_autograd_and_modules.ipynb) | What does autograd automate? |
+| 10 | [Inference + debugging](./10_inference_and_model_debugging.ipynb) | What happens after training, one unseen sample at a time? |
+| 11 | [Business decision lab](./11_business_decision_lab.ipynb) | How does a score become an operational action and KPI? |
 
-The rendered teaching assets used by these notebooks live in [`visual_learning/`](./visual_learning/).
+## Learning design
 
-## The mental model
+Every core notebook follows:
 
-The entire track revolves around one computational loop:
+**intuition → real data → manual arithmetic → vectorized code → visual → what affects what → inference/insight → production/business connection**
 
-$$
-\mathbf{x}
-\rightarrow
-\mathbf{z}=W\mathbf{x}+\mathbf{b}
-\rightarrow
-\mathbf{a}=\phi(\mathbf{z})
-\rightarrow
-\hat{y}
-\rightarrow
-\mathcal{L}
-$$
+## Reproducible environment
 
-Training adds the reverse path:
-
-$$
-\mathcal{L}
-\xrightarrow{\text{backprop}}
-\nabla_W\mathcal{L},\nabla_b\mathcal{L}
-\xrightarrow{\text{optimizer}}
-W',b'
-$$
-
-> **Core principle:** forward propagation tells us what the network currently represents; backpropagation changes the parameters, which changes the representation seen on the next forward pass.
-
-## Notebook philosophy
-
-These are not thin wrappers around hidden utility modules.
-
-- Core mathematics stays **inside the notebook**.
-- Intermediate tensors and scalar values are inspectable.
-- Manual calculations are mapped to code.
-- Visuals are paired with the exact quantities that produced them.
-- The real-data extension uses rendered SVG teaching assets so GitHub itself remains useful without first running Jupyter.
-- Framework code is introduced only after the same mechanism is understood manually.
-- Math uses GitHub/Jupyter-safe `$...$` and `$$...$$` delimiters consistently.
-
-## Setup
+Recommended Python: **3.11**.
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate
-pip install -r artificial-neural-networks/requirements.txt
+source .venv/bin/activate        # Windows PowerShell: .venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r artificial-neural-networks/requirements-notebook.txt
+pip install --index-url https://download.pytorch.org/whl/cpu "torch>=2.2,<3"
 jupyter lab
 ```
 
-On Windows PowerShell:
+Or with Conda/Mamba:
 
-```powershell
-.venv\Scripts\Activate.ps1
+```bash
+conda env create -f artificial-neural-networks/environment.yml
+conda activate ann-gold
 ```
 
-For interactive controls in the earlier notebooks, use JupyterLab or another environment with `ipywidgets` support.
+## Validate and execute exactly like CI
+
+```bash
+python scripts/validate_notebooks.py
+python scripts/execute_notebooks.py --in-place
+python scripts/validate_notebooks.py --require-executed
+```
+
+The GitHub workflow performs these same checks. On pushes to the feature branch it commits executed notebook outputs back to GitHub, so the notebook preview contains the figures/tables/results instead of source-only cells.
+
+## Static + interactive learning
+
+GitHub renders committed static outputs. Notebook 01 additionally contains an optional `ipywidgets` live lab when opened in Jupyter. Static plots are always present so the educational content never depends on widget rendering.

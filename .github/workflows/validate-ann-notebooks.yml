@@ -1,76 +1,76 @@
-name: Validate ANN notebooks
+name: ANN notebooks — execute and verify
 
 on:
   push:
     paths:
       - 'artificial-neural-networks/**'
+      - 'scripts/**'
       - '.github/workflows/validate-ann-notebooks.yml'
   pull_request:
     paths:
       - 'artificial-neural-networks/**'
+      - 'scripts/**'
       - '.github/workflows/validate-ann-notebooks.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  execute-notebooks:
+  notebooks:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           cache: pip
+          cache-dependency-path: artificial-neural-networks/requirements-notebook.txt
 
-      - name: Install dependencies
+      - name: Install notebook environment
         run: |
           python -m pip install --upgrade pip
-          pip install -r artificial-neural-networks/requirements.txt
-          pip install nbconvert
+          pip install -r artificial-neural-networks/requirements-notebook.txt
+          # CPU-only Torch avoids multi-GB CUDA dependencies on CI runners.
+          pip install --index-url https://download.pytorch.org/whl/cpu "torch>=2.2,<3"
 
-      - name: Validate notebook Markdown
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
+      - name: Bootstrap canonical notebook source
+        run: python scripts/bootstrap_ann_notebooks.py
 
-          failures = []
-          for path in sorted(Path('artificial-neural-networks').glob('*.ipynb')):
-              notebook = json.loads(path.read_text(encoding='utf-8'))
-              for index, cell in enumerate(notebook.get('cells', [])):
-                  if cell.get('cell_type') != 'markdown':
-                      continue
-                  source = ''.join(cell.get('source', []))
-                  # GitHub/Jupyter are most consistent when Markdown math uses
-                  # $...$ and $$...$$ instead of LaTeX-only \(...\) / \[...\].
-                  if '\\(' in source or '\\)' in source or '\\[' in source or '\\]' in source:
-                      failures.append(f'{path}: markdown cell {index} uses renderer-fragile math delimiters')
+      - name: Validate notebook source
+        run: python scripts/validate_notebooks.py
 
-          if failures:
-              raise SystemExit('\n'.join(failures))
+      - name: Execute every notebook in place
+        env:
+          CI: 'true'
+          MPLBACKEND: Agg
+        run: python scripts/execute_notebooks.py --in-place
 
-          print('Markdown validation passed for every ANN notebook.')
-          PY
+      - name: Validate committed-style outputs
+        run: python scripts/validate_notebooks.py --require-executed
 
-      - name: Execute every ANN notebook
-        run: |
-          set -euo pipefail
-          mkdir -p executed-notebooks
-          for notebook in artificial-neural-networks/*.ipynb; do
-            echo "Executing ${notebook}"
-            jupyter nbconvert \
-              --to notebook \
-              --execute "${notebook}" \
-              --ExecutePreprocessor.timeout=180 \
-              --output-dir executed-notebooks
-          done
-
-      - name: Upload executed notebooks
+      - name: Upload executed notebooks for inspection
         uses: actions/upload-artifact@v4
         with:
           name: executed-ann-notebooks
-          path: executed-notebooks/*.ipynb
+          path: artificial-neural-networks/*.ipynb
           if-no-files-found: error
+
+      - name: Commit rendered outputs back to feature branch
+        if: github.event_name == 'push' && github.ref == 'refs/heads/feat/visual-ann-learning-track'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [[ -n "$(git status --porcelain artificial-neural-networks)" ]]; then
+            git add -A artificial-neural-networks
+            git commit -m "ci: refresh executed ANN notebook outputs"
+            git push origin HEAD:feat/visual-ann-learning-track
+          else
+            echo "Executed notebooks already match committed outputs."
+          fi

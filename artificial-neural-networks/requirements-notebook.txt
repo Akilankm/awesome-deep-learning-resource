@@ -1,0 +1,7 @@
+-r requirements.txt
+ipython>=8,<10
+ipykernel>=6,<8
+ipywidgets>=8,<9
+jupyterlab>=4,<5
+nbformat>=5.10,<6
+nbconvert>=7.16,<8
