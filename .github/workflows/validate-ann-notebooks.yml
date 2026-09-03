@@ -49,7 +49,7 @@ jobs:
       - name: Execute every notebook in place
         env:
           CI: 'true'
-          MPLBACKEND: Agg
+          MPLBACKEND: module://matplotlib_inline.backend_inline
         run: python scripts/execute_notebooks.py --in-place
 
       - name: Validate committed-style outputs
