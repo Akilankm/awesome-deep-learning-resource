@@ -1,0 +1,52 @@
+name: Validate ANN notebooks
+
+on:
+  push:
+    paths:
+      - 'artificial-neural-networks/**'
+      - '.github/workflows/validate-ann-notebooks.yml'
+  pull_request:
+    paths:
+      - 'artificial-neural-networks/**'
+      - '.github/workflows/validate-ann-notebooks.yml'
+
+jobs:
+  execute-notebooks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r artificial-neural-networks/requirements.txt
+          pip install nbconvert
+
+      - name: Execute every ANN notebook
+        run: |
+          set -euo pipefail
+          mkdir -p executed-notebooks
+          for notebook in artificial-neural-networks/*.ipynb; do
+            echo "Executing ${notebook}"
+            jupyter nbconvert \
+              --to notebook \
+              --execute "${notebook}" \
+              --ExecutePreprocessor.timeout=180 \
+              --output-dir executed-notebooks
+          done
+
+      - name: Upload executed notebooks
+        uses: actions/upload-artifact@v4
+        with:
+          name: executed-ann-notebooks
+          path: executed-notebooks/*.ipynb
+          if-no-files-found: error
