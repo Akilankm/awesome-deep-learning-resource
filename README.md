@@ -41,3 +41,18 @@ make verify
 
 ## Quality contract
 Every code cell has a preceding technical explanation. CI clears all outputs, executes every notebook from zero, checks syntax/formatting, requires persisted outputs and zero error outputs, and commits the executed notebooks back to the branch. The learner-facing notebooks are the canonical source; scripts only verify them.
+
+## Interactive Plotly labs
+
+GitHub intentionally remains a **static, reviewable learning surface**. The committed plots, metrics and explanations are readable without executing code. Concept-heavy notebooks also contain marked Plotly labs.
+
+```bash
+conda env create -f environment.yml
+conda activate ann-mnist-pytorch
+code .
+```
+
+Open `notebooks/` in VS Code, select the Conda kernel and **Run All**. Cells marked **Interactive Plotly lab — clone + run locally** support hover, zoom, pan, 3D rotation, sliders, animation and point-level inspection. Plotly's `plotly_mimetype` renderer is supported by VS Code notebooks and JupyterLab.
+
+The same notebook therefore has two valid modes: **GitHub = persisted static learning artifact; VS Code/Jupyter = executable interactive laboratory.**
+
