@@ -30,6 +30,7 @@ Read the conceptual chapter, then run the matching notebook in one implementatio
 - [Tensor and Shape Reference](docs/17_shape_reference.md)
 - [Training Debug Playbook](docs/18_training_debug_playbook.md)
 - [Production ANN Operating Model](docs/19_production_operating_model.md)
+- [Interactive Learning: GitHub Static View vs VS Code/Jupyter](docs/20_interactive_learning.md)
 
 ## Visual learning
 - [ANN lifecycle](visual_learning/ann_lifecycle.svg)
@@ -37,6 +38,11 @@ Read the conceptual chapter, then run the matching notebook in one implementatio
 - [Forward vs backward](visual_learning/forward_backward.svg)
 - [Representation learning](visual_learning/representation_learning.svg)
 - [Production feedback loop](visual_learning/production_loop.svg)
+
+## Static on GitHub, interactive after cloning
+The implementation notebooks deliberately support two modes. GitHub keeps the executed notebook readable as a **static learning artifact** with explanations, code, metrics and persisted plots. After cloning into VS Code/Jupyter and running the notebook in its Conda environment, marked Plotly labs become interactive with hover, zoom, pan, 3D rotation, sliders, animation and point-level inspection.
+
+See the [interactive learning guide](docs/20_interactive_learning.md) for the exact workflow and the notebooks that contain interactive labs.
 
 ## Final learning objective
 Understand ANN as an end-to-end system: **data → representation → forward → loss → backprop → optimization → validation → test → inference → monitoring → retraining → business action**.
