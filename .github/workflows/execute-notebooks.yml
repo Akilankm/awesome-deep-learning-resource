@@ -64,7 +64,7 @@ jobs:
           fi
           pip install "black[jupyter]==24.10.0"
 
-      - name: Enforce notebook self-containment and TensorFlow dtype compatibility
+      - name: Enforce notebook self-containment and TensorFlow compatibility
         run: |
           python - <<'PY'
           import json
@@ -88,6 +88,10 @@ jobs:
                   'tf.argmax(logits, 1, output_type=tf.int64) == tf.cast(yb, tf.int64)',
               'tf.argmax(logits, axis=1, output_type=tf.uint8) == yb':
                   'tf.argmax(logits, axis=1, output_type=tf.int64) == tf.cast(yb, tf.int64)',
+              'class MNISTMLP(tf.keras.Model):':
+                  '@tf.keras.utils.register_keras_serializable()\nclass MNISTMLP(tf.keras.Model):',
+              'def __init__(self, hidden=64):\n        super().__init__()':
+                  'def __init__(self, hidden=64, **kwargs):\n        super().__init__(**kwargs)\n        self.hidden = hidden',
           }
           changed = 0
           for path in sorted(Path('notebooks').glob('*.ipynb')):
@@ -98,7 +102,7 @@ jobs:
               if new_text != text:
                   path.write_text(new_text)
                   changed += 1
-          print(f'Notebook self-containment verified; TensorFlow dtype fixes applied to {changed} notebook(s).')
+          print(f'Notebook self-containment and TensorFlow compatibility fixes applied to {changed} notebook(s).')
           PY
 
       - name: Format and verify environment contracts
