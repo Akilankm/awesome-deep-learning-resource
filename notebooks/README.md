@@ -1,14 +1,24 @@
-# Rendered MNIST ANN notebooks
+# Executed ANN Learning Notebooks — PyTorch
 
-This directory contains the committed, executed learning notebooks for this orphan branch. GitHub can render the Markdown, equations, code cells, plots, tables, metrics, and persisted outputs directly in the browser.
+These `.ipynb` files are intentionally committed **with outputs**. GitHub should render the explanations, printed values, training metrics, and plots directly.
 
-Expected learning sequence:
+## How to study
 
-1. `00_mnist_learning_map.ipynb` — end-to-end learning map and experiment contract.
-2. `01_pixels_to_neurons.ipynb` — MNIST pixels, flattening, normalization, neurons, weights, bias, activations.
-3. `02_forward_propagation.ipynb` — complete forward propagation through the ANN.
-4. `03_loss_gradients_backprop.ipynb` — loss, gradients, chain rule, and backpropagation.
-5. `04_training_and_representation_learning.ipynb` — optimizer updates, training dynamics, and changing hidden representations.
-6. `05_inference_debugging_business.ipynb` — inference, mistakes, debugging signals, and business interpretation.
+Do not jump immediately to the training notebook. The sequence is designed so each abstraction is earned:
 
-The GitHub Action clears and re-executes every code cell, validates that execution counts and outputs are persisted with zero notebook errors, and commits the rendered `.ipynb` files back into this directory.
+`data → neuron → forward propagation → activation/initialization → loss → gradients/backprop → training loop → representation learning → evaluation → inference → production`
+
+Each notebook combines four views:
+
+1. **Mathematics** — what is being computed.
+2. **Code** — how PyTorch expresses that computation.
+3. **Visual evidence** — shapes, plots, gradients, representations, mistakes, and metrics.
+4. **Engineering/business inference** — why the behavior matters in an actual system.
+
+## Run locally
+
+From the repository root, create/activate the Conda environment described in `../environment.yml`, start JupyterLab, and run notebooks in numerical order. The notebooks download and cache the official `mnist.npz` into `data/` automatically when needed.
+
+## Important reproducibility rule
+
+CI clears every committed output before execution. Therefore a green workflow means these rendered outputs were reproduced from the code—not merely carried forward from a previous run.
