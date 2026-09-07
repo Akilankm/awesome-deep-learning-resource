@@ -1,0 +1,51 @@
+name: Execute and validate MNIST notebooks
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  notebooks:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Install shared notebook environment
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          FRAMEWORK=$(python -c "import json; print(json.load(open('track.json'))['framework'])")
+          if [ "$FRAMEWORK" = "pytorch" ]; then
+            pip install --index-url https://download.pytorch.org/whl/cpu torch==2.5.1
+          elif [ "$FRAMEWORK" = "tensorflow" ]; then
+            pip install tensorflow-cpu==2.18.0
+          fi
+      - name: Generate canonical framework notebooks
+        run: python scripts/bootstrap_notebooks.py
+      - name: Execute notebooks from cleared state
+        run: python scripts/execute_notebooks.py
+      - name: Validate executed notebook artifacts
+        run: python scripts/validate_notebooks.py
+      - name: Upload rendered notebooks
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-${{ github.ref_name }}-notebooks
+          path: '*.ipynb'
+      - name: Commit rendered notebooks to this orphan branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- '*.ipynb' visual_learning
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git commit -m "ci: commit executed MNIST notebooks [skip ci]"
+            git push origin HEAD:${GITHUB_REF_NAME}
+          else
+            echo "Rendered notebooks already match committed artifacts."
+          fi
