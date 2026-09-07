@@ -1,48 +1,41 @@
-# Awesome Deep Learning Resource — Artificial Neural Networks
+# MNIST End-to-End Reference — PyTorch + TensorFlow
 
-`master` is the **framework-neutral ANN textbook and visual knowledge base**. It contains no framework-specific training implementation. Hands-on execution lives in exactly three independent branches:
+This branch is intentionally compact: **two self-contained notebooks, one complete lifecycle in each framework**.
 
-- [`ann-mnist-manual`](https://github.com/Akilankm/awesome-deep-learning-resource/tree/ann-mnist-manual) — NumPy / first principles
-- [`ann-mnist-pytorch`](https://github.com/Akilankm/awesome-deep-learning-resource/tree/ann-mnist-pytorch) — production-style PyTorch
-- [`ann-mnist-tensorflow`](https://github.com/Akilankm/awesome-deep-learning-resource/tree/ann-mnist-tensorflow) — production-style TensorFlow / Keras
+## Notebooks
 
-## Recommended learning sequence
-Read the conceptual chapter, then run the matching notebook in one implementation branch. The three implementation branches use the same official MNIST problem and data split contract so differences reflect implementation, not different experiments.
+- `notebooks/01_mnist_e2e_pytorch.ipynb`
+- `notebooks/02_mnist_e2e_tensorflow.ipynb`
 
-## Documentation map
-- [ANN Big Picture](docs/00_ann_big_picture.md)
-- [Data, EDA, Leakage, and Train/Validation/Test](docs/01_data_and_splits.md)
-- [Preprocessing, Batching, and Data Contracts](docs/02_preprocessing_batching.md)
-- [Neuron and Linear Algebra](docs/03_neuron_linear_algebra.md)
-- [Activations and Initialization](docs/04_activations_initialization.md)
-- [Forward Propagation, Logits, and Softmax](docs/05_forward_logits_softmax.md)
-- [Loss, Chain Rule, and Backpropagation](docs/06_loss_backprop.md)
-- [Optimization and Training Loops](docs/07_optimization_training.md)
-- [Validation, Hyperparameters, and Failure Modes](docs/08_validation_diagnostics.md)
-- [Representation Learning](docs/09_representation_learning.md)
-- [Final Test, Error Analysis, and Calibration](docs/10_evaluation_calibration.md)
-- [Serialization, Inference, and Performance](docs/11_inference_serialization.md)
-- [Monitoring, Drift, and Retraining](docs/12_monitoring_drift.md)
-- [Business and Production Mapping](docs/13_business_mapping.md)
-- [Manual vs PyTorch vs TensorFlow Crosswalk](docs/14_framework_crosswalk.md)
-- [Production-Grade ANN Checklist](docs/15_production_checklist.md)
-- [ANN Math Reference](docs/16_math_reference.md)
-- [Tensor and Shape Reference](docs/17_shape_reference.md)
-- [Training Debug Playbook](docs/18_training_debug_playbook.md)
-- [Production ANN Operating Model](docs/19_production_operating_model.md)
-- [Interactive Learning: GitHub Static View vs VS Code/Jupyter](docs/20_interactive_learning.md)
+Both use the same official MNIST `mnist.npz` source and the same development contract:
 
-## Visual learning
-- [ANN lifecycle](visual_learning/ann_lifecycle.svg)
-- [Train / validation / test](visual_learning/train_val_test.svg)
-- [Forward vs backward](visual_learning/forward_backward.svg)
-- [Representation learning](visual_learning/representation_learning.svg)
-- [Production feedback loop](visual_learning/production_loop.svg)
+- 50,000 training samples
+- 10,000 validation samples (stratified from the original 60,000 training set)
+- 10,000 untouched official test samples
+- 28×28 grayscale → 784 normalized float features
+- ANN: 784 → 128 → 64 → 10
+- 5 epochs
+- Adam optimizer
 
-## Static on GitHub, interactive after cloning
-The implementation notebooks deliberately support two modes. GitHub keeps the executed notebook readable as a **static learning artifact** with explanations, code, metrics and persisted plots. After cloning into VS Code/Jupyter and running the notebook in its Conda environment, marked Plotly labs become interactive with hover, zoom, pan, 3D rotation, sliders, animation and point-level inspection.
+## Lifecycle covered in both notebooks
 
-See the [interactive learning guide](docs/20_interactive_learning.md) for the exact workflow and the notebooks that contain interactive labs.
+`data load → data quality → train/validation/test → preprocessing → batching → model → training → validation → learning curves → final test → precision/recall/F1 → confusion matrix → error analysis → save/reload → inference`
 
-## Final learning objective
-Understand ANN as an end-to-end system: **data → representation → forward → loss → backprop → optimization → validation → test → inference → monitoring → retraining → business action**.
+## Create the environment
+
+```bash
+conda env create -f environment.yml
+conda activate ann-mnist-e2e
+jupyter lab
+```
+
+Open `notebooks/` and run either notebook top-to-bottom in a fresh kernel.
+
+## Verify exactly as CI does
+
+```bash
+python scripts/execute_notebooks.py
+python scripts/validate_notebooks.py
+```
+
+GitHub Actions executes both notebooks from cleared outputs and commits the rendered results back to this branch.
