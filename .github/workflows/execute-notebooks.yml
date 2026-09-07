@@ -37,7 +37,6 @@ jobs:
           import base64, io, os, tarfile
           branch = os.environ['GITHUB_REF_NAME']
           text = Path('/tmp/ann-final-payload/all.b64').read_text()
-          print('payload chars:', len(text), 'mod4:', len(text) % 4)
           raw = base64.b64decode(text, validate=True)
           root = Path.cwd()
           with tarfile.open(fileobj=io.BytesIO(raw), mode='r:xz') as tf:
@@ -63,10 +62,12 @@ jobs:
           else
             pip install -r requirements.txt
           fi
+          pip install "black[jupyter]==24.10.0"
 
-      - name: Verify environment contracts
+      - name: Format and verify environment contracts
         run: |
           python -c "import yaml; yaml.safe_load(open('environment.yml')); print('environment.yml valid')"
+          python -m black scripts notebooks
           python -m black --check scripts notebooks
 
       - name: Execute every notebook from cleared outputs
