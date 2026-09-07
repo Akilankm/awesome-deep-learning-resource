@@ -1,14 +1,17 @@
-# Rendered MNIST ANN notebooks
+# Notebook learning path
 
-This directory contains the committed, executed learning notebooks for this orphan branch. GitHub can render the Markdown, equations, code cells, plots, tables, metrics, and persisted outputs directly in the browser.
+Run these notebooks in order. Each notebook is committed with outputs after CI execution. The course separates training, validation and final test decisions and continues through inference, monitoring, drift, retraining and business operation.
 
-Expected learning sequence:
-
-1. `00_mnist_learning_map.ipynb` — end-to-end learning map and experiment contract.
-2. `01_pixels_to_neurons.ipynb` — MNIST pixels, flattening, normalization, neurons, weights, bias, activations.
-3. `02_forward_propagation.ipynb` — complete forward propagation through the ANN.
-4. `03_loss_gradients_backprop.ipynb` — loss, gradients, chain rule, and backpropagation.
-5. `04_training_and_representation_learning.ipynb` — optimizer updates, training dynamics, and changing hidden representations.
-6. `05_inference_debugging_business.ipynb` — inference, mistakes, debugging signals, and business interpretation.
-
-The GitHub Action clears and re-executes every code cell, validates that execution counts and outputs are persisted with zero notebook errors, and commits the rendered `.ipynb` files back into this directory.
+1. `00_environment_and_learning_map.ipynb`
+2. `01_mnist_data_provenance_eda_splits.ipynb`
+3. `02_preprocessing_batching_data_contract.ipynb`
+4. `03_neuron_linear_algebra_architecture.ipynb`
+5. `04_activations_initialization_gradient_flow.ipynb`
+6. `05_forward_logits_softmax.ipynb`
+7. `06_loss_backprop_gradient_check.ipynb`
+8. `07_optimizers_end_to_end_training.ipynb`
+9. `08_validation_hyperparameters_diagnostics.ipynb`
+10. `09_representation_learning_visualized.ipynb`
+11. `10_test_evaluation_error_calibration.ipynb`
+12. `11_inference_serialization_performance.ipynb`
+13. `12_production_monitoring_drift_retraining_business.ipynb`

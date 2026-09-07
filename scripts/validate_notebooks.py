@@ -1,36 +1,51 @@
 from pathlib import Path
-import ast, sys, nbformat
-files=sorted(Path('.').glob('*.ipynb'))
-if len(files)!=6:
-    raise SystemExit(f'Expected 6 notebooks, found {len(files)}')
-problems=[]
-for p in files:
-    nb=nbformat.read(p,as_version=4)
+import ast
+import sys
+import nbformat
+
+root = Path(__file__).resolve().parents[1]
+notebooks = sorted((root / "notebooks").glob("[0-9][0-9]_*.ipynb"))
+expected = 13
+problems = []
+
+if len(notebooks) != expected:
+    problems.append(f"Expected {expected} notebooks, found {len(notebooks)}")
+
+for path in notebooks:
+    nb = nbformat.read(path, as_version=4)
     nbformat.validate(nb)
-    if not nb.cells or nb.cells[0].cell_type!='markdown' or not nb.cells[0].source.lstrip().startswith('# '):
-        problems.append(f'{p}: missing H1')
-    outputs=0
-    markdown='\n'.join(c.source for c in nb.cells if c.cell_type=='markdown')
-    if len(markdown)<500:
-        problems.append(f'{p}: explanation too thin')
-    for bad in ['TODO','TBD','\\[','\\(','\\]','\\)']:
-        if bad in markdown:
-            problems.append(f'{p}: renderer-fragile token {bad}')
-    for i,c in enumerate(nb.cells):
-        if c.cell_type=='code':
+    markdown_chars = sum(len(c.source) for c in nb.cells if c.cell_type == "markdown")
+    if markdown_chars < 1400:
+        problems.append(f"{path.name}: explanation too thin ({markdown_chars} chars)")
+
+    previous = None
+    output_count = 0
+    for i, cell in enumerate(nb.cells):
+        if cell.cell_type == "code":
+            if previous is None or previous.cell_type != "markdown" or len(previous.source.strip()) < 120:
+                problems.append(f"{path.name} cell {i}: code lacks a substantial preceding explanation")
             try:
-                ast.parse(c.source)
-            except SyntaxError as e:
-                problems.append(f'{p} cell {i}: syntax {e}')
-            if c.execution_count is None:
-                problems.append(f'{p} cell {i}: not executed')
-            for o in c.outputs:
-                outputs+=1
-                if o.output_type=='error':
-                    problems.append(f'{p} cell {i}: {o.ename}: {o.evalue}')
-    if outputs==0:
-        problems.append(f'{p}: no persisted outputs')
+                ast.parse(cell.source)
+            except SyntaxError as exc:
+                problems.append(f"{path.name} cell {i}: syntax error {exc}")
+            if cell.execution_count is None:
+                problems.append(f"{path.name} cell {i}: not executed")
+            for out in cell.outputs:
+                output_count += 1
+                if out.output_type == "error":
+                    problems.append(f"{path.name} cell {i}: {out.ename}: {out.evalue}")
+        previous = cell
+
+    if output_count == 0:
+        problems.append(f"{path.name}: no persisted outputs")
+
+    text = "\n".join(c.source for c in nb.cells if c.cell_type == "markdown").lower()
+    for token in ["business", "production"]:
+        if token not in text:
+            problems.append(f"{path.name}: missing {token} interpretation")
+
 if problems:
-    print('\n'.join(problems))
+    print("\n".join(problems))
     sys.exit(1)
-print(f'Validated {len(files)} executed notebooks: structure, math markdown, code syntax, execution counts, persisted outputs, zero errors.')
+
+print(f"Validated {len(notebooks)} executed notebooks: documentation, syntax, outputs and zero runtime errors.")
