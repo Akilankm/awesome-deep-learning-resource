@@ -64,6 +64,26 @@ jobs:
           fi
           pip install "black[jupyter]==24.10.0"
 
+      - name: Enforce notebook self-containment
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('notebooks/01_mnist_data_provenance_eda_splits.ipynb')
+          nb = json.loads(path.read_text())
+          for cell in nb['cells']:
+              if cell.get('cell_type') == 'code':
+                  source = ''.join(cell.get('source', []))
+                  if 'import matplotlib.pyplot as plt' not in source:
+                      lines = source.splitlines()
+                      insert_at = next((i + 1 for i, line in enumerate(lines) if line.strip() == 'import numpy as np'), 0)
+                      lines.insert(insert_at, 'import matplotlib.pyplot as plt')
+                      cell['source'] = [line + '\n' for line in lines[:-1]] + ([lines[-1]] if lines else [])
+                  break
+          path.write_text(json.dumps(nb, indent=1) + '\n')
+          print('Notebook 01 self-contained plotting import verified.')
+          PY
+
       - name: Format and verify environment contracts
         run: |
           python -c "import yaml; yaml.safe_load(open('environment.yml')); print('environment.yml valid')"
