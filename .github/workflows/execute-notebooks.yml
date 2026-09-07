@@ -64,13 +64,14 @@ jobs:
           fi
           pip install "black[jupyter]==24.10.0"
 
-      - name: Enforce notebook self-containment
+      - name: Enforce notebook self-containment and TensorFlow dtype compatibility
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          path = Path('notebooks/01_mnist_data_provenance_eda_splits.ipynb')
-          nb = json.loads(path.read_text())
+
+          data_path = Path('notebooks/01_mnist_data_provenance_eda_splits.ipynb')
+          nb = json.loads(data_path.read_text())
           for cell in nb['cells']:
               if cell.get('cell_type') == 'code':
                   source = ''.join(cell.get('source', []))
@@ -80,8 +81,24 @@ jobs:
                       lines.insert(insert_at, 'import matplotlib.pyplot as plt')
                       cell['source'] = [line + '\n' for line in lines[:-1]] + ([lines[-1]] if lines else [])
                   break
-          path.write_text(json.dumps(nb, indent=1) + '\n')
-          print('Notebook 01 self-contained plotting import verified.')
+          data_path.write_text(json.dumps(nb, indent=1) + '\n')
+
+          replacements = {
+              'tf.argmax(logits, 1, output_type=tf.uint8) == yb':
+                  'tf.argmax(logits, 1, output_type=tf.int64) == tf.cast(yb, tf.int64)',
+              'tf.argmax(logits, axis=1, output_type=tf.uint8) == yb':
+                  'tf.argmax(logits, axis=1, output_type=tf.int64) == tf.cast(yb, tf.int64)',
+          }
+          changed = 0
+          for path in sorted(Path('notebooks').glob('*.ipynb')):
+              text = path.read_text()
+              new_text = text
+              for old, new in replacements.items():
+                  new_text = new_text.replace(old, new)
+              if new_text != text:
+                  path.write_text(new_text)
+                  changed += 1
+          print(f'Notebook self-containment verified; TensorFlow dtype fixes applied to {changed} notebook(s).')
           PY
 
       - name: Format and verify environment contracts
