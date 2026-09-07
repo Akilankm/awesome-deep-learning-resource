@@ -1,12 +1,19 @@
+.PHONY: install build execute validate verify lab
+
 install:
-	pip install -r requirements.txt
-	pip install tensorflow-cpu==2.18.0
+	python -m pip install -r requirements.txt
+	python -m pip install tensorflow-cpu==2.18.0
 
-bootstrap:
-	python scripts/bootstrap_notebooks.py
+build:
+	python scripts/build_curriculum.py
 
-execute: bootstrap
+execute:
 	python scripts/execute_notebooks.py
 
 validate:
 	python scripts/validate_notebooks.py
+
+verify: build execute validate
+
+lab:
+	jupyter lab
