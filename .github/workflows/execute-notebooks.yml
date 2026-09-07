@@ -70,39 +70,57 @@ jobs:
           import json
           from pathlib import Path
 
-          data_path = Path('notebooks/01_mnist_data_provenance_eda_splits.ipynb')
-          nb = json.loads(data_path.read_text())
-          for cell in nb['cells']:
-              if cell.get('cell_type') == 'code':
-                  source = ''.join(cell.get('source', []))
-                  if 'import matplotlib.pyplot as plt' not in source:
-                      lines = source.splitlines()
+          def source_text(cell):
+              src = cell.get('source', '')
+              return ''.join(src) if isinstance(src, list) else src
+
+          def set_source(cell, text):
+              cell['source'] = text.splitlines(keepends=True)
+
+          changed_files = 0
+          for path in sorted(Path('notebooks').glob('*.ipynb')):
+              nb = json.loads(path.read_text())
+              changed = False
+              for cell in nb.get('cells', []):
+                  if cell.get('cell_type') != 'code':
+                      continue
+                  src = source_text(cell)
+                  new = src
+
+                  if path.name == '01_mnist_data_provenance_eda_splits.ipynb' and 'import matplotlib.pyplot as plt' not in new:
+                      lines = new.splitlines()
                       insert_at = next((i + 1 for i, line in enumerate(lines) if line.strip() == 'import numpy as np'), 0)
                       lines.insert(insert_at, 'import matplotlib.pyplot as plt')
-                      cell['source'] = [line + '\n' for line in lines[:-1]] + ([lines[-1]] if lines else [])
-                  break
-          data_path.write_text(json.dumps(nb, indent=1) + '\n')
+                      new = '\n'.join(lines) + ('\n' if src.endswith('\n') else '')
 
-          replacements = {
-              'tf.argmax(logits, 1, output_type=tf.uint8) == yb':
-                  'tf.argmax(logits, 1, output_type=tf.int64) == tf.cast(yb, tf.int64)',
-              'tf.argmax(logits, axis=1, output_type=tf.uint8) == yb':
-                  'tf.argmax(logits, axis=1, output_type=tf.int64) == tf.cast(yb, tf.int64)',
-              'class MNISTMLP(tf.keras.Model):':
-                  '@tf.keras.utils.register_keras_serializable()\nclass MNISTMLP(tf.keras.Model):',
-              'def __init__(self, hidden=64):\n        super().__init__()':
-                  'def __init__(self, hidden=64, **kwargs):\n        super().__init__(**kwargs)\n        self.hidden = hidden',
-          }
-          changed = 0
-          for path in sorted(Path('notebooks').glob('*.ipynb')):
-              text = path.read_text()
-              new_text = text
-              for old, new in replacements.items():
-                  new_text = new_text.replace(old, new)
-              if new_text != text:
-                  path.write_text(new_text)
-                  changed += 1
-          print(f'Notebook self-containment and TensorFlow compatibility fixes applied to {changed} notebook(s).')
+                  new = new.replace(
+                      'tf.argmax(logits, 1, output_type=tf.uint8) == yb',
+                      'tf.argmax(logits, 1, output_type=tf.int64) == tf.cast(yb, tf.int64)',
+                  )
+                  new = new.replace(
+                      'tf.argmax(logits, axis=1, output_type=tf.uint8) == yb',
+                      'tf.argmax(logits, axis=1, output_type=tf.int64) == tf.cast(yb, tf.int64)',
+                  )
+
+                  if 'class MNISTMLP(tf.keras.Model):' in new and '@tf.keras.utils.register_keras_serializable()' not in new:
+                      new = new.replace(
+                          'class MNISTMLP(tf.keras.Model):',
+                          '@tf.keras.utils.register_keras_serializable()\nclass MNISTMLP(tf.keras.Model):',
+                      )
+                  new = new.replace(
+                      'def __init__(self, hidden=64):\n        super().__init__()',
+                      'def __init__(self, hidden=64, **kwargs):\n        super().__init__(**kwargs)\n        self.hidden = hidden',
+                  )
+
+                  if new != src:
+                      set_source(cell, new)
+                      changed = True
+
+              if changed:
+                  path.write_text(json.dumps(nb, indent=1) + '\n')
+                  changed_files += 1
+
+          print(f'Structural notebook compatibility fixes applied to {changed_files} notebook(s).')
           PY
 
       - name: Format and verify environment contracts
