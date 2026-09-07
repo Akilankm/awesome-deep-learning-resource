@@ -77,6 +77,35 @@ jobs:
           def set_source(cell, text):
               cell['source'] = text.splitlines(keepends=True)
 
+          model_definition = '''@tf.keras.utils.register_keras_serializable()
+          class MNISTMLP(tf.keras.Model):
+              def __init__(self, hidden=64, **kwargs):
+                  super().__init__(**kwargs)
+                  self.hidden = hidden
+                  self.fc1 = tf.keras.layers.Dense(
+                      hidden,
+                      activation=None,
+                      kernel_initializer="he_normal",
+                  )
+                  self.act = tf.keras.layers.ReLU()
+                  self.fc2 = tf.keras.layers.Dense(
+                      10,
+                      activation=None,
+                      kernel_initializer="glorot_uniform",
+                  )
+
+              def call(self, x, training=False):
+                  z1 = self.fc1(x)
+                  a1 = self.act(z1)
+                  return self.fc2(a1)
+
+              def get_config(self):
+                  config = super().get_config()
+                  config.update({"hidden": self.hidden})
+                  return config
+          '''
+          model_definition = '\n'.join(line[10:] if line.startswith('          ') else line for line in model_definition.splitlines())
+
           changed_files = 0
           for path in sorted(Path('notebooks').glob('*.ipynb')):
               nb = json.loads(path.read_text())
@@ -111,6 +140,22 @@ jobs:
                       'def __init__(self, hidden=64):\n        super().__init__()',
                       'def __init__(self, hidden=64, **kwargs):\n        super().__init__(**kwargs)\n        self.hidden = hidden',
                   )
+
+                  if path.name == '12_production_monitoring_drift_retraining_business.ipynb' and 'load_model' in new:
+                      if 'class MNISTMLP(tf.keras.Model):' not in new:
+                          new = new.replace(
+                              'import tensorflow as tf\n',
+                              'import tensorflow as tf\n\n' + model_definition + '\n\n',
+                              1,
+                          )
+                      new = new.replace(
+                          'tf.keras.models.load_model(ARTIFACT_DIR / "mnist_tensorflow_mlp.keras")',
+                          'tf.keras.models.load_model(\n    ARTIFACT_DIR / "mnist_tensorflow_mlp.keras",\n    custom_objects={"MNISTMLP": MNISTMLP, "Custom>MNISTMLP": MNISTMLP},\n)',
+                      )
+                      new = new.replace(
+                          "tf.keras.models.load_model(ARTIFACT_DIR / 'mnist_tensorflow_mlp.keras')",
+                          'tf.keras.models.load_model(\n    ARTIFACT_DIR / "mnist_tensorflow_mlp.keras",\n    custom_objects={"MNISTMLP": MNISTMLP, "Custom>MNISTMLP": MNISTMLP},\n)',
+                      )
 
                   if new != src:
                       set_source(cell, new)
