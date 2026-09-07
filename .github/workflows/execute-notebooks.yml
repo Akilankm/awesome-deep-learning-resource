@@ -7,7 +7,6 @@ on:
 permissions:
   contents: write
 
-# Finalization retry after verified payload repair.
 jobs:
   notebooks:
     if: github.actor != 'github-actions[bot]'
@@ -22,21 +21,24 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Materialize canonical branch from shared payload
+      - name: Materialize canonical branch from pinned shared payload
         shell: bash
         run: |
           set -euo pipefail
           rm -rf README.md scripts notebooks visual_learning requirements.txt environment.yml Makefile .python-version .gitignore data artifacts
           mkdir -p /tmp/ann-final-payload
+          PAYLOAD_COMMIT=b5bc444bb8f4eff8a4ae5450921e5147ee689429
           for n in 00 01 02 03 04 05; do
-            curl -fsSL "https://raw.githubusercontent.com/Akilankm/awesome-deep-learning-resource/master/infrastructure/final_payload_parts/${n}.txt" -o "/tmp/ann-final-payload/${n}.txt"
+            curl -fsSL "https://raw.githubusercontent.com/Akilankm/awesome-deep-learning-resource/${PAYLOAD_COMMIT}/infrastructure/final_payload_parts/${n}.txt" -o "/tmp/ann-final-payload/${n}.txt"
           done
           cat /tmp/ann-final-payload/*.txt > /tmp/ann-final-payload/all.b64
           python - <<'PY'
           from pathlib import Path
           import base64, io, os, tarfile
           branch = os.environ['GITHUB_REF_NAME']
-          raw = base64.b64decode(Path('/tmp/ann-final-payload/all.b64').read_text())
+          text = Path('/tmp/ann-final-payload/all.b64').read_text()
+          print('payload chars:', len(text), 'mod4:', len(text) % 4)
+          raw = base64.b64decode(text, validate=True)
           root = Path.cwd()
           with tarfile.open(fileobj=io.BytesIO(raw), mode='r:xz') as tf:
               prefix = branch + '/'
