@@ -21,6 +21,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Normalize and syntax-check TensorFlow notebook source
+        run: python scripts/normalize_tensorflow_notebook.py
+
       - name: Install shared dependencies
         shell: bash
         run: |
