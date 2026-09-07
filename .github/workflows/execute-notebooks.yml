@@ -1,4 +1,4 @@
-name: Execute and validate final MNIST ANN curriculum
+name: Execute and validate interactive MNIST ANN curriculum
 
 on:
   push:
@@ -21,35 +21,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Materialize canonical branch from pinned shared payload
-        shell: bash
-        run: |
-          set -euo pipefail
-          rm -rf README.md scripts notebooks visual_learning requirements.txt environment.yml Makefile .python-version .gitignore data artifacts
-          mkdir -p /tmp/ann-final-payload
-          PAYLOAD_COMMIT=b5bc444bb8f4eff8a4ae5450921e5147ee689429
-          for n in 00 01 02 03 04 05; do
-            curl -fsSL "https://raw.githubusercontent.com/Akilankm/awesome-deep-learning-resource/${PAYLOAD_COMMIT}/infrastructure/final_payload_parts/${n}.txt" -o "/tmp/ann-final-payload/${n}.txt"
-          done
-          cat /tmp/ann-final-payload/*.txt > /tmp/ann-final-payload/all.b64
-          python - <<'PY'
-          from pathlib import Path
-          import base64, io, os, tarfile
-          branch = os.environ['GITHUB_REF_NAME']
-          text = Path('/tmp/ann-final-payload/all.b64').read_text()
-          raw = base64.b64decode(text, validate=True)
-          root = Path.cwd()
-          with tarfile.open(fileobj=io.BytesIO(raw), mode='r:xz') as tf:
-              prefix = branch + '/'
-              members = [m for m in tf.getmembers() if m.name.startswith(prefix)]
-              if not members:
-                  raise SystemExit(f'No payload members for {branch}')
-              for member in members:
-                  member.name = member.name[len(prefix):]
-                  if member.name:
-                      tf.extract(member, root)
-          print(f'Materialized {branch}: {len(members)} archive members')
-          PY
+      - name: Ensure Plotly interactive learning cells are present
+        run: python .github/enhance_plotly.py
 
       - name: Install pinned environment
         shell: bash
@@ -62,33 +35,13 @@ jobs:
           else
             pip install -r requirements.txt
           fi
-          pip install "black[jupyter]==24.10.0"
 
-      - name: Enforce notebook self-containment
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          path = Path('notebooks/01_mnist_data_provenance_eda_splits.ipynb')
-          nb = json.loads(path.read_text())
-          for cell in nb['cells']:
-              if cell.get('cell_type') == 'code':
-                  source = ''.join(cell.get('source', []))
-                  if 'import matplotlib.pyplot as plt' not in source:
-                      lines = source.splitlines()
-                      insert_at = next((i + 1 for i, line in enumerate(lines) if line.strip() == 'import numpy as np'), 0)
-                      lines.insert(insert_at, 'import matplotlib.pyplot as plt')
-                      cell['source'] = [line + '\n' for line in lines[:-1]] + ([lines[-1]] if lines else [])
-                  break
-          path.write_text(json.dumps(nb, indent=1) + '\n')
-          print('Notebook 01 self-contained plotting import verified.')
-          PY
-
-      - name: Format and verify environment contracts
+      - name: Verify Conda contract and format notebook code
+        shell: bash
         run: |
           python -c "import yaml; yaml.safe_load(open('environment.yml')); print('environment.yml valid')"
-          python -m black scripts notebooks
-          python -m black --check scripts notebooks
+          python -m black scripts notebooks .github/enhance_plotly.py
+          python -m black --check scripts notebooks .github/enhance_plotly.py
 
       - name: Execute every notebook from cleared outputs
         run: python scripts/execute_notebooks.py
@@ -102,11 +55,15 @@ jobs:
           name: rendered-${{ github.ref_name }}-notebooks
           path: notebooks/*.ipynb
 
-      - name: Commit final executed branch
+      - name: Commit interactive rendered notebooks
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "ci: finalize production-grade ANN curriculum with rendered outputs [skip ci]"
-          git push
+          git add README.md requirements.txt environment.yml notebooks .github/enhance_plotly.py .github/workflows/execute-notebooks.yml
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "ci: render Plotly-enhanced ANN notebooks [skip ci]"
+            git push
+          fi
