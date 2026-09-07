@@ -1,0 +1,88 @@
+name: Execute and validate final MNIST ANN curriculum
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  notebooks:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - name: Checkout orphan branch
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Materialize canonical branch from shared payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf README.md scripts notebooks visual_learning requirements.txt environment.yml Makefile .python-version .gitignore data artifacts
+          mkdir -p /tmp/ann-final-payload
+          for n in 00 01 02 03 04 05; do
+            curl -fsSL "https://raw.githubusercontent.com/Akilankm/awesome-deep-learning-resource/master/infrastructure/final_payload_parts/${n}.txt" -o "/tmp/ann-final-payload/${n}.txt"
+          done
+          cat /tmp/ann-final-payload/*.txt > /tmp/ann-final-payload/all.b64
+          python - <<'PY'
+          from pathlib import Path
+          import base64, io, os, tarfile
+          branch = os.environ['GITHUB_REF_NAME']
+          raw = base64.b64decode(Path('/tmp/ann-final-payload/all.b64').read_text())
+          root = Path.cwd()
+          with tarfile.open(fileobj=io.BytesIO(raw), mode='r:xz') as tf:
+              prefix = branch + '/'
+              members = [m for m in tf.getmembers() if m.name.startswith(prefix)]
+              if not members:
+                  raise SystemExit(f'No payload members for {branch}')
+              for member in members:
+                  member.name = member.name[len(prefix):]
+                  if member.name:
+                      tf.extract(member, root)
+          print(f'Materialized {branch}: {len(members)} archive members')
+          PY
+
+      - name: Install pinned environment
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          if [[ "${GITHUB_REF_NAME}" == "ann-mnist-pytorch" ]]; then
+            grep -v '^torch==' requirements.txt > /tmp/requirements-ci.txt
+            pip install -r /tmp/requirements-ci.txt
+            pip install --index-url https://download.pytorch.org/whl/cpu torch==2.5.1
+          else
+            pip install -r requirements.txt
+          fi
+
+      - name: Verify environment contracts
+        run: |
+          python -c "import yaml; yaml.safe_load(open('environment.yml')); print('environment.yml valid')"
+          python -m black --check scripts notebooks
+
+      - name: Execute every notebook from cleared outputs
+        run: python scripts/execute_notebooks.py
+
+      - name: Validate rendered notebooks
+        run: python scripts/validate_notebooks.py
+
+      - name: Upload rendered notebooks
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-${{ github.ref_name }}-notebooks
+          path: notebooks/*.ipynb
+
+      - name: Commit final executed branch
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "ci: finalize production-grade ANN curriculum with rendered outputs [skip ci]"
+          git push
