@@ -1,0 +1,41 @@
+text,label
+"My card was charged twice for the same purchase",billing
+"I am still waiting for my refund",billing
+"There is an unexpected fee on my statement",billing
+"My payment was declined but money was deducted",billing
+"I need a copy of my invoice",billing
+"The transaction amount on my bill is incorrect",billing
+"A merchant charge appears twice",billing
+"My refund does not appear on the statement",billing
+"Why was I charged an extra service fee",billing
+"I need help understanding this payment charge",billing
+"I forgot my password and cannot log in",access
+"My account is locked after too many login attempts",access
+"The OTP code never arrives",access
+"I cannot sign in with my credentials",access
+"Two factor authentication is not working",access
+"Please help me reset my password",access
+"My login session keeps rejecting me",access
+"I lost access to my authenticator",access
+"The verification code is invalid",access
+"I cannot authenticate to the application",access
+"The mobile app crashes when I open it",technical
+"The screen freezes during startup",technical
+"I receive an error when uploading a file",technical
+"The application is extremely slow today",technical
+"Data synchronization is failing",technical
+"The dashboard shows a blank screen",technical
+"The app closes whenever I tap settings",technical
+"I keep seeing a network timeout error",technical
+"The latest update caused the application to freeze",technical
+"My notifications are not syncing",technical
+"Please change the email address on my account",account
+"I need to update my phone number",account
+"Change the name shown on my profile",account
+"I want to update my mailing address",account
+"Please close my account permanently",account
+"How can I edit my profile information",account
+"I need to change my contact details",account
+"Update my preferred language in the profile",account
+"I want to modify my account preferences",account
+"Please correct the personal information on my profile",account
