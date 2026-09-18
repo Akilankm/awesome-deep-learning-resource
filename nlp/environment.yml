@@ -1,0 +1,56 @@
+name: awesome-nlp
+
+channels:
+  - conda-forge
+  - pytorch
+
+dependencies:
+  # Runtime
+  - python=3.11
+  - pip
+  - setuptools
+  - wheel
+
+  # Scientific Python
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - joblib
+  - pyarrow
+
+  # Core NLP
+  - nltk
+  - spacy
+  - gensim
+
+  # Deep learning
+  - pytorch
+
+  # Visualization / interactive notebook experience
+  - matplotlib
+  - plotly
+  - ipywidgets
+  - tqdm
+
+  # Jupyter + notebook execution/validation
+  - jupyterlab
+  - notebook
+  - ipykernel
+  - nbformat
+  - nbclient
+  - nbconvert
+
+  # Modern NLP ecosystem.
+  # The core notebooks remain offline-reproducible; pretrained checkpoints
+  # may require internet access the first time they are downloaded.
+  - pip:
+      - transformers
+      - sentence-transformers
+      - datasets
+      - evaluate
+      - accelerate
+      - huggingface-hub
+      - tokenizers
+      - safetensors
+      - kaleido

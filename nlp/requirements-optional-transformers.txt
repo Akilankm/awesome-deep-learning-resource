@@ -1,0 +1,12 @@
+# Optional / modern pretrained NLP stack
+# These packages are already included by nlp/environment.yml.
+# This file is provided for users who maintain another Python environment.
+transformers
+sentence-transformers
+datasets
+evaluate
+accelerate
+huggingface-hub
+tokenizers
+safetensors
+kaleido
