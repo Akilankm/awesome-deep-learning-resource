@@ -1,15 +1,44 @@
-# Awesome Deep Learning Resource — Artificial Neural Networks
+# Awesome Deep Learning Resource
 
-`master` is the **framework-neutral ANN textbook and visual knowledge base**. It contains no framework-specific training implementation. Hands-on execution lives in exactly three independent branches:
+A visual, executable learning repository for deep learning and modern NLP.
+
+## Learning tracks
+
+### Artificial Neural Networks
+
+`master` contains the **framework-neutral ANN textbook and visual knowledge base**. Hands-on ANN execution lives in three independent branches:
 
 - [`ann-mnist-manual`](https://github.com/Akilankm/awesome-deep-learning-resource/tree/ann-mnist-manual) — NumPy / first principles
 - [`ann-mnist-pytorch`](https://github.com/Akilankm/awesome-deep-learning-resource/tree/ann-mnist-pytorch) — production-style PyTorch
 - [`ann-mnist-tensorflow`](https://github.com/Akilankm/awesome-deep-learning-resource/tree/ann-mnist-tensorflow) — production-style TensorFlow / Keras
 
-## Recommended learning sequence
-Read the conceptual chapter, then run the matching notebook in one implementation branch. The three implementation branches use the same official MNIST problem and data split contract so differences reflect implementation, not different experiments.
+### Natural Language Processing
 
-## Documentation map
+The [`nlp/`](nlp/) track contains **30 executed notebooks** covering the complete path from raw text processing to transformers, semantic retrieval, end-to-end model development, production monitoring and responsible NLP.
+
+Start here:
+
+- [NLP curriculum and run guide](nlp/README.md)
+- [Conda environment](nlp/environment.yml)
+- [Local NLP datasets](nlp/data/)
+- [Optional pretrained NLP requirements](nlp/requirements-optional-transformers.txt)
+
+Create the NLP environment from the repository root:
+
+```bash
+conda env create -f nlp/environment.yml
+conda activate awesome-nlp
+python -m ipykernel install --user --name awesome-nlp --display-name "Python (awesome-nlp)"
+jupyter lab
+```
+
+The environment contains the core scientific/NLP/deep-learning stack plus Jupyter, Plotly/widgets and the Hugging Face ecosystem, so the notebooks can be rerun locally and extended beyond the committed offline examples.
+
+## ANN recommended learning sequence
+
+Read the conceptual chapter, then run the matching notebook in one implementation branch. The three ANN implementation branches use the same official MNIST problem and data split contract so differences reflect implementation, not different experiments.
+
+## ANN documentation map
 - [ANN Big Picture](docs/00_ann_big_picture.md)
 - [Data, EDA, Leakage, and Train/Validation/Test](docs/01_data_and_splits.md)
 - [Preprocessing, Batching, and Data Contracts](docs/02_preprocessing_batching.md)
@@ -40,9 +69,24 @@ Read the conceptual chapter, then run the matching notebook in one implementatio
 - [Production feedback loop](visual_learning/production_loop.svg)
 
 ## Static on GitHub, interactive after cloning
-The implementation notebooks deliberately support two modes. GitHub keeps the executed notebook readable as a **static learning artifact** with explanations, code, metrics and persisted plots. After cloning into VS Code/Jupyter and running the notebook in its Conda environment, marked Plotly labs become interactive with hover, zoom, pan, 3D rotation, sliders, animation and point-level inspection.
 
-See the [interactive learning guide](docs/20_interactive_learning.md) for the exact workflow and the notebooks that contain interactive labs.
+The learning artifacts deliberately support two modes. GitHub keeps executed notebooks readable as **static learning artifacts** with explanations, code, metrics and persisted outputs. After cloning into VS Code/Jupyter and running the appropriate environment, interactive Plotly/widget labs can be explored with hover, zoom, pan and point-level inspection.
 
-## Final learning objective
-Understand ANN as an end-to-end system: **data → representation → forward → loss → backprop → optimization → validation → test → inference → monitoring → retraining → business action**.
+See the [ANN interactive learning guide](docs/20_interactive_learning.md) and the [NLP run guide](nlp/README.md).
+
+## Learning objective
+
+Understand deep-learning and NLP systems end to end:
+
+```text
+data
+  → representation
+  → model
+  → optimization
+  → validation
+  → test
+  → inference
+  → monitoring
+  → retraining
+  → business action
+```
