@@ -90,9 +90,27 @@
     "ok": true
   },
   {
+    "notebook": "RNN/notebooks/15_text_sequences_for_rnn.ipynb",
+    "code_cells": 5,
+    "output_cells": 5,
+    "ok": true
+  },
+  {
+    "notebook": "RNN/notebooks/16_sentence_classification_tensorflow.ipynb",
+    "code_cells": 6,
+    "output_cells": 6,
+    "ok": true
+  },
+  {
     "notebook": "RNN/projects/jena_climate_forecasting/00_end_to_end_jena_forecasting.ipynb",
     "code_cells": 12,
     "output_cells": 12,
+    "ok": true
+  },
+  {
+    "notebook": "RNN/projects/sentence_sentiment_classification/00_end_to_end_sentence_sentiment_rnn.ipynb",
+    "code_cells": 11,
+    "output_cells": 11,
     "ok": true
   },
   {

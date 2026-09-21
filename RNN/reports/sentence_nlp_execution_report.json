@@ -1,0 +1,20 @@
+[
+  {
+    "notebook": "RNN/notebooks/15_text_sequences_for_rnn.ipynb",
+    "code_cells": 5,
+    "executed": 5,
+    "output_cells": 5
+  },
+  {
+    "notebook": "RNN/notebooks/16_sentence_classification_tensorflow.ipynb",
+    "code_cells": 6,
+    "executed": 6,
+    "output_cells": 6
+  },
+  {
+    "notebook": "RNN/projects/sentence_sentiment_classification/00_end_to_end_sentence_sentiment_rnn.ipynb",
+    "code_cells": 11,
+    "executed": 11,
+    "output_cells": 11
+  }
+]

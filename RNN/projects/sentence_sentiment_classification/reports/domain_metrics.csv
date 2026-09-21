@@ -1,0 +1,4 @@
+source,rows,accuracy
+amazon,150,0.84
+imdb,150,0.7666666666666667
+yelp,150,0.78

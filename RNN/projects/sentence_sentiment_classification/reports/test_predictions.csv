@@ -1,0 +1,451 @@
+source,text,label,words,prob_positive,prediction,correct,confidence
+imdb,The telephone repair man was really funny and his reactions to the nuts and bitchy boss were truly genuine.  ,1,19,0.98591197,1,True,0.98591197
+yelp,A lady at the table next to us found a live green caterpillar In her salad.,0,16,0.2084227,0,True,0.7915773
+amazon,"It is light, has plenty of battery capacity, and is very confortable to wear for somewhat extended periods of time.",1,20,0.9921427,1,True,0.9921427
+yelp,The sweet potato tots were good but the onion rings were perfection or as close as I have had.,1,19,0.9745413,1,True,0.9745413
+yelp,"I'd rather eat airline food, seriously.",0,6,0.34003443,0,True,0.6599656
+yelp,This is a really fantastic Thai restaurant which is definitely worth a visit.,1,13,0.98502713,1,True,0.98502713
+yelp,So we went to Tigerlilly and had a fantastic afternoon!,1,10,0.9031994,1,True,0.9031994
+yelp,The cashier was friendly and even brought the food out to me.,1,12,0.2588041,0,False,0.7411959
+imdb,"I mean, in a realistic world, she would NEVER have gotten into that ballet repertory... The whole thing was quite pathetic.  ",0,21,0.041854493,0,True,0.9581455
+imdb,"Their on-screen chemistry, critical to the entire film, is genuine.  ",1,10,0.7355826,1,True,0.7355826
+imdb,There was NOTHING believable about it at all.  ,0,8,0.26796603,0,True,0.73203397
+imdb,"Regardless, the film fails on most levels.  ",0,7,0.5426341,1,False,0.5426341
+amazon,"Good product, good seller.",1,4,0.94502807,1,True,0.94502807
+imdb,"The best part about ""Nurse Betty"" is it's unpredictability.  ",1,9,0.93135095,1,True,0.93135095
+yelp,"I do love sushi, but I found Kabuki to be over-priced, over-hip and under-services.",0,14,0.89275575,1,False,0.89275575
+imdb,"The use of slow-motion needlessly repeats itself throughout the movie but is well backed up by bad acting (and bad is a kind word here), no continuity, scenes that are thrown in for no reason whatsoever, vehicles that looked like they were made from a Corn Flakes box and a directorial style that bordered on stupidity.  ",0,56,0.03492588,0,True,0.9650741
+amazon,"I was sitting in my vehicle, with the cradle on my belt, and the headset lost signal.",0,17,0.44014314,0,True,0.5598569
+yelp,What a great double cheeseburger!,1,5,0.8139742,1,True,0.8139742
+amazon,I'm using it with an iriver SPINN (with case) and it fits fine.,1,13,0.957786,1,True,0.957786
+yelp,It was delicious!!!,1,3,0.7491334,1,True,0.7491334
+amazon,I'm happy about this purchase- good quality and low price.,1,10,0.99015534,1,True,0.99015534
+imdb,I wasn't the least bit interested.  ,0,6,0.110631935,0,True,0.88936806
+yelp,The ambience is wonderful and there is music playing.,1,9,0.95900565,1,True,0.95900565
+amazon,You can't beat the price on these.,1,7,0.62748826,1,True,0.62748826
+yelp,"I also had to taste my Mom's multi-grain pumpkin pancakes with pecan butter and they were amazing, fluffy, and delicious!",1,20,0.99375826,1,True,0.99375826
+imdb,Exceptionally bad!  ,0,2,0.18532446,0,True,0.81467557
+imdb,This film tries to be a serious and sophisticated thriller/horror flick and it fails miserably.  ,0,15,0.5778448,1,False,0.5778448
+yelp,"The ripped banana was not only ripped, but petrified and tasteless.",0,11,0.048916474,0,True,0.95108354
+imdb,This is one of Peter Watkins most accessible films.  ,1,9,0.735559,1,True,0.735559
+imdb,"Overall, this movie was cheap trash.  ",0,6,0.3546963,0,True,0.6453037
+yelp,Everything was fresh and delicious!,1,5,0.8644429,1,True,0.8644429
+imdb,All the pretty pictures in the world cannot make up for a piece of work that is flawed at the core.  ,0,21,0.22039211,0,True,0.7796079
+amazon,I even fully charged it before I went to bed and turned off blue tooth and wi-fi and noticed that it only had 20 % left in the morning.,0,29,0.3322927,0,True,0.6677073
+yelp,Their daily specials are always a hit with my group.,1,10,0.83528745,1,True,0.83528745
+yelp,"Main thing I didn't enjoy is that the crowd is of older crowd, around mid 30s and up.",0,18,0.90923303,1,False,0.90923303
+imdb,Now imagine that every single one of those decisions was made wrong.  ,0,12,0.5881072,1,False,0.5881072
+yelp,"The service was terrible, food was mediocre.",0,7,0.061525255,0,True,0.9384748
+yelp,"My breakfast was perpared great, with a beautiful presentation of 3 giant slices of Toast, lightly dusted with powdered sugar.",1,20,0.9958163,1,True,0.9958163
+amazon,the only VERY DISAPPOINTING thing was there was NO SPEAKERPHONE!!!!,0,10,0.062266394,0,True,0.9377336
+imdb,Everything about this movie is stupid.  ,0,6,0.47721094,0,True,0.52278906
+imdb,It really created a unique feeling though.  ,1,7,0.4781951,0,False,0.5218049
+amazon,The first thing that happened was that the tracking was off.,0,11,0.084685266,0,True,0.91531473
+imdb,"In fact, I liked it better than Interview With a Vampire and I liked this Lestat (Stuart Townsend) better than Cruise's attempt.  ",1,22,0.99478805,1,True,0.99478805
+amazon,The design is very good.4.,1,5,0.39805064,0,False,0.60194933
+amazon,"Perhaps my phone is defective, but people cannot hear me when I use this.",0,14,0.084703155,0,True,0.91529685
+amazon,"Terrible product, and waste of money!",0,6,0.054413054,0,True,0.9455869
+yelp,"The sangria was about half of a glass wine full and was $12, ridiculous.",0,14,0.15842852,0,True,0.84157145
+amazon,Does not work for listening to music with the cingular 8125.,0,11,0.05554092,0,True,0.9444591
+amazon,Tied to charger for conversations lasting more than 45 minutes.MAJOR PROBLEMS!!,0,11,0.49337715,0,True,0.50662285
+imdb,It is a true classic.  ,1,5,0.71176964,1,True,0.71176964
+amazon,I didn't think that the instructions provided were helpful to me.,0,11,0.08214791,0,True,0.9178521
+imdb,"Elias Koteas,Jack Palance play good roles Angelina is hot and gets naked.Billy Drago appears in this and is cool as usual + a cameo by Sven ole Thorsen helps make this a very enjoyable movie with good acting and a decent budget.  ",1,42,0.99702984,1,True,0.99702984
+yelp,The cashew cream sauce was bland and the vegetables were undercooked.,0,11,0.23355222,0,True,0.7664478
+imdb,"The ""explosion"" of the Gas tanks at the end was just as awful.  ",0,13,0.07735434,0,True,0.9226457
+amazon,People couldnt hear me talk and I had to pull out the earphone and talk on the phone.,0,18,0.5794416,1,False,0.5794416
+imdb,"As a courtroom drama, it's compelling, as an indictment on the American justice system, it's frightening.  ",1,16,0.4884865,0,False,0.5115135
+imdb,"Angus Scrimm also turns in a good performance in a somewhat brief but memorable role as the gently menacing, violin-playing anatomist Doctor Quinn.  ",1,23,0.9941787,1,True,0.9941787
+amazon,"It fits comfortably in either ear, the sound is clear and loud, and the charge lasts a couple of days.",1,20,0.9581141,1,True,0.9581141
+yelp,Very good lunch spot.,1,4,0.8703698,1,True,0.8703698
+amazon,This is simply the BEST bluetooth headset for sound quality!,1,10,0.8981819,1,True,0.8981819
+amazon,"Verizon tech support walked my through a few procedures, none of which worked and I ended up having to do a hard re-set, wiping out all my data.",0,28,0.09302549,0,True,0.9069745
+yelp,We've have gotten a much better service from the pizza place next door than the services we received from this restaurant.,0,21,0.06910387,0,True,0.93089616
+imdb,Avoid at any and all costs.  ,0,6,0.20580003,0,True,0.79419994
+imdb,And those baby owls were adorable.  ,1,6,0.74117774,1,True,0.74117774
+amazon,Poor quality.,0,2,0.20170833,0,True,0.7982917
+yelp,!....THE OWNERS REALLY REALLY need to quit being soooooo cheap let them wrap my freaking sandwich in two papers not one!,0,21,0.98645455,1,False,0.98645455
+yelp,"It lacked flavor, seemed undercooked, and dry.",0,7,0.17453407,0,True,0.8254659
+amazon,The delivery was on time.,1,5,0.35665548,0,False,0.6433445
+yelp,"Classy/warm atmosphere, fun and fresh appetizers, succulent steaks (Baseball steak!!!!!",1,10,0.98721415,1,True,0.98721415
+imdb,In short - this was a monumental waste of time and energy and I would not recommend anyone to EVER see this film.  ,0,23,0.054012503,0,True,0.9459875
+yelp,The vegetables are so fresh and the sauce feels like authentic Thai.,1,12,0.6718741,1,True,0.6718741
+yelp,We loved the place.,1,4,0.81800175,1,True,0.81800175
+amazon,"I posted more detailed comments under the grey or black phone, but i have the Fire Red and it's a great color!",1,22,0.42220664,0,False,0.57779336
+imdb,"It was too predictable, even for a chick flick.  ",0,9,0.07356025,0,True,0.92643976
+imdb,"The acting helps the writing along very well (maybe the idiot-savant sister could have been played better), and it is a real joy to watch.  ",1,25,0.37688795,0,False,0.6231121
+yelp,Based on the sub-par service I received and no effort to show their gratitude for my business I won't be going back.,0,22,0.062241863,0,True,0.93775815
+amazon,The reception has been generally good.,1,6,0.6495169,1,True,0.6495169
+imdb,"One more thing: I can tolerate political incorrectness very well, I'm all for artistic freedom and suspension of disbelief, but the Slavic female character was just too much.  ",0,28,0.99225783,1,False,0.99225783
+yelp,"In fact I'm going to round up to 4 stars, just because she was so awesome.",1,16,0.20383315,0,False,0.79616684
+imdb,The plot has more holes than a pair of fishnet stockings and the direction and editing is astonishingly ham fisted.  ,0,20,0.17684747,0,True,0.82315254
+imdb,I rather enjoyed it.  ,1,4,0.6651342,1,True,0.6651342
+amazon,Nice docking station for home or work.,1,7,0.89390206,1,True,0.89390206
+yelp,"It's close to my house, it's low-key, non-fancy, affordable prices, good food.",1,12,0.82989347,1,True,0.82989347
+amazon,Someone shouldve invented this sooner.,1,5,0.4730589,0,False,0.52694106
+imdb,Excellent short film.  ,1,3,0.9201961,1,True,0.9201961
+imdb,Do not waste your time.  ,0,5,0.047244214,0,True,0.9527558
+amazon,Logitech Bluetooth Headset is a 10!.,1,6,0.89265287,1,True,0.89265287
+imdb,"first of all, there are enough racial stereotypes and racial jokes to offend everyone.  ",0,14,0.5130623,1,False,0.5130623
+amazon,Excellent hands free tool.,1,4,0.9291869,1,True,0.9291869
+yelp,the staff is friendly and the joint is always clean.,1,10,0.9679688,1,True,0.9679688
+yelp,"for 40 bucks a head, i really expect better food.",0,10,0.8361919,1,False,0.8361919
+imdb,It's this pandering to the audience that sabotages most of his films.  ,0,12,0.8621806,1,False,0.8621806
+imdb,"The very idea of it was lame - take a minor character from a mediocre PG-13 film, and make a complete non-sequel while changing its tone to a PG-rated family movie.  ",0,31,0.16857074,0,True,0.83142924
+imdb,"This movie contained an all-star cast, and what I loved the most was that it opened my eyes to see other actors who I haven't seen before.  ",1,27,0.97708654,1,True,0.97708654
+amazon,I'm still infatuated with this phone.,1,6,0.6630588,1,True,0.6630588
+yelp,This place is amazing!,1,4,0.6913368,1,True,0.6913368
+amazon,Very good quality though,1,4,0.8429284,1,True,0.8429284
+imdb,Generally; it just lacked imagination.  ,0,5,0.28038493,0,True,0.7196151
+imdb,"Yet, I enjoy watching it.  ",1,5,0.73074,1,True,0.73074
+amazon,Unfortunately it did not work.,0,5,0.11019485,0,True,0.88980514
+imdb,The budget was evidently very limited.  ,0,6,0.41317645,0,True,0.5868236
+amazon,"It works great with a car charger, especially if you cannot plug in two adapters at the same time.",1,19,0.993919,1,True,0.993919
+amazon,"This item is great, installed it, let it charged up overnite and it has been working good every since with no problems",1,22,0.99598086,1,True,0.99598086
+imdb,Awful.  ,0,1,0.2785116,0,True,0.72148836
+amazon,Rip off---- Over charge shipping.,0,5,0.30105448,0,True,0.6989455
+amazon,Pretty piece of junk.,0,4,0.29894948,0,True,0.7010505
+imdb,This second appearance of Mickey Mouse (following the silent PLANE CRAZY earlier that year) is probably his most famous film--mostly because it was so ground-breaking.  ,1,25,0.95252967,1,True,0.95252967
+imdb,"However, here there was no decent acting, action or location work to balance things up.  ",0,15,0.05740629,0,True,0.9425937
+yelp,Service sucks.,0,2,0.3340631,0,True,0.6659369
+imdb,"Another thing I didn't really like is when a character got punched in the face, a gallon of blood would spew forth soon after.  ",0,24,0.17375164,0,True,0.82624835
+imdb,"Not only did it only confirm that the film would be unfunny and generic, but it also managed to give away the ENTIRE movie; and I'm not exaggerating - every moment, every plot point, every joke is told in the trailer.  ",0,41,0.08031886,0,True,0.91968113
+yelp,I never come again.,0,4,0.26999468,0,True,0.7300053
+yelp,Just as good as when I had it more than a year ago!,1,13,0.94288504,1,True,0.94288504
+imdb,"The film's dialogue is natural, real to life.  ",1,8,0.24946062,0,False,0.75053936
+yelp,We also ordered the spinach and avocado salad; the ingredients were sad and the dressing literally had zero taste.,0,19,0.24776205,0,True,0.7522379
+yelp,"Bad day or not, I have a very low tolerance for rude customer service people, it is your job to be nice and polite, wash dishes otherwise!!",0,27,0.2020235,0,True,0.7979765
+amazon,"My experience was terrible..... This was my fourth bluetooth headset, and while it was much more comfortable than my last Jabra (which I HATED!!!",0,24,0.5145243,1,False,0.5145243
+imdb,His losing his marbles so early in the proceedings is totally implausible and unconvincing.  ,0,14,0.91979,1,False,0.91979
+amazon,[...] down the drain because of a weak snap!,0,9,0.16915889,0,True,0.8308411
+yelp,I can assure you that you won't be disappointed.,1,9,0.52727205,1,True,0.52727205
+yelp,We won't be going back.,0,5,0.33070558,0,True,0.6692944
+amazon,Also the area where my unit broke).- I'm not too fond of the magnetic strap.,0,15,0.03964508,0,True,0.9603549
+amazon,Please dont waste your money.,0,5,0.058048233,0,True,0.94195175
+yelp,Now the pizza itself was good the peanut sauce was very tasty.,1,12,0.39082432,0,False,0.6091757
+yelp,Very bad Experience!,0,3,0.15698266,0,True,0.84301734
+imdb,Clever and a real crowd-pleaser--this film still ranks among Mickey's best films even after 80 wonderful years.  ,1,17,0.9924437,1,True,0.9924437
+yelp,"All in all an excellent restaurant highlighted by great service, a unique menu, and a beautiful setting.",1,17,0.9966848,1,True,0.9966848
+imdb,"If you have not seen this movie, I definitely recommend it!  ",1,11,0.07931656,0,False,0.92068344
+yelp,This place was such a nice surprise!,1,7,0.7752551,1,True,0.7752551
+amazon,I've missed numerous calls because of this reason.,0,8,0.6802406,1,False,0.6802406
+imdb,"This is a masterful piece of film-making, with many themes simmering and occasionally boiling over in this warts and all study of the poet's bohemian, self-indulgent wartime years that span the aerial bombardments of London and the outward tranquillity of a Welsh coastal retreat - the borderlines between friendship, lust and love, dedication to art and experience versus practical concerns, jealousy, rivalry, cowardice and egotism versus heroism and self-sacrifice and more.  ",1,71,0.9829294,1,True,0.9829294
+yelp,"Best service and food ever, Maria our server was so good and friendly she made our day.",1,17,0.99434054,1,True,0.99434054
+yelp,Always a great time at Dos Gringos!,1,7,0.96883374,1,True,0.96883374
+imdb,""" I love it.  ",1,4,0.8121034,1,True,0.8121034
+amazon,I've had this bluetoooth headset for some time now and still not comfortable with the way it fits on the ear.,0,21,0.7973936,1,False,0.7973936
+imdb,"Just consider the excellent story, solid acting and look of the film as added bonuses.  ",1,15,0.9775048,1,True,0.9775048
+amazon,VERY comfortable.,1,2,0.7271962,1,True,0.7271962
+imdb,"However, after seeing the short again after about 25 years, I was amazed at how timeless the film actually is.  ",1,20,0.3085156,0,False,0.6914844
+amazon,worthless product.,0,2,0.39153087,0,True,0.6084691
+yelp,"The burger had absolutely no flavor - the meat itself was totally bland, the burger was overcooked and there was no charcoal flavor.",0,23,0.01579968,0,True,0.9842003
+amazon,"Good , works fine.",1,4,0.9370714,1,True,0.9370714
+amazon,I got the aluminum case for my new Palm VX and it worked really well--it has protected my handheld perfectly so far.,1,22,0.72802883,1,True,0.72802883
+amazon,I'm very disappointed with my decision.,0,6,0.39690033,0,True,0.6030997
+amazon,Product is exactly as described.,1,5,0.72645813,1,True,0.72645813
+amazon,what a disappointment,0,3,0.22941782,0,True,0.7705822
+yelp,The turkey and roast beef were bland.,0,7,0.72092247,1,False,0.72092247
+amazon,This is cool because most cases are just open there allowing the screen to get all scratched up.,1,18,0.9912879,1,True,0.9912879
+yelp,"Also, the fries are without a doubt the worst fries I've ever had.",0,13,0.16925776,0,True,0.83074224
+yelp,Great place to relax and have an awesome burger and beer.,1,11,0.99504733,1,True,0.99504733
+yelp,Service was fine and the waitress was friendly.,1,8,0.8815427,1,True,0.8815427
+imdb,Simply beautiful.  ,1,2,0.692565,1,True,0.692565
+yelp,"I know this is not like the other restaurants at all, something is very off here!",0,16,0.06656612,0,True,0.9334339
+yelp,Waitress was a little slow in service.,0,7,0.24810028,0,True,0.7518997
+yelp,"Back to good BBQ, lighter fare, reasonable pricing and tell the public they are back to the old ways.",1,19,0.110577434,0,False,0.88942254
+imdb,Great character actors Telly Savalas and Peter Boyle.  ,1,8,0.9907535,1,True,0.9907535
+imdb,One of the most disappointing aspects is the lack of notable gore.  ,0,12,0.11195833,0,True,0.8880417
+amazon,Love this product.,1,3,0.85787994,1,True,0.85787994
+amazon,Worked perfectly!,1,2,0.6277168,1,True,0.6277168
+imdb,"I loved this movie it was a great portrayal of a family who had it's share of ups and down, but in the end they knew that special love they had for each other.  ",1,34,0.99717444,1,True,0.99717444
+amazon,My phone doesn't slide around my car now and the grip prevents my phone from slipping out of my hand.,1,20,0.14860493,0,False,0.8513951
+imdb,Rating: 1 out of 10.  ,0,5,0.35747346,0,True,0.6425265
+yelp,The food was outstanding and the prices were very reasonable.,1,10,0.69434273,1,True,0.69434273
+amazon,Protects the phone on all sides.,1,6,0.5160576,1,True,0.5160576
+yelp,The waitresses are very friendly.,1,5,0.71026355,1,True,0.71026355
+yelp,They were excellent.,1,3,0.77000755,1,True,0.77000755
+amazon,WORST PHONE EVER.,0,3,0.14749482,0,True,0.8525052
+yelp,Extremely Tasty!,1,2,0.4809131,0,False,0.5190869
+imdb,Her role was played well.  ,1,5,0.8182851,1,True,0.8182851
+amazon,You'll love how thin it is.,1,6,0.922867,1,True,0.922867
+imdb,there are so many problems i dont know where to start.  ,0,11,0.27734756,0,True,0.72265244
+yelp,"Anyway, this FS restaurant has a wonderful breakfast/lunch.",1,8,0.94184816,1,True,0.94184816
+amazon,)Setup couldn't have been simpler.,1,5,0.5560032,1,True,0.5560032
+yelp,this was a different cut than the piece the other day but still wonderful and tender s well as well flavored.,1,21,0.98112434,1,True,0.98112434
+yelp,Cooked to perfection and the service was impeccable.,1,8,0.81612813,1,True,0.81612813
+imdb,I believe that Pitch Black was done well.  ,1,8,0.355383,0,False,0.64461696
+yelp,"It was attached to a gas station, and that is rarely a good sign.",0,14,0.7403375,1,False,0.7403375
+yelp,Very poor service.,0,3,0.25460276,0,True,0.7453972
+amazon,Yet Plantronincs continues to use the same flawed charger design.,0,10,0.31535414,0,True,0.6846459
+yelp,"The service was a little slow , considering that were served by 3 people servers so the food was coming in a slow pace.",0,24,0.020513926,0,True,0.97948605
+amazon,My sister has one also and she loves it.,1,9,0.9031687,1,True,0.9031687
+amazon,"Not only will it drain your player, but may also potentially fry it.",0,13,0.04997463,0,True,0.9500254
+imdb,"Whatever the producer was going for, he missed entirely.  ",0,9,0.28115985,0,True,0.7188401
+yelp,"the food is not tasty at all, not to say its ""real traditional Hunan style"".",0,15,0.05139035,0,True,0.94860965
+amazon,don't waste your money and time.,0,6,0.06225143,0,True,0.93774855
+imdb,"The only real effects work is the presence of all the animals, and the integration of those into the scenes is some of the worst and most obvious blue/green-screen work I've ever seen.  ",0,33,0.043044925,0,True,0.9569551
+amazon,"First of all, it doesn't wear well.",0,7,0.37484083,0,True,0.62515914
+imdb,"Otherwise, don't even waste your time on this.  ",0,8,0.07590165,0,True,0.9240984
+amazon,The pairing of the two devices was so easy it barely took a couple minutes before I started making calls with the voice dialing feature.,1,25,0.033449218,0,False,0.96655077
+amazon,Works great!.,1,2,0.9443752,1,True,0.9443752
+imdb,Not easy to watch.  ,0,4,0.27345595,0,True,0.726544
+imdb,The aerial scenes were well-done.  ,1,5,0.37790817,0,False,0.6220918
+yelp,You can't beat that.,1,4,0.4365682,0,False,0.5634318
+yelp,The bathrooms are clean and the place itself is well decorated.,1,11,0.39003736,0,False,0.60996264
+amazon,"No ear loop needed, it's tiny and the sound is great.",1,11,0.68644226,1,True,0.68644226
+imdb,THERE IS NO PLOT OR STORYLINE!!  ,0,6,0.058145944,0,True,0.94185406
+amazon,It defeats the purpose of a bluetooth headset.,0,8,0.7574473,1,False,0.7574473
+yelp,"This hole in the wall has great Mexican street tacos, and friendly staff.",1,13,0.9928924,1,True,0.9928924
+imdb,"This is a chilly, unremarkable movie about an author living/working in a chilly abstruse culture.  ",0,15,0.7761589,1,False,0.7761589
+imdb,"If you act in such a film, you should be glad that you're gonna drift away from earth as far as possible!  ",0,22,0.64525574,1,False,0.64525574
+yelp,"I had a salad with the wings, and some ice cream for dessert and left feeling quite satisfied.",1,18,0.98754466,1,True,0.98754466
+amazon,An Awesome New Look For Fall 2000!.,1,7,0.87444353,1,True,0.87444353
+amazon,i would advise to not purchase this item it never worked very well.,0,13,0.11426332,0,True,0.8857367
+yelp,"Overall, a great experience.",1,4,0.93664294,1,True,0.93664294
+yelp,The croutons also taste homemade which is an extra plus.,1,10,0.73659027,1,True,0.73659027
+yelp,"Good value, great food, great service.",1,6,0.9923923,1,True,0.9923923
+yelp,No one at the table thought the food was above average or worth the wait that we had for it.,0,20,0.036145303,0,True,0.9638547
+yelp,What I really like there is the crepe station.,1,9,0.2116618,0,False,0.7883382
+imdb,Omit watching this.  ,0,3,0.35846266,0,True,0.6415373
+imdb,I knew when I saw the film that more great things were to come from this gifted actor.  ,1,18,0.9668509,1,True,0.9668509
+imdb,"Funny, clever, hip - just like Pray's previous film, Hype!  ",1,10,0.8923982,1,True,0.8923982
+amazon,"Simple, lightweight and great fit.",1,5,0.9685683,1,True,0.9685683
+imdb,Cinematography: The film was shot in an interesting way.  ,1,9,0.9567859,1,True,0.9567859
+amazon,"sucked, most of the stuff does not work with my phone.",0,11,0.048776824,0,True,0.9512232
+amazon,"Also, the phone doesn't seem to accept anything except CBR mp3s, preferably ripped by Windows Media Player.",0,17,0.0706036,0,True,0.9293964
+amazon,Disappointing accessory from a good manufacturer.,0,6,0.36886275,0,True,0.63113725
+imdb,"I was totally fascinated by the music, the dancing... everything.  ",1,10,0.11282826,0,False,0.88717175
+amazon,"The microphone also works well, but (according to people I have called) it applifies everything.",1,15,0.9697165,1,True,0.9697165
+yelp,It is worth the drive.,1,5,0.60972834,1,True,0.60972834
+yelp,"This place is like Chipotle, but BETTER.",1,7,0.3650831,0,False,0.6349169
+imdb,This film has no redeeming features.  ,0,6,0.56719637,1,False,0.56719637
+imdb,This is one of the worst Sandra Bullock movie since Speed 2 But not quite that bad.  ,0,17,0.014104228,0,True,0.98589575
+imdb,"Schrader has made a resume full of lousy, amateurish films.  ",0,10,0.72678757,1,False,0.72678757
+amazon,"Otherwise, easy to install and use, clear sound.",1,8,0.76906776,1,True,0.76906776
+imdb,I will never forget it now.  ,1,6,0.18670388,0,False,0.81329614
+imdb,"This movie is a solid example of a bad plot and a very, very bad idea all the way.  ",0,19,0.02030936,0,True,0.9796906
+imdb,"It showed exactly how the government and the scientist argued for humanity and the reasons of the ""gadget"".  ",1,18,0.7863453,1,True,0.7863453
+imdb,There still are good actors around!  ,1,6,0.7221564,1,True,0.7221564
+yelp,Tasted like dirt.,0,3,0.3187063,0,True,0.6812937
+amazon,"It didn't work, people can not hear me when I talk.",0,11,0.052529383,0,True,0.9474706
+imdb,"Top line: Don't waste your time and money on this one, its as bad as it comes.  ",0,17,0.029606638,0,True,0.97039336
+amazon,Not loud enough and doesn't turn on like it should.,0,10,0.027883383,0,True,0.9721166
+imdb,The attractive set used throughout most of the film is an eye-pleasing gem.  ,1,13,0.9475914,1,True,0.9475914
+yelp,I was mortified.,0,3,0.46129745,0,True,0.53870255
+amazon,We have gotten a lot of compliments on it.,1,9,0.28552088,0,False,0.7144791
+amazon,It feels more comfortable than most headsets because I wear glasses and that gets in the way sometimes.,1,18,0.9836201,1,True,0.9836201
+imdb,I can't believe there's even a sequel to this!  ,0,9,0.29296193,0,True,0.70703804
+yelp,"Love the margaritas, too!",1,4,0.72125465,1,True,0.72125465
+amazon,The shipping time was also very quick!,1,7,0.6603079,1,True,0.6603079
+imdb,I do think Tom Hanks is a good actor.  ,1,9,0.74521923,1,True,0.74521923
+amazon,It's AGGRAVATING!,0,2,0.5861839,1,False,0.5861839
+amazon,This is by far the worst purchase I've made on Amazon.,0,11,0.14935929,0,True,0.8506407
+imdb,This is just a great movie.  ,1,6,0.8943161,1,True,0.8943161
+imdb,NOBODY identifies with these characters because they're all cardboard cutouts and stereotypes (or predictably reverse-stereotypes).  ,0,15,0.28395113,0,True,0.71604884
+amazon,Those phones are working just fine now.,1,7,0.6398911,1,True,0.6398911
+yelp,It kept getting worse and worse so now I'm officially done.,0,11,0.08185889,0,True,0.9181411
+imdb,The good cinematography also makes her and Monica Bellucci look very beautiful.  ,1,12,0.99286354,1,True,0.99286354
+imdb,Brilliant!  ,1,1,0.649811,1,True,0.649811
+amazon,"It was an inexpensive piece, but I would still have expected better quality.",0,13,0.27184686,0,True,0.7281531
+amazon,Echo Problem....Very unsatisfactory,0,3,0.41240358,0,True,0.5875964
+imdb,"Im big fan of RPG games too, but this movie, its a disgrace to any self-respecting RPGer there is.  ",0,19,0.20603576,0,True,0.79396427
+amazon,Yes it's shiny on front side - and I love it!,1,11,0.7335234,1,True,0.7335234
+amazon,"great headset, very impressed - H500.",1,6,0.9805272,1,True,0.9805272
+imdb,Not too screamy not to masculine but just right.  ,1,9,0.02689459,0,False,0.97310543
+imdb,"Camerawork - again, bad.  ",0,4,0.13622439,0,True,0.8637756
+amazon,They work about 2 weeks then break.,0,7,0.14465725,0,True,0.85534275
+imdb,This if the first movie I've given a 10 to in years.  ,1,12,0.62790644,1,True,0.62790644
+amazon,If you are Razr owner...you must have this!,1,8,0.39892164,0,False,0.6010784
+yelp,The nachos are a MUST HAVE!,1,6,0.39875984,0,False,0.60124016
+yelp,Please stay away from the shrimp stir fried noodles.,0,9,0.11390344,0,True,0.88609654
+amazon,I've also had problems with the phone reading the memory card in which I always turn it on and then off again.,0,22,0.055159517,0,True,0.9448405
+amazon,This little device has transformed my organizational capability and made my life a whole lot easier.,1,16,0.69578636,1,True,0.69578636
+yelp,Nicest Chinese restaurant I've been in a while.,1,8,0.6458374,1,True,0.6458374
+yelp,I'm not sure how long we stood there but it was long enough for me to begin to feel awkwardly out of place.,0,23,0.035046834,0,True,0.9649532
+amazon,Then I had to continue pairing it periodically since it somehow kept dropping.,0,13,0.36283162,0,True,0.6371684
+amazon,Love This Phone.,1,3,0.8451083,1,True,0.8451083
+yelp,Gave up trying to eat any of the crust (teeth still sore).,0,12,0.7580369,1,False,0.7580369
+imdb,"An Italian reviewer called this ""a small, great film,"" and that's right.  ",1,12,0.9896842,1,True,0.9896842
+yelp,The Greek dressing was very creamy and flavorful.,1,8,0.85304403,1,True,0.85304403
+amazon,"The sound quality for the device is unacceptable.Unless you are in a really quiet area, you almost hear nothing.",0,19,0.54090583,1,False,0.54090583
+yelp,Worst martini ever!,0,3,0.15167576,0,True,0.84832424
+yelp,We waited for forty five minutes in vain.,0,8,0.06925962,0,True,0.93074036
+yelp,My gyro was basically lettuce only.,0,6,0.33150178,0,True,0.6684982
+imdb,And don't even get me started on the jerky camerawork.  ,0,10,0.06374508,0,True,0.9362549
+yelp,Best breakfast buffet!!!,1,3,0.821469,1,True,0.821469
+yelp,The Heart Attack Grill in downtown Vegas is an absolutely flat-lined excuse for a restaurant.,0,15,0.6397561,1,False,0.6397561
+amazon,"Small, sleek, impressive looking, practical setup with ample storage in place.",1,11,0.6818214,1,True,0.6818214
+amazon,Its the best headset I have used.,1,7,0.88634104,1,True,0.88634104
+imdb,"(My mother and brother had to do this)When I saw Robert Ryan portraying this type of man, it was a very good imitation of this type of individual, and I was impressed.  ",1,32,0.9691304,1,True,0.9691304
+yelp,I'm not really sure how Joey's was voted best hot dog in the Valley by readers of Phoenix Magazine.,0,19,0.17558719,0,True,0.8244128
+amazon,Disapointing Results.,0,2,0.45826575,0,True,0.5417342
+yelp,First time going but I think I will quickly become a regular.,1,12,0.21326122,0,False,0.78673875
+amazon,"But, in any case, the best part is, you can download these pictures to your laptop using IR, or even send pictures from your laptop to the phone.",1,28,0.98430383,1,True,0.98430383
+yelp,say bye bye to your tip lady!,0,7,0.8126363,1,False,0.8126363
+yelp,I can take a little bad service but the food sucks.,0,11,0.026964946,0,True,0.97303504
+imdb,The CG opening sequence in space looked like it could have been created on Microsoft Slideshow for God's sake!  ,0,19,0.7553726,1,False,0.7553726
+yelp,"I have been in more than a few bars in Vegas, and do not ever recall being charged for tap water.",0,21,0.08000031,0,True,0.9199997
+yelp,It's a great place and I highly recommend it.,1,9,0.99243814,1,True,0.99243814
+amazon,It was that loud.Glad to say that the Plantronics 510 maintains a flawless connection to my cell and with no static during normal use.,1,24,0.056502666,0,False,0.94349736
+yelp,"I mean really, how do you get so famous for your fish and chips when it's so terrible!?!",0,18,0.07819248,0,True,0.9218075
+imdb,Not recommended.  ,0,2,0.21320283,0,True,0.78679717
+yelp,I won't be back.,0,4,0.44242093,0,True,0.55757904
+yelp,I left with a stomach ache and felt sick the rest of the day.,0,14,0.14568114,0,True,0.85431886
+amazon,Not good when wearing a hat or sunglasses.,0,8,0.13137959,0,True,0.8686204
+amazon,"The tracfonewebsite is user friendly and makes it easy toactivate, etc.",1,11,0.92888784,1,True,0.92888784
+amazon,I did not bother contacting the company for few dollar product but I learned the lesson that I should not have bought this form online anyway.,0,26,0.033524513,0,True,0.9664755
+yelp,My wife had the Lobster Bisque soup which was lukewarm.,0,10,0.1316633,0,True,0.8683367
+yelp,Highly recommended.,1,2,0.75731343,1,True,0.75731343
+yelp,Very very fun chef.,1,4,0.8456045,1,True,0.8456045
+amazon,It makes very strange ticking noises before it ends the call.,0,11,0.7937931,1,False,0.7937931
+imdb,I keep watching it over and over.  ,1,7,0.16318014,0,False,0.8368199
+amazon,"If you don't find it, too bad, as again the unit comes with one earpad only.I would not recommend this to anyone.",0,22,0.028791044,0,True,0.97120893
+imdb,I was particularly pleased with the acting ability of Dwight Schultz.  ,1,11,0.5421902,1,True,0.5421902
+imdb,"The characters are interesting and you want to find out more about them the longer the movie goes on, and I think people will be surprised by who does and doesn't make it.  ",1,33,0.9938425,1,True,0.9938425
+imdb,"But, Kevin Spacey is an excellent, verbal tsunami as Buddy Ackerman  and totally believable because he is a great actor.  ",1,21,0.9952296,1,True,0.9952296
+imdb,"This is a bad film, with bad writing, and good actors....an ugly cartoon crafted by Paul Haggis for people who can't handle anything but the bold strokes in storytelling....a picture painted with crayons.  ",0,33,0.10375489,0,True,0.8962451
+yelp,The buffet is small and all the food they offered was BLAND.,0,12,0.62670696,1,False,0.62670696
+amazon,Great price also!,1,3,0.9650511,1,True,0.9650511
+imdb,I advise you to look out for it.  ,1,8,0.5004112,1,True,0.5004112
+amazon,I wouldn't recommend buying this product.,0,6,0.34046268,0,True,0.6595373
+amazon,!I definitly recommend!!,1,3,0.611165,1,True,0.611165
+amazon,"I have this phone and it is a thorn in my side, I really abhor it.",0,16,0.6931103,1,False,0.6931103
+yelp,Will go back next trip out.,1,6,0.22556604,0,False,0.774434
+imdb,But it picked up speed and got right to the point.  ,1,11,0.48627815,0,False,0.5137218
+amazon,it did not work in my cell phone plug i am very up set with the charger!.,0,17,0.09949891,0,True,0.9005011
+yelp,Food was so gooodd.,1,4,0.45648807,0,False,0.5435119
+yelp,The chicken wings contained the driest chicken meat I have ever eaten.,0,12,0.3334611,0,True,0.6665389
+imdb,Don't miss it.  ,1,3,0.40076208,0,False,0.5992379
+amazon,Don't bother - go to the store.,0,7,0.1332997,0,True,0.8667003
+amazon,Don't make the same mistake that I did and please don't buy this phone.,0,14,0.027648775,0,True,0.97235125
+yelp,"The chicken dishes are OK, the beef is like shoe leather.",0,11,0.7687706,1,False,0.7687706
+yelp,The kids play area is NASTY!,0,6,0.65903074,1,False,0.65903074
+imdb,Perabo has a nice energy level and is obviously very comfortable in front of a camera.  ,1,16,0.98769313,1,True,0.98769313
+yelp,I liked the patio and the service was outstanding.,1,9,0.923576,1,True,0.923576
+yelp,Everything was perfect the night we were in.,1,8,0.88503987,1,True,0.88503987
+yelp,Over rated.,0,2,0.32708445,0,True,0.6729156
+imdb,"The plot - well, I said I'd let that one go.  ",0,11,0.2230161,0,True,0.7769839
+amazon,This BlueAnt Supertooth hands-free phone speaker is AWESOME.,1,8,0.8874661,1,True,0.8874661
+yelp,The pizza selections are good.,1,5,0.66665757,1,True,0.66665757
+amazon,Waste of 13 bucks.,0,4,0.22981095,0,True,0.77018905
+imdb,"And the rest of it just sits there being awful... with soldiers singing songs about the masculinity they pledge themselves to, hairsplitting about purity, the admiration of swords, etc.  ",0,29,0.19267309,0,True,0.8073269
+imdb,"Bela Lugosi was totally extraneous, intoning odd lines.  ",0,8,0.17643115,0,True,0.8235688
+yelp,"We had so much to say about the place before we walked in that he expected it to be amazing, but was quickly disappointed.",0,24,0.38287637,0,True,0.6171236
+amazon,"It is super charged up for use as a small hybrid palmtop/camera/cellphone, and excels in those roles.",1,17,0.9467329,1,True,0.9467329
+yelp,I had the chicken Pho and it tasted very bland.,0,10,0.55070144,1,False,0.55070144
+imdb,The script iswas there a script?  ,0,7,0.18923068,0,True,0.8107693
+amazon,"Five star Plus, plus.",1,4,0.47992897,0,False,0.520071
+amazon,Terrible.. My car will not accept this cassette.,0,8,0.049224004,0,True,0.950776
+imdb,"Aside from it's terrible lead, this film has loads of other debits.  ",0,12,0.29692733,0,True,0.70307267
+amazon,This pair of headphones is the worst that I have ever had sound-wise.,0,13,0.05313456,0,True,0.94686544
+yelp,Service was excellent and prices are pretty reasonable considering this is Vegas and located inside the Crystals shopping mall by Aria.,1,21,0.9962642,1,True,0.9962642
+imdb,"I think it was Robert Ryans best film, because he portrayed someone like my father, and he was a schizophrenic in real life,(my father) although he never murdered anyone but was affected more so during the second world war which made him worse.  ",1,43,0.07651335,0,False,0.92348665
+yelp,It was a huge awkward 1.5lb piece of cow that was 3/4ths gristle and fat.,0,15,0.06579678,0,True,0.9342032
+imdb,Thanks good a movie like this was done and released.  ,1,10,0.948965,1,True,0.948965
+imdb,It's a case of 'so bad it is laughable'.  ,0,9,0.15684107,0,True,0.84315896
+imdb,I totally and absolutely recommend this movie to anyone who likes good wholesome family movies because that is exactly what this is.  ,1,22,0.97721994,1,True,0.97721994
+imdb,is pretty funny.  ,1,3,0.79374266,1,True,0.79374266
+yelp,"Prices are very reasonable, flavors are spot on, the sauce is home made, and the slaw is not drenched in mayo.",1,21,0.971631,1,True,0.971631
+amazon,"The camera, although rated at an impressive 1.3 megapixels, renders images that fall well below expectations of such a relatively high resolution.",0,22,0.2577024,0,True,0.7422976
+yelp,I immediately said I wanted to talk to the manager but I did not want to talk to the guy who was doing shots of fireball behind the bar.,0,29,0.045471918,0,True,0.9545281
+yelp,"For a self proclaimed coffee cafe, I was wildly disappointed.",0,10,0.5336482,1,False,0.5336482
+yelp,Crust is not good.,0,4,0.3514442,0,True,0.64855576
+amazon,Incredible!.,1,1,0.627626,1,True,0.627626
+imdb,"Conceptually, the show offers a little bit of everything- and for just about everybody (parents, kids, fantasy and/or fx fans).  ",1,20,0.15738069,0,False,0.8426193
+amazon,Razr Battery - Good buy.,1,5,0.5091548,1,True,0.5091548
+imdb,He's a national treasure.  ,1,4,0.45769313,0,False,0.5423069
+imdb,I don't think you will be disappointed.  ,1,7,0.1298145,0,False,0.8701855
+imdb,"It's a sad movie, but very good.  ",1,7,0.62718636,1,True,0.62718636
+amazon,the charger worked for about a week and then completely stopped charging my phone.,0,14,0.34819573,0,True,0.65180427
+imdb,Lame would be the best way to describe it.  ,0,9,0.17939098,0,True,0.82060903
+imdb,"The movie showed a lot of Florida at it's best, made it look very appealing.  ",1,15,0.5184969,1,True,0.5184969
+yelp,I will come back here every time I'm in Vegas.,1,10,0.71934223,1,True,0.71934223
+yelp,This is one of the best bars with food in Vegas.,1,11,0.7596777,1,True,0.7596777
+yelp,I ordered the Lemon raspberry ice cocktail which was also incredible.,1,11,0.56448424,1,True,0.56448424
+imdb,There were too many close ups.  ,0,6,0.16495755,0,True,0.8350425
+imdb,"I'm glad this pretentious piece of s*** didn't do as planned by the Dodge stratus Big Shots... It's gonna help movie makers who aren't in the very restrained ""movie business"" of Québec.  ",0,32,0.040660743,0,True,0.95933926
+yelp,This place is horrible and way overpriced.,0,7,0.12029722,0,True,0.8797028
+amazon,"Uncomfortable In the Ear, Don't use with LG VX9900 (EnV).",0,10,0.103759505,0,True,0.8962405
+amazon,The battery life is highly unacceptable.,0,6,0.6954458,1,False,0.6954458
+yelp,Go To Place for Gyros.,1,5,0.2879375,0,False,0.7120625
+yelp,The warm beer didn't help.,0,5,0.5484557,1,False,0.5484557
+imdb,The film is way too long.  ,0,6,0.5019674,1,False,0.5019674
+imdb,"I cannot believe that the actors agreed to do this ""film"".  ",0,11,0.15125592,0,True,0.8487441
+imdb,"The ending is so, SO perfect... you'll shed a tear.  ",1,10,0.97889626,1,True,0.97889626
+yelp,The classic Maine Lobster Roll was fantastic.,1,7,0.7808543,1,True,0.7808543
+amazon,It is easy to turn on and off when you are in the car and the volume controls are quite accessable.,1,21,0.89920187,1,True,0.89920187
+yelp,"Insults, profound deuchebaggery, and had to go outside for a smoke break while serving just to solidify it.",0,18,0.4742256,0,True,0.52577436
+imdb,"How this piece of trash was ever released is beyond me: the acting, the story, the characters, the supposedly special effects, etc...it's ALL wrong.  ",0,24,0.048378535,0,True,0.9516215
+yelp,"I had heard good things about this place, but it exceeding every hope I could have dreamed of.",1,18,0.98580164,1,True,0.98580164
+imdb,"In a word, it is embarrassing.  ",0,6,0.23905656,0,True,0.7609434
+imdb,The character developments also lacked in depth.  ,0,7,0.49531513,0,True,0.50468487
+amazon,The battery runs down quickly.,0,5,0.43536004,0,True,0.5646399
+imdb,"The characters are interesting, even if a bit predictable.  ",1,9,0.29615754,0,False,0.70384246
+amazon,Plan on ordering from them again and again.,1,8,0.20538847,0,False,0.7946115
+yelp,Weird vibe from owners.,0,4,0.64228946,1,False,0.64228946
+imdb,"It's dumb and pointless, and a complete waste of time.  ",0,10,0.5728812,1,False,0.5728812
+amazon,I especially love the long battery life.,1,7,0.92246354,1,True,0.92246354
+yelp,I can say that the desserts were yummy.,1,8,0.5472297,1,True,0.5472297
+yelp,My salad had a bland vinegrette on the baby greens and hearts of Palm.,0,14,0.369566,0,True,0.63043404
+yelp,I waited and waited.,0,4,0.19733194,0,True,0.8026681
+imdb,Lots of holes in the script.  ,0,6,0.23349325,0,True,0.76650673
+yelp,I don't think I'll be running back to Carly's anytime soon for food.,0,13,0.048679277,0,True,0.9513207
+amazon,The phone is sturdy and waterproof.,1,6,0.7899666,1,True,0.7899666
+amazon,in addition it feels &amp; looks as if the phone is all lightweight cheap plastic.,0,15,0.26276544,0,True,0.7372346
+amazon,Has been working great.,1,4,0.9109333,1,True,0.9109333
+yelp,This is a disgrace.,0,4,0.5243496,1,False,0.5243496
+imdb,Cinematography noteworthy including fine views of Barcelona and its famed Gaudi towers.  ,1,12,0.983025,1,True,0.983025
+yelp,My boyfriend and i sat at the bar and had a completely delightful experience.,1,14,0.9332089,1,True,0.9332089
+imdb,I thought Errol Flynn was brilliant as Custer and has since become my favourite actor!  ,1,15,0.97508395,1,True,0.97508395
+amazon,I have yet to run this new battery below two bars and that's three days without charging.,1,17,0.14654405,0,False,0.85345596
+imdb,This is an extraordinary film.  ,1,5,0.6922121,1,True,0.6922121
+yelp,They were golden-crispy and delicious.,1,5,0.75828826,1,True,0.75828826
+imdb,"I am so tired of clichés that is just lazy writing, and here they come in thick and fast.  ",0,19,0.25761643,0,True,0.7423836
+amazon,Was not happy.,0,3,0.33900204,0,True,0.660998
+imdb,I have recommended it to friends.  ,1,6,0.5449954,1,True,0.5449954
+imdb,10/10  ,1,1,0.57066864,1,True,0.57066864
+amazon,This company charge me a restocking fee and still not given me my refund back.,0,15,0.03417743,0,True,0.9658226
+amazon,The majority of the Logitech earbud headsets failed.,0,8,0.37575644,0,True,0.62424356
+yelp,"I live in the neighborhood so I am disappointed I won't be back here, because it is a convenient location.",0,20,0.16332206,0,True,0.8366779
+amazon,It doesn't make you look cool.,0,6,0.26320314,0,True,0.73679686
+amazon,Superb Phone on a Great Network.,1,6,0.9479584,1,True,0.9479584
+imdb,"It's a gloriously fun, fast paced and fairly accurate portrayal of the night of a raver.  ",1,16,0.99145275,1,True,0.99145275
+amazon,Great Pocket PC / phone combination.,1,6,0.97944844,1,True,0.97944844
+yelp,Now this dish was quite flavourful.,1,6,0.3313259,0,False,0.6686741
+imdb,"Every time he opened his mouth you expect to hear, ""you see kids..."" Pulling the plug was a mercy killing for this horrible show.  ",0,24,0.9816144,1,False,0.9816144
+imdb,The stories were as unbelievable as the actors.  ,0,8,0.3540153,0,True,0.6459847
+yelp,"I probably won't be back, to be honest.",0,8,0.11760164,0,True,0.88239837
+imdb,Which has more depth and character than the man underneath it.  ,0,11,0.72737974,1,False,0.72737974
+amazon,This is a great deal.,1,5,0.91945106,1,True,0.91945106
+amazon,The reception through this headset is excellent.,1,7,0.8339661,1,True,0.8339661
+imdb,"And I forgot: The Casting here i superb, with Trond Fausa Aurvåg being perfect in the role as the Bothersome Man, who doesn't understand where he is, what he is doing and why.  ",1,33,0.9959389,1,True,0.9959389
+yelp,I got home to see the driest damn wings ever!,0,10,0.2279926,0,True,0.7720074
+imdb,"IMDB ratings only go as low 1 for awful, it's time to get some negative numbers in there for cases such as these.  ",0,23,0.047251634,0,True,0.95274836
+amazon,Very good stuff for the price.,1,6,0.9546389,1,True,0.9546389
+yelp,The selection was probably the worst I've seen in Vegas.....there was none.,0,12,0.03125789,0,True,0.96874213
+yelp,Only Pros : Large seating area/ Nice bar area/ Great simple drink menu/ The BEST brick oven pizza with homemade dough!,1,21,0.99615383,1,True,0.99615383
+yelp,It shouldn't take 30 min for pancakes and eggs.,0,9,0.23121744,0,True,0.76878256
+yelp,What a mistake.,0,3,0.25481302,0,True,0.745187
+amazon,I had to purchase a different case.,0,7,0.71277,1,False,0.71277
+yelp,I just don't know how this place managed to served the blandest food I have ever eaten when they are preparing Indian cuisine.,0,23,0.11745462,0,True,0.88254535
+amazon,Don't buy it.,0,3,0.22076422,0,True,0.7792358
+yelp,"After waiting an hour and being seated, I was not in the greatest of moods.",0,15,0.03959872,0,True,0.9604013
+amazon,"Needless to say, I wasted my money.",0,7,0.1759541,0,True,0.8240459
+amazon,great...no problems at all!.,1,4,0.43235734,0,False,0.5676427
+imdb,"The only thing really worth watching was the scenery and the house, because it is beautiful.  ",1,16,0.69398564,1,True,0.69398564
+amazon,The only thing that I think could improve is the sound leaks out from the headset.,0,16,0.33838254,0,True,0.66161746
+yelp,RUDE & INCONSIDERATE MANAGEMENT.,0,4,0.2150346,0,True,0.7849654
+amazon,"Well packaged, arrived on time, and works as intended.",1,9,0.9516679,1,True,0.9516679
+yelp,The cocktails are all handmade and delicious.,1,7,0.8241005,1,True,0.8241005
+imdb,The script is horrendously stupid.  ,0,5,0.21135585,0,True,0.78864413
+amazon,Great choice!,1,2,0.92563087,1,True,0.92563087
+imdb,add betty white and jean smart and you have a great cast - everyone played their parts really well.  ,1,19,0.99650973,1,True,0.99650973
+amazon,Excellent!.,1,1,0.8029645,1,True,0.8029645
+imdb,The movie is full of wonderful dancing (hence the title!  ,1,10,0.58799314,1,True,0.58799314
+amazon,don't waste your money.,0,4,0.07621933,0,True,0.9237807
+amazon,"I didn't want the clip going over the top of my ear, causing discomfort.",0,14,0.09686165,0,True,0.90313834
+amazon,Linksys should have some way to exchange a bad phone for a refurb unit or something!,0,16,0.041576672,0,True,0.9584233
+amazon,"Excellent sound, battery life and inconspicuous to boot!.",1,8,0.979242,1,True,0.979242
+yelp,He came running after us when he realized my husband had left his sunglasses on the table.,1,17,0.21010408,0,False,0.7898959
+amazon,Not good enough for the price.,0,6,0.29588866,0,True,0.70411134
+imdb,"Things happen, characters personalities change, plot twists occur for no real reason other than that script calls for it.  ",0,19,0.033028416,0,True,0.9669716

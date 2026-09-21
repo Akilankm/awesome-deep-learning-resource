@@ -1,0 +1,12 @@
+{
+  "selected_model": "LSTM",
+  "tfidf_logistic_validation_accuracy": 0.8133333333333334,
+  "validation_accuracy": 0.8066666666666666,
+  "test_accuracy": 0.7955555555555556,
+  "test_precision": 0.8009049773755657,
+  "test_recall": 0.7866666666666666,
+  "test_f1": 0.7937219730941704,
+  "test_roc_auc": 0.8730271604938271,
+  "vocabulary_size": 4306,
+  "sequence_length": 50
+}
