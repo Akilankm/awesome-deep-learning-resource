@@ -14,11 +14,12 @@ A visual, executable learning repository for deep learning and modern NLP.
 
 ### Natural Language Processing
 
-The [`nlp/`](nlp/) track contains **30 executed notebooks** covering the complete path from raw text processing to transformers, semantic retrieval, end-to-end model development, production monitoring and responsible NLP.
+The [`nlp/`](nlp/) track contains **30 executed notebooks** covering the complete path from raw text processing to transformers, semantic retrieval, end-to-end model development, production monitoring and responsible NLP. The track uses **causal visual teaching**: each concept includes a mindmap, change→effect reasoning, predict-before-run prompts, when/when-not guidance, and a debugging lens.
 
 Start here:
 
 - [NLP curriculum and run guide](nlp/README.md)
+- [NLP causal visual teaching standard](nlp/TEACHING_STANDARD.md)
 - [Conda environment](nlp/environment.yml)
 - [Local NLP datasets](nlp/data/)
 - [Optional pretrained NLP requirements](nlp/requirements-optional-transformers.txt)
