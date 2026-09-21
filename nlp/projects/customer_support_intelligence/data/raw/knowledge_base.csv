@@ -1,0 +1,13 @@
+article_id,intent,title,content
+KB-BILL-01,billing,Duplicate card payment,A card transaction appears more than once. Check pending versus settled entries and raise a duplicate-charge dispute when required.
+KB-BILL-02,billing,Unexpected fee or incorrect charge,"Review fees, merchant descriptors and billed amounts. Unexplained or incorrect charges require a billing investigation."
+KB-REF-01,refund,Refund pending,Refunds can take several business days after release. Verify the reference and expected settlement window.
+KB-REF-02,refund,Refund amount incorrect,"Compare the original transaction, refund reference and merchant confirmation when a refund amount is wrong."
+KB-ACC-01,access,Password and account lock,Use the recovery flow for forgotten passwords. Locked accounts can require identity verification.
+KB-ACC-02,access,OTP or authentication problem,"For missing or invalid OTP codes, verify the registered contact method, device time and authenticator setup."
+KB-TECH-01,technical,Application crash or freeze,"Capture app version, device details and reproduction steps for crashes or freezes; then retry after cache and update checks."
+KB-TECH-02,technical,"Network, sync or upload error","For timeout, sync or upload failures, verify connectivity, service status and file constraints before escalation."
+KB-ACCT-01,account,Update profile details,"Update email, phone, address and profile preferences after identity verification."
+KB-ACCT-02,account,Close or manage account,Account closure and preference changes require confirmation and may have retention or balance prerequisites.
+KB-DEL-01,delivery,Order delayed or missing,Track the shipment using the order ID. Delayed or missing deliveries may require a carrier investigation.
+KB-DEL-02,delivery,Wrong or damaged delivery,"Capture the order ID, item details and evidence before replacement or return for wrong or damaged items."

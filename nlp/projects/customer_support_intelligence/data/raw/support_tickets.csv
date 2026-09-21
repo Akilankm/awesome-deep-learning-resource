@@ -1,0 +1,474 @@
+ticket_id,text,intent,kb_article_id,channel,priority,country,product,created_at,amount,order_id,email,event_date,secondary_intent
+TKT-00001,"the merchant payment appears two times thanks Amount ₹499. Also, the package arrived but the product is broken.",billing,KB-BILL-01,email,medium,US,shopping,2026-01-23,₹499,,,,delivery
+TKT-00002,"can someone check, I see the same transaction twice on my card I need an update Amount ₹499.",billing,KB-BILL-01,app,medium,IN,account_portal,2026-04-28,₹499,,,,
+TKT-00003,my card was charged twice for the same purchase thanks,billing,KB-BILL-01,email,medium,GB,shopping,2026-09-06,,,,,
+TKT-00004,I think this purchase was debited twice please Amount $49.99.,billing,KB-BILL-01,email,low,SG,mobile_app,2026-03-11,$49.99,,,,
+TKT-00005,"can someone check, the merchant payment appears two times I need an update",billing,KB-BILL-01,chat,low,US,mobile_app,2026-08-20,,,,,
+TKT-00006,"hello team, I do not recognize this merchant charge can you check? Amount ₹4,299. Date 12 Sep 2026.",billing,KB-BILL-02,app,medium,IN,mobile_app,2026-06-24,"₹4,299",,,12 Sep 2026,
+TKT-00007,"Hi, the invoice total is different from what I expected can you check? Amount ₹499. Date 18/09/2026.",billing,KB-BILL-02,app,low,GB,credit_card,2026-01-12,₹499,,,18/09/2026,
+TKT-00008,"Hi, my card was charged twice for the same purchase I need an update Amount ₹1,299.",billing,KB-BILL-01,app,high,IN,credit_card,2026-05-14,"₹1,299",,,,
+TKT-00009,"urgent: the merchant payment appears two times Amount ₹4,299.",billing,KB-BILL-01,app,medium,GB,mobile_app,2026-04-06,"₹4,299",,,,
+TKT-00010,"can someone check, I think this purchase was debited twice please",billing,KB-BILL-01,chat,low,GB,shopping,2026-08-28,,,,,
+TKT-00011,need help - the invoice total is different from what I expected this is frustrating Amount $49.99. Date 18/09/2026.,billing,KB-BILL-02,app,high,IN,shopping,2026-03-18,$49.99,,,18/09/2026,
+TKT-00012,"need help - the amount on my bill looks incorrect!!! Also, the item arrived damaged.",billing,KB-BILL-02,app,medium,US,account_portal,2026-06-05,,,,,delivery
+TKT-00013,"I do not recognize this merchant charge thanks Amount $49.99. Date Sep 20, 2026.",billing,KB-BILL-02,email,medium,GB,mobile_app,2026-04-13,$49.99,,,"Sep 20, 2026",
+TKT-00014,"why was I chagred an extra service fee please Amount ₹4,299.",billing,KB-BILL-02,app,medium,SG,shopping,2026-03-12,"₹4,299",,,,
+TKT-00015,"can someone check, the invoice total is different from what I expected thanks",billing,KB-BILL-02,chat,low,IN,credit_card,2026-04-21,,,,,
+TKT-00016,need help - I do not recognize this merchant charge this is frustrating,billing,KB-BILL-02,app,medium,US,shopping,2026-03-10,,,,,
+TKT-00017,"can someone check, I do not recognize this merchant charge this is frustrating Amount ₹4,299.",billing,KB-BILL-02,chat,low,IN,account_portal,2026-02-27,"₹4,299",,,,
+TKT-00018,"can someone check, I think this purchase was debited twice can you check? Amount ₹4,299.",billing,KB-BILL-01,chat,low,US,account_portal,2026-07-12,"₹4,299",,,,
+TKT-00019,"please help, my card was charged twice for the same purchase this is frustrating Also, please disable my account after this billing cycle.",billing,KB-BILL-01,email,high,US,account_portal,2026-04-22,,,,,account
+TKT-00020,"change my communication preferences. Also, please help, I do not recognize this merchant charge!!! Amount ₹499.",billing,KB-BILL-02,chat,low,US,account_portal,2026-04-11,₹499,,,,account
+TKT-00021,"I think this purchase was debited twice Amount ₹4,299.",billing,KB-BILL-01,app,low,IN,account_portal,2026-07-11,"₹4,299",,,,
+TKT-00022,"can someone check, my card was charged twice for the same purchase please Amount £25.",billing,KB-BILL-01,chat,medium,SG,account_portal,2026-01-11,£25,,,,
+TKT-00023,"the delivery is late and tracking has not moved. Also, the amount on my bill looks incorrect can you check? Amount £25.",billing,KB-BILL-02,app,low,SG,account_portal,2026-07-10,£25,,,,delivery
+TKT-00024,"hello team, I think this purchase was debited twice can you check? Amount ₹4,299.",billing,KB-BILL-01,chat,low,US,shopping,2026-03-10,"₹4,299",,,,
+TKT-00025,"I want to close my account permanently. Also, can someone check, the invoice total is different from what I expected can you check?",billing,KB-BILL-02,chat,medium,US,shopping,2026-07-13,,,,,account
+TKT-00026,"Hi, I think this purchase was debited twice please Amount ₹4,299. Also, my refund is still missing.",billing,KB-BILL-01,email,medium,SG,account_portal,2026-04-09,"₹4,299",,,,refund
+TKT-00027,"can someone check, why was I charged an extra service fee asap Amount ₹4,299.",billing,KB-BILL-02,chat,high,SG,account_portal,2026-09-07,"₹4,299",,,,
+TKT-00028,"Hi, why was I charged an extra service fee asap Also, the application closes when I tap settings.",billing,KB-BILL-02,email,low,GB,account_portal,2026-09-06,,,,,technical
+TKT-00029,"need help - why was I charged an extra service fee please Amount ₹1,299.",billing,KB-BILL-02,app,low,GB,mobile_app,2026-02-07,"₹1,299",,,,
+TKT-00030,"Hi, my card was charged twice for the same purchase please Amount $49.99. Also, the refund amount is lower than expected.",billing,KB-BILL-01,app,low,SG,account_portal,2026-03-13,$49.99,,,,refund
+TKT-00031,"please help, I do not recognize this merchant charge I need an update Amount ₹1,299.",billing,KB-BILL-02,chat,medium,SG,mobile_app,2026-01-12,"₹1,299",,,,
+TKT-00032,"hello team, the invoice total is different from what I expected!!! Amount £25. Date 18/09/2026.",billing,KB-BILL-02,chat,high,SG,account_portal,2026-03-27,£25,,,18/09/2026,
+TKT-00033,why was I charged an extra service fee Amount £25.,billing,KB-BILL-02,email,low,IN,credit_card,2026-07-15,£25,,,,
+TKT-00034,"please help, I think this purchase was debited twice Amount ₹1,299. Date Sep 20, 2026. Also, the item arrived damaged.",billing,KB-BILL-01,app,low,GB,mobile_app,2026-05-20,"₹1,299",,,"Sep 20, 2026",delivery
+TKT-00035,"need help - the amount on my bill looks incorrect!!! Amount ₹4,299.",billing,KB-BILL-02,chat,low,SG,account_portal,2026-08-10,"₹4,299",,,,
+TKT-00036,need help - why was I charged an extra service fee asap,billing,KB-BILL-02,email,medium,GB,credit_card,2026-03-29,,,,,
+TKT-00037,"can someone check, I see the same transaction twice on my card!!! Amount ₹1,299.",billing,KB-BILL-01,email,medium,SG,shopping,2026-04-09,"₹1,299",,,,
+TKT-00038,"please help, why was I charged an extra service fee please Date Sep 20, 2026.",billing,KB-BILL-02,email,low,GB,credit_card,2026-07-08,,,,"Sep 20, 2026",
+TKT-00039,"please disable my account after this billing cycle. Also, please help, why was I charged an extra service fee thanks Amount $49.99. Date Sep 20, 2026.",billing,KB-BILL-02,app,low,US,mobile_app,2026-02-02,$49.99,,,"Sep 20, 2026",account
+TKT-00040,"hello team, the amount on my bill looks incorrect!!! Date 12 Sep 2026.",billing,KB-BILL-02,app,high,SG,account_portal,2026-05-18,,,,12 Sep 2026,
+TKT-00041,"can someone check, why was I charged an extra service fee I need an update Amount ₹499.",billing,KB-BILL-02,app,low,US,shopping,2026-01-24,₹499,,,,
+TKT-00042,"my delivery contains a different item. Also, Hi, the amount on my bill looks incorrect!!! Amount ₹4,299.",billing,KB-BILL-02,app,medium,GB,shopping,2026-05-03,"₹4,299",,,,delivery
+TKT-00043,"Hi, the merchant payment appears two times asap Date 12 Sep 2026.",billing,KB-BILL-01,email,medium,US,mobile_app,2026-03-25,,,,12 Sep 2026,
+TKT-00044,"hello team, I see the same transaction twice on my card thanks",billing,KB-BILL-01,email,low,GB,credit_card,2026-07-03,,,,,
+TKT-00045,urgent: I think this purchase was debited twice thanks,billing,KB-BILL-01,email,low,IN,shopping,2026-03-05,,,,,
+TKT-00046,"please help, the merchant paymnt appears two times asap Amount ₹499.",billing,KB-BILL-01,chat,medium,US,shopping,2026-07-23,₹499,,,,
+TKT-00047,"Hi, I think this purchase was debited twice can you check? Amount ₹1,299.",billing,KB-BILL-01,email,low,GB,mobile_app,2026-04-05,"₹1,299",,,,
+TKT-00048,urgent: the amount on my bill looks incorrect!!! Amount $49.99.,billing,KB-BILL-02,chat,medium,US,shopping,2026-08-30,$49.99,,,,
+TKT-00049,"please help, the amount on my bill looks incorrect thanks Amount $49.99.",billing,KB-BILL-02,email,high,IN,account_portal,2026-01-10,$49.99,,,,
+TKT-00050,"my refund is still missing. Also, please help, I do not recognize this merchant charge thanks",billing,KB-BILL-02,app,medium,US,shopping,2026-02-11,,,,,refund
+TKT-00051,I do not recognize this merchant charge this is frustrating Amount £25.,billing,KB-BILL-02,email,low,SG,credit_card,2026-08-29,£25,,,,
+TKT-00052,"please help, the merchant payment appears two times I need an update Date Sep 20, 2026.",billing,KB-BILL-01,email,low,GB,mobile_app,2026-07-07,,,,"Sep 20, 2026",
+TKT-00053,"Hi, why was I charged an extra service fee!!! Amount $49.99.",billing,KB-BILL-02,chat,low,US,mobile_app,2026-02-28,$49.99,,,,
+TKT-00054,"Hi, I do not recognize this merchant charge can you check?",billing,KB-BILL-02,chat,high,SG,mobile_app,2026-03-01,,,,,
+TKT-00055,"can someone check, I do not recognize this merchant charge asap Amount £25.",billing,KB-BILL-02,email,medium,SG,credit_card,2026-03-15,£25,,,,
+TKT-00056,"I think this purchase was debited twice can you check? Amount ₹4,299.",billing,KB-BILL-01,email,low,GB,account_portal,2026-06-23,"₹4,299",,,,
+TKT-00057,"the delivery is late and tracking has not moved. Also, Hi, I see the same transaction twice on my card Amount £25.",billing,KB-BILL-01,chat,high,IN,mobile_app,2026-02-28,£25,,,,delivery
+TKT-00058,"I forgot my password and cannot sign in. Also, need help - the merchant payment appears two times Amount £25.",billing,KB-BILL-01,app,low,US,credit_card,2026-06-10,£25,,,,access
+TKT-00059,"can someone check, my card was charged twice for the same purchase this is frustrating Amount $49.99.",billing,KB-BILL-01,chat,low,GB,credit_card,2026-07-06,$49.99,,,,
+TKT-00060,"data synchronization is not working. Also, the merchant payment appears two times!!!",billing,KB-BILL-01,email,medium,IN,account_portal,2026-08-23,,,,,technical
+TKT-00061,"can someone check, the invoice total is different from what I expected thanks Amount ₹4,299.",billing,KB-BILL-02,chat,low,IN,credit_card,2026-07-05,"₹4,299",,,,
+TKT-00062,"the dashboard keeps timing out. Also, hello team, the invoice total is different from what I expected please",billing,KB-BILL-02,email,medium,GB,credit_card,2026-08-30,,,,,technical
+TKT-00063,"I see the same transaction twice on my card Amount ₹4,299.",billing,KB-BILL-01,app,high,IN,shopping,2026-08-09,"₹4,299",,,,
+TKT-00064,urgent: the merchant payment appears two times!!!,billing,KB-BILL-01,email,low,IN,account_portal,2026-05-18,,,,,
+TKT-00065,"change my communication preferences. Also, urgent: why was I charged an extra service fee thanks Amount $49.99.",billing,KB-BILL-02,app,high,US,credit_card,2026-03-11,$49.99,,,,account
+TKT-00066,"why was I charged an extra service fee!!! Amount ₹1,299.",billing,KB-BILL-02,email,medium,US,shopping,2026-04-14,"₹1,299",,,,
+TKT-00067,I do not recognize this merchant charge please Amount $49.99.,billing,KB-BILL-02,email,low,GB,mobile_app,2026-02-12,$49.99,,,,
+TKT-00068,"urgent: the merchant paymnt appears two times I need an update Amount ₹1,299.",billing,KB-BILL-01,app,high,IN,shopping,2026-04-14,"₹1,299",,,,
+TKT-00069,"my profile has old contact information. Also, the invoice total is different from what I expected asap",billing,KB-BILL-02,chat,low,SG,credit_card,2026-06-23,,,,,account
+TKT-00070,"please help, the merchant payment appears two times I need an update",billing,KB-BILL-01,email,low,US,mobile_app,2026-09-07,,,,,
+TKT-00071,"hello team, the invoice total is different from what I expected!!! Amount ₹1,299.",billing,KB-BILL-02,app,medium,GB,shopping,2026-08-21,"₹1,299",,,,
+TKT-00072,urgent: I do not recognize this merchant charge thanks Amount £25.,billing,KB-BILL-02,email,medium,US,mobile_app,2026-07-31,£25,,,,
+TKT-00073,need help - my card was charged twice for the same purchase please Amount $49.99.,billing,KB-BILL-01,email,medium,US,mobile_app,2026-05-15,$49.99,,,,
+TKT-00074,"I forgot my password and cannot sign in. Also, need help - the invoice total is different from what I expected this is frustrating Amount ₹1,299.",billing,KB-BILL-02,email,low,GB,shopping,2026-03-25,"₹1,299",,,,access
+TKT-00075,"please help, I think this purchase was debited twice!!! Amount ₹4,299.",billing,KB-BILL-01,email,low,IN,account_portal,2026-07-06,"₹4,299",,,,
+TKT-00076,I see the same transaction twice on my card can you check?,billing,KB-BILL-01,email,medium,GB,account_portal,2026-06-21,,,,,
+TKT-00077,"please help, I think this purchase was debited twice please Amount £25.",billing,KB-BILL-01,email,low,GB,account_portal,2026-08-29,£25,,,,
+TKT-00078,"hello team, my card was charged twice for the same purchase this is frustrating",billing,KB-BILL-01,chat,high,GB,mobile_app,2026-05-14,,,,,
+TKT-00079,I do not recognize this merchant charge can you check? Date 18/09/2026.,billing,KB-BILL-02,email,medium,GB,credit_card,2026-07-03,,,,18/09/2026,
+TKT-00080,"can someone check, the amount on my bill looks incorrect asap Amount £25.",billing,KB-BILL-02,chat,low,SG,credit_card,2026-02-22,£25,,,,
+TKT-00081,"need help - the merchant payment appears two times this is frustrating Amount ₹4,299.",billing,KB-BILL-01,app,high,SG,account_portal,2026-06-26,"₹4,299",,,,
+TKT-00082,"hello team, the merchant payment appears two times please Date Sep 20, 2026. Also, the app says offline even though my internet works.",billing,KB-BILL-01,email,medium,GB,shopping,2026-07-11,,,,"Sep 20, 2026",technical
+TKT-00083,"hello team, I think this purchase was debited twice I need an update Date Sep 20, 2026.",billing,KB-BILL-01,app,medium,IN,account_portal,2026-03-27,,,,"Sep 20, 2026",
+TKT-00084,need help - I see the same transaction twice on my card this is frustrating Amount ₹499.,billing,KB-BILL-01,email,low,GB,mobile_app,2026-03-15,₹499,,,,
+TKT-00085,"Hi, I see the same transaction twice on my card I need an udpate Amount ₹4,299.",billing,KB-BILL-01,email,low,US,credit_card,2026-04-16,"₹4,299",,,,
+TKT-00086,the merchant payment appears two times Amount £25.,billing,KB-BILL-01,app,low,SG,shopping,2026-06-25,£25,,,,
+TKT-00087,"need help - my card was charged twice for the same purchase!!! Amount ₹4,299. Date Sep 20, 2026. Also, the refunded amount does not match the purchase.",billing,KB-BILL-01,email,low,US,credit_card,2026-02-26,"₹4,299",,,"Sep 20, 2026",refund
+TKT-00088,"Hi, I see the same transaction twice on my card can you check? Amount ₹4,299. Date 12 Sep 2026.",billing,KB-BILL-01,app,medium,IN,shopping,2026-03-18,"₹4,299",,,12 Sep 2026,
+TKT-00089,the invoice total is different from what I expected thanks Amount ₹499.,billing,KB-BILL-02,email,low,SG,account_portal,2026-05-06,₹499,,,,
+TKT-00090,"can someone check, I do not recognize this merchant charge asap",billing,KB-BILL-02,app,low,GB,shopping,2026-08-24,,,,,
+TKT-00091,"how can I change my mailing address. Also, hello team, my refund came through but the value is wrong asap Amount ₹499. Date 18/09/2026.",refund,KB-REF-02,app,low,GB,account_portal,2026-03-26,₹499,,,18/09/2026,account
+TKT-00092,urgent: my refnd came through but the value is wrong can you check?,refund,KB-REF-02,app,low,IN,mobile_app,2026-02-02,,,,,
+TKT-00093,"please help, the refunded amount does not match the purchase this is frustrating Amount ₹4,299. Date Sep 20, 2026.",refund,KB-REF-02,app,medium,US,shopping,2026-04-24,"₹4,299",,,"Sep 20, 2026",
+TKT-00094,I received only part of my refund this is frustrating Amount £25.,refund,KB-REF-02,app,medium,SG,credit_card,2026-01-08,£25,,,,
+TKT-00095,"please help, I received only part of my refund!!! Date Sep 20, 2026.",refund,KB-REF-02,app,low,IN,account_portal,2026-02-12,,,,"Sep 20, 2026",
+TKT-00096,"please help, the reversal has not reached my card yet I need an update Amount ₹4,299. Also, where is my order it should be here already.",refund,KB-REF-01,app,low,US,shopping,2026-01-23,"₹4,299",,,,delivery
+TKT-00097,"can someone check, the refund amount is lower than expected can you check? Amount £25. Also, the merchant payment appears two times.",refund,KB-REF-02,email,medium,SG,mobile_app,2026-07-19,£25,,,,billing
+TKT-00098,"Hi, the refund amount is lower than expected can you check? Amount $49.99. Date 12 Sep 2026.",refund,KB-REF-02,email,high,US,shopping,2026-07-13,$49.99,,,12 Sep 2026,
+TKT-00099,"please help, the refunded amount does not match the purchase asap",refund,KB-REF-02,app,high,GB,mobile_app,2026-06-29,,,,,
+TKT-00100,urgent: the reversal has not reached my card yet thanks Amount $49.99.,refund,KB-REF-01,chat,low,IN,credit_card,2026-05-01,$49.99,,,,
+TKT-00101,"change my communication preferences. Also, urgent: when will the refund appear on my statement!!!",refund,KB-REF-01,email,high,SG,mobile_app,2026-04-26,,,,,account
+TKT-00102,"can someone check, my refund is still missing",refund,KB-REF-01,email,medium,SG,credit_card,2026-08-09,,,,,
+TKT-00103,"urgent: the merchant says refunded but I cannot see it asap Amount ₹1,299. Date 12 Sep 2026.",refund,KB-REF-01,app,low,SG,shopping,2026-06-18,"₹1,299",,,12 Sep 2026,
+TKT-00104,need help - the reversal has not reached my card yet!!! Amount $49.99.,refund,KB-REF-01,chat,high,IN,credit_card,2026-05-23,$49.99,,,,
+TKT-00105,"need help - the reversal has not reached my card yet can you check? Amount ₹1,299.",refund,KB-REF-01,chat,medium,GB,credit_card,2026-04-27,"₹1,299",,,,
+TKT-00106,"Hi, the reversal has not reached my card yet I need an update",refund,KB-REF-01,app,low,SG,mobile_app,2026-09-03,,,,,
+TKT-00107,"can someone check, the reversal has not reached my card yet!!! Amount £25.",refund,KB-REF-01,chat,low,SG,account_portal,2026-01-08,£25,,,,
+TKT-00108,urgent: the refunded amount does not match the purchase can you check? Amount $49.99.,refund,KB-REF-02,chat,medium,SG,account_portal,2026-07-08,$49.99,,,,
+TKT-00109,urgent: the refnded amount does not match the purchase asap Amount $49.99.,refund,KB-REF-02,app,low,SG,shopping,2026-01-03,$49.99,,,,
+TKT-00110,"can someone check, my refund came through but the value is wrong can you check? Date 12 Sep 2026.",refund,KB-REF-02,chat,medium,GB,account_portal,2026-05-01,,,,12 Sep 2026,
+TKT-00111,"urgent: my refund came through but the value is wrong can you check? Amount ₹499. Date Sep 20, 2026. Also, I need to update my phone number.",refund,KB-REF-02,email,low,IN,mobile_app,2026-08-31,₹499,,,"Sep 20, 2026",account
+TKT-00112,"please change the email on my profile. Also, my refund is still missing can you check? Amount $49.99. Date Sep 20, 2026.",refund,KB-REF-01,chat,low,US,mobile_app,2026-06-24,$49.99,,,"Sep 20, 2026",account
+TKT-00113,the reversal has not reached my card yet can you check? Amount ₹499. Date 12 Sep 2026.,refund,KB-REF-01,chat,medium,GB,mobile_app,2026-04-17,₹499,,,12 Sep 2026,
+TKT-00114,"urgent: the refunded amount does not match the purchase!!! Amount ₹4,299. Also, I forgot my password and cannot sign in.",refund,KB-REF-02,email,medium,SG,credit_card,2026-03-06,"₹4,299",,,,access
+TKT-00115,"need help - my refund came through but the value is wrong can you check? Amount ₹4,299.",refund,KB-REF-02,chat,medium,IN,shopping,2026-07-29,"₹4,299",,,,
+TKT-00116,"Hi, my refund is still missing can you check? Date 12 Sep 2026.",refund,KB-REF-01,email,high,GB,account_portal,2026-03-04,,,,12 Sep 2026,
+TKT-00117,when will the refund appear on my statement,refund,KB-REF-01,email,medium,IN,account_portal,2026-03-20,,,,,
+TKT-00118,"can someone check, the refunded amount does not match the purchase asap Amount £25. Also, I received the wrong product.",refund,KB-REF-02,chat,high,IN,mobile_app,2026-07-04,£25,,,,delivery
+TKT-00119,need help - I received only part of my refund I need an update Date 18/09/2026.,refund,KB-REF-02,chat,medium,GB,shopping,2026-08-01,,,,18/09/2026,
+TKT-00120,my refund came through but the value is wrong I need an update Amount £25.,refund,KB-REF-02,chat,low,SG,credit_card,2026-03-04,£25,,,,
+TKT-00121,"need help - the refunded amount does not match the purchase can you check? Amount £25. Also, two factor authentication stopped working.",refund,KB-REF-02,email,high,GB,shopping,2026-07-10,£25,,,,access
+TKT-00122,"please help, I received only part of my refund please Amount ₹1,299.",refund,KB-REF-02,email,medium,US,mobile_app,2026-03-21,"₹1,299",,,,
+TKT-00123,urgent: the refund amount is lower than expected this is frustrating Amount £25.,refund,KB-REF-02,email,low,SG,shopping,2026-01-22,£25,,,,
+TKT-00124,"Hi, the refund amount is lower than expected Amount ₹499. Also, please change the email on my profile.",refund,KB-REF-02,app,medium,GB,shopping,2026-05-11,₹499,,,,account
+TKT-00125,"please help, my refund is still missing thanks Amount $49.99.",refund,KB-REF-01,email,low,SG,mobile_app,2026-08-11,$49.99,,,,
+TKT-00126,"hello team, my refund is still missing can you check? Amount $49.99. Date 18/09/2026.",refund,KB-REF-01,email,low,GB,credit_card,2026-05-01,$49.99,,,18/09/2026,
+TKT-00127,"can someone check, the merchant says refunded but I cannot see it this is frustrating Amount ₹4,299.",refund,KB-REF-01,email,medium,GB,account_portal,2026-03-03,"₹4,299",,,,
+TKT-00128,"Hi, the refunded amount does not match the purchase",refund,KB-REF-02,email,low,IN,mobile_app,2026-08-02,,,,,
+TKT-00129,"my card was charged twice for the same purchase. Also, urgent: the merchant says refunded but I cannot see it please",refund,KB-REF-01,chat,low,IN,shopping,2026-03-08,,,,,billing
+TKT-00130,"please help, the reversal has not reached my card yet asap Amount ₹499. Also, change my communication preferences.",refund,KB-REF-01,chat,medium,IN,shopping,2026-08-28,₹499,,,,account
+TKT-00131,urgent: when will the refund appear on my statement!!!,refund,KB-REF-01,app,high,US,mobile_app,2026-03-23,,,,,
+TKT-00132,"Hi, my refund came through but the value is wrong can you check? Amount £25. Also, why was I charged an extra service fee.",refund,KB-REF-02,email,low,GB,credit_card,2026-04-07,£25,,,,billing
+TKT-00133,"please help, I received only part of my refund Amount ₹499.",refund,KB-REF-02,email,low,GB,account_portal,2026-01-03,₹499,,,,
+TKT-00134,urgent: when will the refund appear on my statement can you check? Amount $49.99.,refund,KB-REF-01,app,high,GB,mobile_app,2026-06-30,$49.99,,,,
+TKT-00135,"the delivery is late and tracking has not moved. Also, urgent: the refunded amount does not match the purchase this is frustrating",refund,KB-REF-02,app,medium,IN,account_portal,2026-03-20,,,,,delivery
+TKT-00136,"hello team, my refund came through but the value is wrong this is frustrating Amount $49.99.",refund,KB-REF-02,chat,low,GB,account_portal,2026-06-29,$49.99,,,,
+TKT-00137,"urgent: I received only part of my refnd Amount £25. Also, the screen freezes after the latest update.",refund,KB-REF-02,email,medium,IN,shopping,2026-01-02,£25,,,,technical
+TKT-00138,need help - my refund is still missing this is frustrating Date 12 Sep 2026.,refund,KB-REF-01,chat,low,IN,shopping,2026-04-08,,,,12 Sep 2026,
+TKT-00139,"can someone check, the refund amount is lower than expected!!!",refund,KB-REF-02,email,medium,GB,account_portal,2026-07-11,,,,,
+TKT-00140,when will the refund appear on my statement can you check?,refund,KB-REF-01,email,low,US,mobile_app,2026-02-08,,,,,
+TKT-00141,"the screen freezes after the latest update. Also, the reversal has not reached my card yet asap",refund,KB-REF-01,chat,high,SG,mobile_app,2026-02-24,,,,,technical
+TKT-00142,"hello team, the refund amount is lower than expected please",refund,KB-REF-02,chat,low,GB,mobile_app,2026-09-06,,,,,
+TKT-00143,"the invoice total is different from what I expected. Also, please help, I received only part of my refund asap",refund,KB-REF-02,app,medium,US,credit_card,2026-03-25,,,,,billing
+TKT-00144,need help - the reversal has not reached my card yet!!!,refund,KB-REF-01,chat,high,IN,mobile_app,2026-02-05,,,,,
+TKT-00145,"Hi, the merchant says refunded but I cannot see it!!! Amount ₹499.",refund,KB-REF-01,chat,medium,GB,account_portal,2026-08-29,₹499,,,,
+TKT-00146,need help - the refunded amount does not match the purchase thanks,refund,KB-REF-02,app,medium,IN,account_portal,2026-06-29,,,,,
+TKT-00147,need help - the merchant says refunded but I cannot see it this is frustrating Amount ₹499. Date 18/09/2026.,refund,KB-REF-01,email,low,US,account_portal,2026-04-02,₹499,,,18/09/2026,
+TKT-00148,"the delivery is late and tracking has not moved. Also, please help, the merchant says refunded but I cannot see it thanks Amount £25.",refund,KB-REF-01,chat,low,US,shopping,2026-02-27,£25,,,,delivery
+TKT-00149,"Hi, the refunded amount does not match the purchase Also, my verification code keeps showing invalid.",refund,KB-REF-02,app,medium,GB,account_portal,2026-06-12,,,,,access
+TKT-00150,"I want to manage my account settings. Also, urgent: the reversal has not reached my card yet this is frustrating Amount ₹1,299.",refund,KB-REF-01,app,low,US,mobile_app,2026-05-03,"₹1,299",,,,account
+TKT-00151,"please help, the refund amount is lower than expected can you check? Amount £25.",refund,KB-REF-02,email,low,IN,shopping,2026-03-08,£25,,,,
+TKT-00152,"urgent: the reversal has not reached my card yet thanks Amount ₹4,299.",refund,KB-REF-01,chat,low,IN,shopping,2026-08-23,"₹4,299",,,,
+TKT-00153,"can someone check, the refunded amount does not match the purchase can you check? Amount ₹4,299.",refund,KB-REF-02,email,medium,US,credit_card,2026-04-24,"₹4,299",,,,
+TKT-00154,the reversal has not reached my card yet I need an update Amount $49.99.,refund,KB-REF-01,email,high,GB,shopping,2026-05-12,$49.99,,,,
+TKT-00155,"urgent: my refund is still missing asap Amount $49.99. Date 18/09/2026. Also, why was I charged an extra service fee.",refund,KB-REF-01,email,medium,GB,credit_card,2026-09-07,$49.99,,,18/09/2026,billing
+TKT-00156,my refnd is still missing asap,refund,KB-REF-01,chat,low,IN,mobile_app,2026-01-22,,,,,
+TKT-00157,"please help, the reversal has not reached my card yet I need an udpate Amount $49.99.",refund,KB-REF-01,chat,low,IN,mobile_app,2026-08-02,$49.99,,,,
+TKT-00158,urgent: the refund amount is lower than expected!!! Amount £25.,refund,KB-REF-02,chat,high,SG,shopping,2026-01-05,£25,,,,
+TKT-00159,"please help, I received only part of my refund can you check?",refund,KB-REF-02,chat,low,IN,shopping,2026-01-24,,,,,
+TKT-00160,"need help - the refunded amount does not match the purchase can you check? Amount ₹1,299.",refund,KB-REF-02,app,high,IN,shopping,2026-08-09,"₹1,299",,,,
+TKT-00161,"please help, the reversal has not reached my card yet this is frustrating Amount $49.99. Also, my delivery contains a different item.",refund,KB-REF-01,app,medium,SG,credit_card,2026-09-08,$49.99,,,,delivery
+TKT-00162,"Hi, the refunded amount does not match the purchase I need an update Date Sep 20, 2026. Also, I see the same transaction twice on my card.",refund,KB-REF-02,email,low,SG,account_portal,2026-01-26,,,,"Sep 20, 2026",billing
+TKT-00163,"please help, the refund amount is lower than expected this is frustrating",refund,KB-REF-02,app,low,SG,mobile_app,2026-07-19,,,,,
+TKT-00164,"can someone check, the merchant says refnded but I cannot see it thanks Amount ₹499.",refund,KB-REF-01,email,low,GB,account_portal,2026-08-01,₹499,,,,
+TKT-00165,I received only part of my refund thanks,refund,KB-REF-02,email,low,US,shopping,2026-06-01,,,,,
+TKT-00166,"hello team, when will the refund appear on my statement I need an udpate Date 12 Sep 2026.",refund,KB-REF-01,app,medium,US,account_portal,2026-04-23,,,,12 Sep 2026,
+TKT-00167,"urgent: the refund amount is lower than expected please Amount ₹1,299.",refund,KB-REF-02,app,low,IN,mobile_app,2026-06-01,"₹1,299",,,,
+TKT-00168,"please help, I received only part of my refund thanks Also, I do not recognize this merchant charge.",refund,KB-REF-02,app,low,GB,mobile_app,2026-01-17,,,,,billing
+TKT-00169,I received only part of my refund this is frustrating,refund,KB-REF-02,chat,high,SG,credit_card,2026-08-02,,,,,
+TKT-00170,"Hi, my refund is still missing!!! Amount ₹1,299.",refund,KB-REF-01,email,low,SG,shopping,2026-08-17,"₹1,299",,,,
+TKT-00171,need help - my account is locked after too many login attempts!!! Email user90@example.com. Date 18/09/2026.,access,KB-ACC-01,email,medium,US,credit_card,2026-09-07,,,user90@example.com,18/09/2026,
+TKT-00172,need help - my verification code keeps showing invalid!!! Email user23@example.com.,access,KB-ACC-02,chat,medium,US,shopping,2026-01-27,,,user23@example.com,,
+TKT-00173,"the refund amount is lower than expected. Also, hello team, I cannot get past the login screen after resetting my password asap Email user14@example.com.",access,KB-ACC-01,email,low,IN,shopping,2026-02-17,,,user14@example.com,,refund
+TKT-00174,urgent: two factor authentication stopped working can you check? Email user72@example.com.,access,KB-ACC-02,chat,low,GB,shopping,2026-06-28,,,user72@example.com,,
+TKT-00175,urgent: my account is locked after too many login attempts asap,access,KB-ACC-01,email,low,IN,shopping,2026-04-18,,,,,
+TKT-00176,"Hi, my account is locked after too many login attempts I need an udpate",access,KB-ACC-01,app,medium,IN,mobile_app,2026-08-15,,,,,
+TKT-00177,two factor authentication stopped working can you check? Email user93@example.com.,access,KB-ACC-02,email,high,US,account_portal,2026-03-20,,,user93@example.com,,
+TKT-00178,urgent: my account is locked after too many login attempts this is frustrating,access,KB-ACC-01,app,low,SG,mobile_app,2026-09-02,,,,,
+TKT-00179,"hello team, the OTP code never arrives please Email user83@example.com.",access,KB-ACC-02,app,medium,GB,account_portal,2026-06-24,,,user83@example.com,,
+TKT-00180,"Hi, two factor authentication stopped working Email user31@example.com. Date Sep 20, 2026.",access,KB-ACC-02,app,high,US,shopping,2026-05-21,,,user31@example.com,"Sep 20, 2026",
+TKT-00181,"I see the same transaction twice on my card. Also, need help - my verification code keeps showing invalid!!!",access,KB-ACC-02,email,low,GB,credit_card,2026-09-08,,,,,billing
+TKT-00182,need help - my account is locked after too many login attempts asap Email user31@example.com.,access,KB-ACC-01,email,high,GB,credit_card,2026-02-28,,,user31@example.com,,
+TKT-00183,"Hi, my account is locked after too many login attempts please Email user98@example.com.",access,KB-ACC-01,chat,low,SG,mobile_app,2026-02-21,,,user98@example.com,,
+TKT-00184,"urgent: my verification code keeps showing invalid asap Also, I want to manage my account settings.",access,KB-ACC-02,email,low,SG,account_portal,2026-08-30,,,,,account
+TKT-00185,"hello team, password reset is not letting me access the account please Email user87@example.com.",access,KB-ACC-01,app,medium,US,shopping,2026-07-21,,,user87@example.com,,
+TKT-00186,"hello team, I forgot my password and cannot sign in thanks",access,KB-ACC-01,chat,medium,US,shopping,2026-09-08,,,,,
+TKT-00187,"can someone check, the OTP code never arrives this is frustrating Also, please disable my account after this billing cycle.",access,KB-ACC-02,app,low,GB,account_portal,2026-04-03,,,,,account
+TKT-00188,"I cannot get past the login screen after resetting my password please Also, please change the email on my profile.",access,KB-ACC-01,email,low,US,credit_card,2026-09-02,,,,,account
+TKT-00189,"the authenticator code is rejected every time asap Email user94@example.com. Also, my card was charged twice for the same purchase.",access,KB-ACC-02,chat,medium,GB,credit_card,2026-03-15,,,user94@example.com,,billing
+TKT-00190,"can someone check, the OTP code never arrives Email user79@example.com.",access,KB-ACC-02,email,low,IN,shopping,2026-08-01,,,user79@example.com,,
+TKT-00191,"can someone check, the OTP code never arrives can you check? Email user76@example.com.",access,KB-ACC-02,chat,medium,IN,mobile_app,2026-01-31,,,user76@example.com,,
+TKT-00192,"can someone check, my account is locked after too many login attempts asap Email user35@example.com. Also, tracking says shipped but nothing arrived.",access,KB-ACC-01,email,medium,SG,credit_card,2026-03-25,,,user35@example.com,,delivery
+TKT-00193,the OTP code never arrives thanks Email user75@example.com.,access,KB-ACC-02,app,medium,GB,shopping,2026-08-03,,,user75@example.com,,
+TKT-00194,"I want to close my account permanently. Also, my account is locked after too many login attempts this is frustrating",access,KB-ACC-01,app,medium,SG,mobile_app,2026-05-11,,,,,account
+TKT-00195,"Hi, the OTP code never arrives asap",access,KB-ACC-02,app,medium,SG,account_portal,2026-05-04,,,,,
+TKT-00196,"the dashboard keeps timing out. Also, my verification code keeps showing invalid this is frustrating Email user51@example.com.",access,KB-ACC-02,chat,medium,SG,shopping,2026-06-12,,,user51@example.com,,technical
+TKT-00197,"can someone check, the authenticator code is rejected every time Email user32@example.com. Also, my card was charged twice for the same purchase.",access,KB-ACC-02,chat,low,SG,shopping,2026-08-01,,,user32@example.com,,billing
+TKT-00198,"hello team, my verification code keeps showing invalid please Also, why was I charged an extra service fee.",access,KB-ACC-02,email,low,IN,shopping,2026-08-10,,,,,billing
+TKT-00199,"Hi, I forgot my pasword and cannot sign in can you check? Email user64@example.com. Also, the merchant payment appears two times.",access,KB-ACC-01,app,medium,US,mobile_app,2026-04-06,,,user64@example.com,,billing
+TKT-00200,"can someone check, my account is locked after too many login attempts I need an update Email user44@example.com.",access,KB-ACC-01,chat,medium,GB,account_portal,2026-03-21,,,user44@example.com,,
+TKT-00201,"Hi, the authenticator code is rejected every time this is frustrating Email user96@example.com. Date 12 Sep 2026.",access,KB-ACC-02,chat,medium,IN,mobile_app,2026-05-11,,,user96@example.com,12 Sep 2026,
+TKT-00202,"can someone check, I forgot my password and cannot sign in!!! Email user24@example.com.",access,KB-ACC-01,app,medium,GB,credit_card,2026-06-19,,,user24@example.com,,
+TKT-00203,"hello team, I forgot my password and cannot sign in please Email user23@example.com. Date Sep 20, 2026.",access,KB-ACC-01,chat,low,IN,shopping,2026-08-02,,,user23@example.com,"Sep 20, 2026",
+TKT-00204,need help - two factor authentication stopped working!!! Email user33@example.com. Date 12 Sep 2026.,access,KB-ACC-02,email,low,SG,account_portal,2026-08-15,,,user33@example.com,12 Sep 2026,
+TKT-00205,"my profile has old contact information. Also, please help, I cannot get past the login screen after resetting my password please",access,KB-ACC-01,email,medium,SG,shopping,2026-04-04,,,,,account
+TKT-00206,"please help, password reset is not letting me access the account can you check? Email user95@example.com.",access,KB-ACC-01,chat,medium,IN,shopping,2026-01-08,,,user95@example.com,,
+TKT-00207,urgent: I cannot get past the login screen after resetting my password!!!,access,KB-ACC-01,email,medium,US,mobile_app,2026-02-03,,,,,
+TKT-00208,"Hi, password reset is not letting me access the account please Email user18@example.com.",access,KB-ACC-01,chat,low,GB,mobile_app,2026-08-15,,,user18@example.com,,
+TKT-00209,urgent: I forgot my password and cannot sign in I need an udpate Email user22@example.com.,access,KB-ACC-01,email,medium,GB,credit_card,2026-01-27,,,user22@example.com,,
+TKT-00210,"Hi, I cannot get past the login screen after resetting my password asap Email user78@example.com.",access,KB-ACC-01,email,low,GB,account_portal,2026-04-26,,,user78@example.com,,
+TKT-00211,"need help - I forgot my password and cannot sign in!!! Date 12 Sep 2026. Also, where is my order it should be here already.",access,KB-ACC-01,chat,low,US,account_portal,2026-01-15,,,,12 Sep 2026,delivery
+TKT-00212,password reset is not letting me access the account thanks Email user45@example.com.,access,KB-ACC-01,chat,medium,SG,shopping,2026-06-02,,,user45@example.com,,
+TKT-00213,"Hi, my account is locked after too many login attempts can you check? Also, the reversal has not reached my card yet.",access,KB-ACC-01,email,medium,GB,credit_card,2026-02-28,,,,,refund
+TKT-00214,need help - my account is locked after too many login attempts I need an update Email user70@example.com.,access,KB-ACC-01,email,medium,IN,credit_card,2026-06-15,,,user70@example.com,,
+TKT-00215,"hello team, my verification code keeps showing invalid Email user15@example.com.",access,KB-ACC-02,app,medium,IN,account_portal,2026-01-18,,,user15@example.com,,
+TKT-00216,"can someone check, the OTP code never arrives",access,KB-ACC-02,chat,low,GB,account_portal,2026-01-12,,,,,
+TKT-00217,"hello team, my account is locked after too many login attempts I need an update Email user67@example.com. Date 12 Sep 2026.",access,KB-ACC-01,chat,high,SG,shopping,2026-01-07,,,user67@example.com,12 Sep 2026,
+TKT-00218,"two factor authentication stopped working can you check? Email user75@example.com. Also, the invoice total is different from what I expected.",access,KB-ACC-02,email,medium,SG,shopping,2026-04-12,,,user75@example.com,,billing
+TKT-00219,"please help, the OTP code never arrives please",access,KB-ACC-02,app,medium,IN,shopping,2026-07-30,,,,,
+TKT-00220,"please change the email on my profile. Also, please help, the OTP code never arrives Email user27@example.com.",access,KB-ACC-02,email,low,IN,shopping,2026-02-22,,,user27@example.com,,account
+TKT-00221,I cannot get past the login screen after resetting my password thanks Email user88@example.com.,access,KB-ACC-01,email,medium,SG,mobile_app,2026-03-02,,,user88@example.com,,
+TKT-00222,"when will the refund appear on my statement. Also, hello team, the authenticator code is rejected every time",access,KB-ACC-02,app,high,IN,credit_card,2026-06-15,,,,,refund
+TKT-00223,"Hi, password reset is not letting me access the account this is frustrating Email user11@example.com. Also, the mobile app crashes whenever I open it.",access,KB-ACC-01,chat,low,SG,credit_card,2026-02-07,,,user11@example.com,,technical
+TKT-00224,"the screen freezes after the latest update. Also, can someone check, I cannot get past the login screen after resetting my pasword asap Email user90@example.com.",access,KB-ACC-01,email,high,GB,shopping,2026-01-22,,,user90@example.com,,technical
+TKT-00225,"the dashboard keeps timing out. Also, can someone check, I cannot get past the login screen after resetting my password!!! Date Sep 20, 2026.",access,KB-ACC-01,email,medium,GB,shopping,2026-02-04,,,,"Sep 20, 2026",technical
+TKT-00226,"need help - password reset is not letting me access the account thanks Also, the package arrived but the product is broken.",access,KB-ACC-01,email,medium,US,shopping,2026-03-28,,,,,delivery
+TKT-00227,"urgent: pasword reset is not letting me access the account this is frustrating Email user94@example.com. Also, where is my order it should be here already.",access,KB-ACC-01,app,low,US,account_portal,2026-02-25,,,user94@example.com,,delivery
+TKT-00228,"the OTP code never arrives Date Sep 20, 2026.",access,KB-ACC-02,email,medium,GB,account_portal,2026-03-14,,,,"Sep 20, 2026",
+TKT-00229,"Hi, the OTP code never arrives Email user93@example.com. Date 12 Sep 2026.",access,KB-ACC-02,app,medium,US,mobile_app,2026-06-08,,,user93@example.com,12 Sep 2026,
+TKT-00230,need help - my account is locked after too many login attempts I need an update Email user85@example.com.,access,KB-ACC-01,email,medium,IN,shopping,2026-08-21,,,user85@example.com,,
+TKT-00231,"please help, the authenticator code is rejected every time this is frustrating Email user90@example.com.",access,KB-ACC-02,app,medium,GB,shopping,2026-02-09,,,user90@example.com,,
+TKT-00232,"please help, I cannot get past the login screen after resetting my password thanks",access,KB-ACC-01,chat,medium,GB,mobile_app,2026-04-27,,,,,
+TKT-00233,"please help, the OTP code never arrives please Also, the refund amount is lower than expected.",access,KB-ACC-02,app,medium,SG,account_portal,2026-06-19,,,,,refund
+TKT-00234,"can someone check, my verification code keeps showing invalid thanks Email user99@example.com.",access,KB-ACC-02,app,medium,GB,shopping,2026-01-23,,,user99@example.com,,
+TKT-00235,password reset is not letting me access the account asap Email user75@example.com.,access,KB-ACC-01,chat,medium,US,credit_card,2026-03-05,,,user75@example.com,,
+TKT-00236,"hello team, pasword reset is not letting me access the account asap Also, tracking says shipped but nothing arrived.",access,KB-ACC-01,chat,medium,SG,shopping,2026-08-19,,,,,delivery
+TKT-00237,"Hi, I cannot get past the login screen after resetting my password I need an update Email user78@example.com.",access,KB-ACC-01,email,low,SG,mobile_app,2026-09-04,,,user78@example.com,,
+TKT-00238,"can someone check, I cannot get past the login screen after resetting my password can you check?",access,KB-ACC-01,app,medium,US,shopping,2026-03-22,,,,,
+TKT-00239,"the refund amount is lower than expected. Also, please help, two factor authentication stopped working",access,KB-ACC-02,app,medium,GB,account_portal,2026-02-27,,,,,refund
+TKT-00240,"Hi, the authenticator code is rejected every time thanks Email user19@example.com. Also, I do not recognize this merchant charge.",access,KB-ACC-02,chat,medium,SG,mobile_app,2026-05-03,,,user19@example.com,,billing
+TKT-00241,"can someone check, I cannot get past the login screen after resetting my pasword!!! Email user83@example.com.",access,KB-ACC-01,chat,low,US,shopping,2026-08-08,,,user83@example.com,,
+TKT-00242,"data synchronization is not working. Also, need help - my verification code keeps showing invalid I need an update Email user76@example.com.",access,KB-ACC-02,app,low,SG,shopping,2026-05-15,,,user76@example.com,,technical
+TKT-00243,"can someone check, the OTP code never arrives can you check? Also, the mobile app crashes whenever I open it.",access,KB-ACC-02,chat,medium,US,credit_card,2026-05-04,,,,,technical
+TKT-00244,"Hi, I forgot my password and cannot sign in can you check? Date 12 Sep 2026.",access,KB-ACC-01,app,high,SG,shopping,2026-07-14,,,,12 Sep 2026,
+TKT-00245,"tracking says shipped but nothing arrived. Also, can someone check, the OTP code never arrives Email user71@example.com. Date 12 Sep 2026.",access,KB-ACC-02,email,low,US,shopping,2026-04-23,,,user71@example.com,12 Sep 2026,delivery
+TKT-00246,"please help, password reset is not letting me access the account thanks",access,KB-ACC-01,email,low,US,credit_card,2026-04-19,,,,,
+TKT-00247,need help - my account is locked after too many login attempts I need an update,access,KB-ACC-01,email,medium,SG,shopping,2026-01-04,,,,,
+TKT-00248,"Hi, I forgot my password and cannot sign in Email user16@example.com.",access,KB-ACC-01,app,high,GB,shopping,2026-01-08,,,user16@example.com,,
+TKT-00249,"hello team, password reset is not letting me access the account I need an udpate Email user69@example.com.",access,KB-ACC-01,email,medium,IN,mobile_app,2026-01-02,,,user69@example.com,,
+TKT-00250,"the login page freezes before I can type my password. Also, can someone check, the authenticator code is rejected every time asap",access,KB-ACC-02,app,low,GB,credit_card,2026-07-22,,,,,technical
+TKT-00251,"my profile has old contact information. Also, Hi, the authenticator code is rejected every time asap",access,KB-ACC-02,chat,medium,US,credit_card,2026-05-31,,,,,account
+TKT-00252,"hello team, I cannot get past the login screen after resetting my password this is frustrating",access,KB-ACC-01,email,low,US,credit_card,2026-06-11,,,,,
+TKT-00253,I forgot my password and cannot sign in I need an update,access,KB-ACC-01,chat,medium,SG,shopping,2026-07-05,,,,,
+TKT-00254,"Hi, I cannot get past the login screen after resetting my password please Email user12@example.com.",access,KB-ACC-01,app,medium,IN,credit_card,2026-04-23,,,user12@example.com,,
+TKT-00255,"can someone check, my acount is locked after too many login attempts",access,KB-ACC-01,app,medium,US,mobile_app,2026-07-03,,,,,
+TKT-00256,"hello team, the dashboard keeps timing out please",technical,KB-TECH-02,email,medium,SG,mobile_app,2026-08-12,,,,,
+TKT-00257,"hello team, the app says offline even though my internet works!!!",technical,KB-TECH-02,app,medium,IN,account_portal,2026-04-09,,,,,
+TKT-00258,file upload fails with a network error please Date 18/09/2026.,technical,KB-TECH-02,email,high,US,account_portal,2026-08-10,,,,18/09/2026,
+TKT-00259,"I think this purchase was debited twice. Also, can someone check, the dashboard keeps timing out!!!",technical,KB-TECH-02,chat,low,GB,account_portal,2026-02-12,,,,,billing
+TKT-00260,the dashboard keeps timing out asap,technical,KB-TECH-02,chat,low,SG,mobile_app,2026-02-14,,,,,
+TKT-00261,"can someone check, the login page freezes before I can type my password!!!",technical,KB-TECH-01,app,medium,IN,account_portal,2026-04-28,,,,,
+TKT-00262,"hello team, the application closes when I tap settings!!!",technical,KB-TECH-01,app,low,SG,mobile_app,2026-04-04,,,,,
+TKT-00263,the application closes when I tap settings thanks,technical,KB-TECH-01,chat,high,IN,mobile_app,2026-05-29,,,,,
+TKT-00264,"please help, the app says offline even though my internet works I need an update Date Sep 20, 2026.",technical,KB-TECH-02,chat,medium,GB,account_portal,2026-01-31,,,,"Sep 20, 2026",
+TKT-00265,"urgent: the app says offline even though my internet works can you check? Also, my refund is still missing.",technical,KB-TECH-02,email,medium,SG,shopping,2026-08-24,,,,,refund
+TKT-00266,"the item arrived damaged. Also, Hi, the application closes when I tap settings",technical,KB-TECH-01,app,low,IN,mobile_app,2026-06-25,,,,,delivery
+TKT-00267,"hello team, the app says offline even though my internet works this is frustrating Also, the invoice total is different from what I expected.",technical,KB-TECH-02,chat,medium,IN,account_portal,2026-08-05,,,,,billing
+TKT-00268,need help - file upload fails with a network error thanks,technical,KB-TECH-02,email,low,GB,credit_card,2026-06-17,,,,,
+TKT-00269,need help - the screen freezes after the latest update can you check?,technical,KB-TECH-01,email,low,GB,account_portal,2026-09-08,,,,,
+TKT-00270,"hello team, data synchronization is not working asap",technical,KB-TECH-02,chat,medium,US,mobile_app,2026-03-10,,,,,
+TKT-00271,"hello team, the application closes when I tap settings thanks",technical,KB-TECH-01,chat,high,SG,account_portal,2026-06-24,,,,,
+TKT-00272,"please help, the login page freezes before I can type my password!!!",technical,KB-TECH-01,chat,low,US,account_portal,2026-03-07,,,,,
+TKT-00273,"the delivery is late and tracking has not moved. Also, please help, the screen freezes after the latest udpate Date 18/09/2026.",technical,KB-TECH-01,app,low,SG,credit_card,2026-07-11,,,,18/09/2026,delivery
+TKT-00274,"can someone check, the screen freezes after the latest update please",technical,KB-TECH-01,chat,medium,SG,shopping,2026-02-19,,,,,
+TKT-00275,urgent: data synchronization is not working I need an update,technical,KB-TECH-02,app,high,SG,credit_card,2026-04-02,,,,,
+TKT-00276,"please help, the application closes when I tap settings",technical,KB-TECH-01,app,medium,GB,account_portal,2026-09-04,,,,,
+TKT-00277,the screen freezes after the latest update please Date 18/09/2026.,technical,KB-TECH-01,app,low,SG,account_portal,2026-01-11,,,,18/09/2026,
+TKT-00278,urgent: the mobile app crashes whenever I open it!!!,technical,KB-TECH-01,app,low,US,shopping,2026-02-18,,,,,
+TKT-00279,"Hi, the app says offline even though my internet works can you check?",technical,KB-TECH-02,app,high,US,shopping,2026-03-31,,,,,
+TKT-00280,"please disable my account after this billing cycle. Also, can someone check, the screen freezes after the latest update can you check?",technical,KB-TECH-01,email,high,SG,account_portal,2026-08-03,,,,,account
+TKT-00281,"please help, the application closes when I tap settings",technical,KB-TECH-01,app,low,IN,credit_card,2026-03-20,,,,,
+TKT-00282,"please help, the mobile app crashes whenever I open it please Also, the invoice total is different from what I expected.",technical,KB-TECH-01,email,medium,GB,account_portal,2026-05-02,,,,,billing
+TKT-00283,the login page freezes before I can type my pasword can you check? Date 12 Sep 2026.,technical,KB-TECH-01,email,low,IN,credit_card,2026-08-08,,,,12 Sep 2026,
+TKT-00284,need help - data synchronization is not working I need an udpate,technical,KB-TECH-02,app,high,SG,mobile_app,2026-07-29,,,,,
+TKT-00285,"hello team, the dashboard keeps timing out please",technical,KB-TECH-02,app,high,SG,shopping,2026-07-01,,,,,
+TKT-00286,need help - file upload fails with a network error,technical,KB-TECH-02,app,medium,SG,shopping,2026-08-24,,,,,
+TKT-00287,"the refund amount is lower than expected. Also, can someone check, the application closes when I tap settings thanks",technical,KB-TECH-01,email,low,GB,account_portal,2026-07-21,,,,,refund
+TKT-00288,"Hi, the mobile app crashes whenever I open it thanks",technical,KB-TECH-01,chat,medium,GB,credit_card,2026-07-31,,,,,
+TKT-00289,"the dashboard keeps timing out thanks Date 18/09/2026. Also, the reversal has not reached my card yet.",technical,KB-TECH-02,chat,high,SG,mobile_app,2026-08-20,,,,18/09/2026,refund
+TKT-00290,need help - file upload fails with a network error,technical,KB-TECH-02,chat,medium,IN,mobile_app,2026-04-22,,,,,
+TKT-00291,urgent: the application closes when I tap settings I need an update,technical,KB-TECH-01,app,low,US,account_portal,2026-01-22,,,,,
+TKT-00292,"can someone check, the application closes when I tap settings I need an update",technical,KB-TECH-01,app,low,GB,account_portal,2026-09-05,,,,,
+TKT-00293,"my refund is still missing. Also, urgent: the screen freezes after the latest update!!!",technical,KB-TECH-01,app,high,IN,shopping,2026-05-13,,,,,refund
+TKT-00294,"hello team, the dashboard keeps timing out!!! Date Sep 20, 2026.",technical,KB-TECH-02,chat,medium,SG,shopping,2026-02-13,,,,"Sep 20, 2026",
+TKT-00295,the login page freezes before I can type my password please Date 18/09/2026.,technical,KB-TECH-01,chat,low,IN,shopping,2026-03-12,,,,18/09/2026,
+TKT-00296,"hello team, data synchronization is not working I need an update",technical,KB-TECH-02,app,low,US,credit_card,2026-02-22,,,,,
+TKT-00297,"can someone check, the login page freezes before I can type my password I need an update",technical,KB-TECH-01,email,high,GB,account_portal,2026-06-16,,,,,
+TKT-00298,urgent: the screen freezes after the latest udpate!!!,technical,KB-TECH-01,email,medium,SG,mobile_app,2026-07-20,,,,,
+TKT-00299,"please help, file upload fails with a network error please",technical,KB-TECH-02,app,medium,US,mobile_app,2026-07-21,,,,,
+TKT-00300,"Hi, the app says offline even though my internet works!!!",technical,KB-TECH-02,app,low,IN,shopping,2026-03-25,,,,,
+TKT-00301,"why was I charged an extra service fee. Also, urgent: the login page freezes before I can type my password please",technical,KB-TECH-01,chat,medium,US,shopping,2026-01-24,,,,,billing
+TKT-00302,"please help, the mobile app crashes whenever I open it",technical,KB-TECH-01,app,medium,GB,shopping,2026-08-22,,,,,
+TKT-00303,"hello team, the login page freezes before I can type my password asap Date Sep 20, 2026.",technical,KB-TECH-01,chat,medium,GB,credit_card,2026-07-25,,,,"Sep 20, 2026",
+TKT-00304,"hello team, data synchronization is not working thanks",technical,KB-TECH-02,email,high,SG,account_portal,2026-02-22,,,,,
+TKT-00305,"hello team, the mobile app crashes whenever I open it please",technical,KB-TECH-01,app,low,GB,shopping,2026-04-25,,,,,
+TKT-00306,need help - file upload fails with a network error I need an update,technical,KB-TECH-02,email,low,IN,account_portal,2026-07-03,,,,,
+TKT-00307,the app says offline even though my internet works!!!,technical,KB-TECH-02,app,medium,SG,mobile_app,2026-03-04,,,,,
+TKT-00308,need help - the mobile app crashes whenever I open it I need an update,technical,KB-TECH-01,chat,low,IN,shopping,2026-06-21,,,,,
+TKT-00309,"hello team, the login page freezes before I can type my password",technical,KB-TECH-01,app,low,SG,account_portal,2026-08-23,,,,,
+TKT-00310,"when will the refund appear on my statement. Also, Hi, the applicaton closes when I tap settings please",technical,KB-TECH-01,email,medium,SG,mobile_app,2026-04-01,,,,,refund
+TKT-00311,the dashboard keeps timing out I need an update,technical,KB-TECH-02,email,high,SG,shopping,2026-08-19,,,,,
+TKT-00312,"please help, the applicaton closes when I tap settings thanks",technical,KB-TECH-01,app,medium,US,mobile_app,2026-04-30,,,,,
+TKT-00313,"please help, the screen freezes after the latest update!!!",technical,KB-TECH-01,email,medium,IN,shopping,2026-03-02,,,,,
+TKT-00314,"need help - the mobile app crashes whenever I open it asap Also, why was I charged an extra service fee.",technical,KB-TECH-01,email,low,IN,mobile_app,2026-05-07,,,,,billing
+TKT-00315,"can someone check, the mobile app crashes whenever I open it thanks",technical,KB-TECH-01,chat,low,GB,shopping,2026-07-16,,,,,
+TKT-00316,"please help, the dashboard keeps timing out asap",technical,KB-TECH-02,chat,medium,IN,shopping,2026-07-30,,,,,
+TKT-00317,"hello team, the mobile app crashes whenever I open it please",technical,KB-TECH-01,email,high,SG,mobile_app,2026-05-21,,,,,
+TKT-00318,"urgent: data synchronization is not working asap Also, the package arrived but the product is broken.",technical,KB-TECH-02,app,low,US,account_portal,2026-03-04,,,,,delivery
+TKT-00319,"Hi, the dashboard keeps timing out can you check? Also, my delivery contains a different item.",technical,KB-TECH-02,email,high,GB,shopping,2026-07-07,,,,,delivery
+TKT-00320,"my refund came through but the value is wrong. Also, the app says offline even though my internet works thanks",technical,KB-TECH-02,email,high,GB,mobile_app,2026-05-06,,,,,refund
+TKT-00321,"can someone check, the application closes when I tap settings I need an update Date Sep 20, 2026. Also, please change the email on my profile.",technical,KB-TECH-01,app,high,US,shopping,2026-03-21,,,,"Sep 20, 2026",account
+TKT-00322,"hello team, file upload fails with a network error",technical,KB-TECH-02,email,medium,IN,shopping,2026-01-26,,,,,
+TKT-00323,urgent: the dashboard keeps timing out thanks,technical,KB-TECH-02,email,low,SG,credit_card,2026-06-25,,,,,
+TKT-00324,"please help, file upload fails with a network error!!!",technical,KB-TECH-02,chat,low,IN,credit_card,2026-07-07,,,,,
+TKT-00325,"need help - the login page freezes before I can type my password Date Sep 20, 2026.",technical,KB-TECH-01,email,medium,IN,shopping,2026-06-07,,,,"Sep 20, 2026",
+TKT-00326,"please help, the application closes when I tap settings can you check?",technical,KB-TECH-01,app,medium,US,mobile_app,2026-03-11,,,,,
+TKT-00327,urgent: file upload fails with a network error I need an update,technical,KB-TECH-02,app,medium,SG,shopping,2026-01-19,,,,,
+TKT-00328,"password reset is not letting me access the account. Also, Hi, the app says offline even though my internet works this is frustrating",technical,KB-TECH-02,app,high,GB,account_portal,2026-03-22,,,,,access
+TKT-00329,"hello team, the mobile app crashes whenever I open it!!!",technical,KB-TECH-01,app,medium,SG,account_portal,2026-08-17,,,,,
+TKT-00330,"hello team, the app says offline even though my internet works this is frustrating",technical,KB-TECH-02,app,low,US,shopping,2026-02-04,,,,,
+TKT-00331,"the mobile app crashes whenever I open it. Also, need help - I want to close my account permanently!!! Email user83@example.com.",account,KB-ACCT-02,app,high,GB,shopping,2026-04-09,,,user83@example.com,,technical
+TKT-00332,my profile has old contact information thanks Email user16@example.com. Date 18/09/2026.,account,KB-ACCT-01,app,low,GB,account_portal,2026-05-14,,,user16@example.com,18/09/2026,
+TKT-00333,"Hi, I need to update my phone number I need an update",account,KB-ACCT-01,app,low,IN,account_portal,2026-01-09,,,,,
+TKT-00334,"Hi, please change the email on my profile please",account,KB-ACCT-01,app,medium,IN,account_portal,2026-02-22,,,,,
+TKT-00335,"Hi, I want to close my account permanently",account,KB-ACCT-02,chat,low,US,credit_card,2026-07-19,,,,,
+TKT-00336,"hello team, please disable my account after this billing cycle asap Email user22@example.com.",account,KB-ACCT-02,email,low,SG,account_portal,2026-07-24,,,user22@example.com,,
+TKT-00337,"need help - change my communication preferences thanks Email user56@example.com. Also, I cannot get past the login screen after resetting my password.",account,KB-ACCT-02,app,medium,IN,account_portal,2026-07-02,,,user56@example.com,,access
+TKT-00338,"Hi, I want to manage my account settings please",account,KB-ACCT-02,chat,low,US,account_portal,2026-05-09,,,,,
+TKT-00339,"Hi, I need to update my phone number this is frustrating",account,KB-ACCT-01,app,low,IN,credit_card,2026-07-08,,,,,
+TKT-00340,I want to manage my account settings I need an update Email user78@example.com. Date 18/09/2026.,account,KB-ACCT-02,app,low,IN,mobile_app,2026-05-19,,,user78@example.com,18/09/2026,
+TKT-00341,"can someone check, change my communication preferences!!!",account,KB-ACCT-02,email,medium,US,shopping,2026-01-03,,,,,
+TKT-00342,"data synchronization is not working. Also, can someone check, change my communication preferences I need an update",account,KB-ACCT-02,app,high,IN,account_portal,2026-05-29,,,,,technical
+TKT-00343,please change the email on my profile please Email user83@example.com.,account,KB-ACCT-01,email,medium,SG,credit_card,2026-08-14,,,user83@example.com,,
+TKT-00344,please change the email on my profile!!!,account,KB-ACCT-01,email,high,IN,credit_card,2026-07-27,,,,,
+TKT-00345,"hello team, how can I change my mailing address!!! Date 18/09/2026. Also, two factor authentication stopped working.",account,KB-ACCT-01,email,medium,GB,account_portal,2026-03-17,,,,18/09/2026,access
+TKT-00346,urgent: my profile has old contact information can you check?,account,KB-ACCT-01,chat,low,SG,credit_card,2026-08-21,,,,,
+TKT-00347,"please disable my acount after this billing cycle asap Date Sep 20, 2026.",account,KB-ACCT-02,app,high,US,mobile_app,2026-05-24,,,,"Sep 20, 2026",
+TKT-00348,"can someone check, please disable my acount after this billing cycle asap Email user89@example.com.",account,KB-ACCT-02,chat,low,GB,mobile_app,2026-02-18,,,user89@example.com,,
+TKT-00349,urgent: please disable my acount after this billing cycle can you check?,account,KB-ACCT-02,email,low,US,credit_card,2026-04-09,,,,,
+TKT-00350,"hello team, my profile has old contact information can you check?",account,KB-ACCT-01,app,high,US,credit_card,2026-08-18,,,,,
+TKT-00351,"please help, I need to update my phone number asap Email user89@example.com.",account,KB-ACCT-01,app,low,SG,shopping,2026-05-31,,,user89@example.com,,
+TKT-00352,"need help - how can I change my mailing address this is frustrating Email user72@example.com. Date Sep 20, 2026. Also, my card was charged twice for the same purchase.",account,KB-ACCT-01,email,high,US,credit_card,2026-03-08,,,user72@example.com,"Sep 20, 2026",billing
+TKT-00353,"Hi, I want to manage my account settings!!!",account,KB-ACCT-02,chat,low,SG,mobile_app,2026-01-06,,,,,
+TKT-00354,urgent: how can I change my mailing address!!!,account,KB-ACCT-01,chat,medium,SG,mobile_app,2026-03-16,,,,,
+TKT-00355,need help - my profile has old contact information this is frustrating,account,KB-ACCT-01,chat,low,US,mobile_app,2026-09-08,,,,,
+TKT-00356,urgent: I want to manage my account settings!!!,account,KB-ACCT-02,email,low,SG,mobile_app,2026-03-13,,,,,
+TKT-00357,"can someone check, I want to manage my account settings thanks Email user53@example.com.",account,KB-ACCT-02,chat,medium,SG,shopping,2026-06-29,,,user53@example.com,,
+TKT-00358,"the mobile app crashes whenever I open it. Also, can someone check, my profile has old contact information!!!",account,KB-ACCT-01,email,medium,IN,credit_card,2026-04-07,,,,,technical
+TKT-00359,"can someone check, please change the email on my profile!!! Date 12 Sep 2026. Also, my package has not arrived yet.",account,KB-ACCT-01,email,medium,GB,credit_card,2026-05-12,,,,12 Sep 2026,delivery
+TKT-00360,how can I change my mailing address please,account,KB-ACCT-01,app,low,SG,credit_card,2026-02-26,,,,,
+TKT-00361,"Hi, please disable my account after this billing cycle thanks Email user61@example.com. Also, the reversal has not reached my card yet.",account,KB-ACCT-02,chat,medium,GB,mobile_app,2026-06-23,,,user61@example.com,,refund
+TKT-00362,"Hi, I want to close my account permanently please",account,KB-ACCT-02,email,medium,GB,shopping,2026-05-05,,,,,
+TKT-00363,"hello team, I want to manage my account settings Email user18@example.com.",account,KB-ACCT-02,chat,low,US,credit_card,2026-02-04,,,user18@example.com,,
+TKT-00364,"please help, how can I change my mailing address I need an update Date 12 Sep 2026.",account,KB-ACCT-01,email,low,IN,credit_card,2026-02-09,,,,12 Sep 2026,
+TKT-00365,"the dashboard keeps timing out. Also, please help, how can I change my mailing address I need an update",account,KB-ACCT-01,email,low,IN,mobile_app,2026-03-08,,,,,technical
+TKT-00366,"hello team, please change the email on my profile asap Email user40@example.com.",account,KB-ACCT-01,app,medium,GB,mobile_app,2026-09-07,,,user40@example.com,,
+TKT-00367,urgent: please disable my account after this billing cycle I need an update Email user76@example.com.,account,KB-ACCT-02,app,medium,GB,shopping,2026-06-26,,,user76@example.com,,
+TKT-00368,"hello team, please change the email on my profile please Email user86@example.com.",account,KB-ACCT-01,app,low,SG,shopping,2026-02-05,,,user86@example.com,,
+TKT-00369,need help - I want to manage my acount settings this is frustrating Email user88@example.com.,account,KB-ACCT-02,chat,medium,US,mobile_app,2026-02-01,,,user88@example.com,,
+TKT-00370,need help - please disable my account after this billing cycle!!! Email user38@example.com. Date 12 Sep 2026.,account,KB-ACCT-02,email,low,US,account_portal,2026-03-25,,,user38@example.com,12 Sep 2026,
+TKT-00371,"can someone check, I want to close my account permanently I need an update Email user28@example.com. Date 18/09/2026.",account,KB-ACCT-02,app,medium,SG,credit_card,2026-03-18,,,user28@example.com,18/09/2026,
+TKT-00372,my profile has old contact information Date 18/09/2026.,account,KB-ACCT-01,chat,low,SG,credit_card,2026-07-29,,,,18/09/2026,
+TKT-00373,"hello team, how can I change my mailing address this is frustrating Email user85@example.com.",account,KB-ACCT-01,app,low,IN,shopping,2026-04-25,,,user85@example.com,,
+TKT-00374,"hello team, I want to manage my account settings can you check?",account,KB-ACCT-02,app,low,SG,shopping,2026-01-27,,,,,
+TKT-00375,"my account is locked after too many login attempts. Also, Hi, my profile has old contact information thanks",account,KB-ACCT-01,app,medium,IN,shopping,2026-03-04,,,,,access
+TKT-00376,"urgent: please disable my account after this billing cycle thanks Also, my package has not arrived yet.",account,KB-ACCT-02,app,low,US,credit_card,2026-06-08,,,,,delivery
+TKT-00377,"hello team, how can I change my mailing address!!! Date 12 Sep 2026.",account,KB-ACCT-01,app,medium,GB,mobile_app,2026-07-24,,,,12 Sep 2026,
+TKT-00378,please disable my account after this billing cycle thanks Date 18/09/2026.,account,KB-ACCT-02,chat,high,GB,shopping,2026-01-07,,,,18/09/2026,
+TKT-00379,urgent: I want to close my account permanently please Email user70@example.com.,account,KB-ACCT-02,email,medium,IN,account_portal,2026-08-05,,,user70@example.com,,
+TKT-00380,"hello team, how can I change my mailing address I need an update",account,KB-ACCT-01,app,low,IN,credit_card,2026-01-28,,,,,
+TKT-00381,"please help, my profile has old contact information this is frustrating",account,KB-ACCT-01,chat,high,US,mobile_app,2026-08-29,,,,,
+TKT-00382,"password reset is not letting me access the account. Also, how can I change my mailing address!!! Email user98@example.com.",account,KB-ACCT-01,email,low,SG,credit_card,2026-01-12,,,user98@example.com,,access
+TKT-00383,"can someone check, how can I change my mailing address asap Email user15@example.com.",account,KB-ACCT-01,email,low,SG,credit_card,2026-01-10,,,user15@example.com,,
+TKT-00384,"change my communication preferences please Date Sep 20, 2026.",account,KB-ACCT-02,chat,medium,US,shopping,2026-01-10,,,,"Sep 20, 2026",
+TKT-00385,"please help, I need to update my phone number I need an update Also, my verification code keeps showing invalid.",account,KB-ACCT-01,chat,low,US,mobile_app,2026-03-20,,,,,access
+TKT-00386,"hello team, please disable my account after this billing cycle this is frustrating Email user64@example.com.",account,KB-ACCT-02,email,medium,IN,credit_card,2026-02-17,,,user64@example.com,,
+TKT-00387,"Hi, change my communication preferences can you check? Date Sep 20, 2026.",account,KB-ACCT-02,email,low,IN,shopping,2026-04-14,,,,"Sep 20, 2026",
+TKT-00388,"please help, how can I change my mailing address this is frustrating",account,KB-ACCT-01,chat,low,US,mobile_app,2026-05-04,,,,,
+TKT-00389,"please help, please disable my account after this billing cycle can you check? Email user49@example.com.",account,KB-ACCT-02,chat,low,GB,shopping,2026-06-04,,,user49@example.com,,
+TKT-00390,"can someone check, please change the email on my profile this is frustrating Email user71@example.com.",account,KB-ACCT-01,email,low,US,shopping,2026-02-23,,,user71@example.com,,
+TKT-00391,I want to manage my account settings can you check?,account,KB-ACCT-02,app,high,SG,shopping,2026-06-12,,,,,
+TKT-00392,"please help, I want to manage my account settings I need an update Also, why was I charged an extra service fee.",account,KB-ACCT-02,app,low,US,mobile_app,2026-08-20,,,,,billing
+TKT-00393,"Hi, please change the email on my profile!!! Email user91@example.com.",account,KB-ACCT-01,email,high,US,mobile_app,2026-02-18,,,user91@example.com,,
+TKT-00394,"Hi, I want to close my account permanently I need an update",account,KB-ACCT-02,app,medium,IN,shopping,2026-04-28,,,,,
+TKT-00395,change my communication preferences this is frustrating Email user22@example.com.,account,KB-ACCT-02,app,low,GB,credit_card,2026-09-08,,,user22@example.com,,
+TKT-00396,"hello team, my delivery contains a different item asap Order ORD-30692.",delivery,KB-DEL-02,email,high,GB,shopping,2026-04-04,,ORD-30692,,,
+TKT-00397,urgent: my package has not arrived yet!!!,delivery,KB-DEL-01,app,low,IN,credit_card,2026-01-13,,,,,
+TKT-00398,the delivery is late and tracking has not moved can you check? Order ORD-29381.,delivery,KB-DEL-01,chat,low,IN,mobile_app,2026-04-30,,ORD-29381,,,
+TKT-00399,need help - the item arrived damaged thanks Order ORD-25921.,delivery,KB-DEL-02,chat,high,GB,account_portal,2026-05-13,,ORD-25921,,,
+TKT-00400,where is my order it should be here already,delivery,KB-DEL-01,chat,low,US,mobile_app,2026-06-20,,,,,
+TKT-00401,"can someone check, the item arrived damaged please Order ORD-47073.",delivery,KB-DEL-02,email,low,GB,account_portal,2026-01-27,,ORD-47073,,,
+TKT-00402,"can someone check, the item arrived damaged can you check? Order ORD-36714. Also, password reset is not letting me access the account.",delivery,KB-DEL-02,chat,medium,IN,shopping,2026-05-28,,ORD-36714,,,access
+TKT-00403,urgent: I received the wrong product thanks Order ORD-79816.,delivery,KB-DEL-02,app,low,SG,account_portal,2026-05-15,,ORD-79816,,,
+TKT-00404,need help - the item arrived damaged!!! Order ORD-69810.,delivery,KB-DEL-02,email,low,SG,shopping,2026-06-03,,ORD-69810,,,
+TKT-00405,need help - I received the wrong product asap Order ORD-54860.,delivery,KB-DEL-02,email,medium,GB,credit_card,2026-02-04,,ORD-54860,,,
+TKT-00406,"where is my order it should be here already I need an update Order ORD-15828. Date Sep 20, 2026.",delivery,KB-DEL-01,chat,medium,IN,credit_card,2026-05-18,,ORD-15828,,"Sep 20, 2026",
+TKT-00407,"can someone check, my delivry contains a different item",delivery,KB-DEL-02,email,medium,US,account_portal,2026-03-22,,,,,
+TKT-00408,urgent: I received the wrong product please,delivery,KB-DEL-02,email,high,US,shopping,2026-01-19,,,,,
+TKT-00409,"can someone check, where is my order it should be here already asap Order ORD-45998.",delivery,KB-DEL-01,chat,medium,US,credit_card,2026-08-20,,ORD-45998,,,
+TKT-00410,urgent: the item arrived damaged!!! Order ORD-33894.,delivery,KB-DEL-02,app,low,GB,mobile_app,2026-01-14,,ORD-33894,,,
+TKT-00411,"hello team, I received the wrong product asap Order ORD-95493.",delivery,KB-DEL-02,app,high,US,mobile_app,2026-01-24,,ORD-95493,,,
+TKT-00412,"the login page freezes before I can type my password. Also, Hi, my delivry contains a different item thanks Order ORD-94564.",delivery,KB-DEL-02,app,medium,US,mobile_app,2026-02-26,,ORD-94564,,,technical
+TKT-00413,where is my order it should be here already this is frustrating Order ORD-21601. Date 12 Sep 2026.,delivery,KB-DEL-01,app,low,SG,shopping,2026-03-21,,ORD-21601,,12 Sep 2026,
+TKT-00414,"hello team, the item arrived damaged this is frustrating Order ORD-17727.",delivery,KB-DEL-02,email,medium,GB,shopping,2026-05-30,,ORD-17727,,,
+TKT-00415,"my card was charged twice for the same purchase. Also, Hi, where is my order it should be here already thanks",delivery,KB-DEL-01,chat,medium,US,shopping,2026-02-03,,,,,billing
+TKT-00416,"can someone check, tracking says shipped but nothing arrived!!! Order ORD-10757.",delivery,KB-DEL-01,chat,medium,IN,credit_card,2026-09-04,,ORD-10757,,,
+TKT-00417,the delivery is late and tracking has not moved can you check?,delivery,KB-DEL-01,app,medium,US,shopping,2026-03-09,,,,,
+TKT-00418,"need help - my delivery contains a different item I need an update Also, I cannot get past the login screen after resetting my password.",delivery,KB-DEL-02,chat,low,GB,account_portal,2026-01-20,,,,,access
+TKT-00419,tracking says shipped but nothing arrived please,delivery,KB-DEL-01,chat,low,US,mobile_app,2026-09-01,,,,,
+TKT-00420,"I received the wrong product can you check? Order ORD-52642. Also, my card was charged twice for the same purchase.",delivery,KB-DEL-02,app,medium,GB,mobile_app,2026-08-24,,ORD-52642,,,billing
+TKT-00421,"please help, my package has not arrived yet I need an update Order ORD-92599.",delivery,KB-DEL-01,app,medium,SG,account_portal,2026-05-10,,ORD-92599,,,
+TKT-00422,"please help, I received the wrong product Order ORD-85780.",delivery,KB-DEL-02,email,medium,IN,mobile_app,2026-01-25,,ORD-85780,,,
+TKT-00423,I received the wrong product can you check? Order ORD-10716.,delivery,KB-DEL-02,chat,low,IN,credit_card,2026-07-12,,ORD-10716,,,
+TKT-00424,"hello team, the package arrived but the product is broken I need an update",delivery,KB-DEL-02,email,high,SG,shopping,2026-05-02,,,,,
+TKT-00425,urgent: the delivery is late and tracking has not moved please Order ORD-79505.,delivery,KB-DEL-01,app,low,SG,mobile_app,2026-08-10,,ORD-79505,,,
+TKT-00426,need help - my delivery contains a different item can you check?,delivery,KB-DEL-02,app,medium,GB,credit_card,2026-05-02,,,,,
+TKT-00427,tracking says shipped but nothing arrived I need an update,delivery,KB-DEL-01,app,high,GB,shopping,2026-06-21,,,,,
+TKT-00428,"please help, the delivery is late and tracking has not moved this is frustrating",delivery,KB-DEL-01,app,low,IN,credit_card,2026-06-05,,,,,
+TKT-00429,the item arrived damaged Order ORD-12103. Date 18/09/2026.,delivery,KB-DEL-02,app,low,IN,mobile_app,2026-02-16,,ORD-12103,,18/09/2026,
+TKT-00430,"please help, my delivery contains a different item asap Order ORD-53894. Also, my verification code keeps showing invalid.",delivery,KB-DEL-02,chat,low,SG,shopping,2026-07-23,,ORD-53894,,,access
+TKT-00431,"please help, tracking says shipped but nothing arrived this is frustrating Order ORD-45437. Date 18/09/2026.",delivery,KB-DEL-01,app,medium,SG,credit_card,2026-06-10,,ORD-45437,,18/09/2026,
+TKT-00432,need help - the item arrived damaged please Order ORD-98697.,delivery,KB-DEL-02,chat,low,GB,credit_card,2026-07-01,,ORD-98697,,,
+TKT-00433,"the OTP code never arrives. Also, need help - the item arrived damaged please Order ORD-90287.",delivery,KB-DEL-02,app,low,US,credit_card,2026-05-14,,ORD-90287,,,access
+TKT-00434,"please help, I received the wrong product Order ORD-42994.",delivery,KB-DEL-02,app,medium,IN,credit_card,2026-03-09,,ORD-42994,,,
+TKT-00435,"can someone check, the package arrived but the product is broken thanks Order ORD-11534.",delivery,KB-DEL-02,email,low,SG,mobile_app,2026-01-17,,ORD-11534,,,
+TKT-00436,need help - my delivery contains a different item can you check? Order ORD-31710. Date 12 Sep 2026.,delivery,KB-DEL-02,chat,low,IN,credit_card,2026-02-26,,ORD-31710,,12 Sep 2026,
+TKT-00437,"Hi, my package has not arrived yet thanks Order ORD-71055.",delivery,KB-DEL-01,app,medium,SG,mobile_app,2026-03-20,,ORD-71055,,,
+TKT-00438,"file upload fails with a network error. Also, need help - where is my order it should be here already!!! Order ORD-53739. Date 12 Sep 2026.",delivery,KB-DEL-01,chat,high,SG,mobile_app,2026-03-22,,ORD-53739,,12 Sep 2026,technical
+TKT-00439,my package has not arrived yet!!! Order ORD-27834.,delivery,KB-DEL-01,chat,low,IN,shopping,2026-04-20,,ORD-27834,,,
+TKT-00440,"the merchant says refunded but I cannot see it. Also, my package has not arrived yet thanks",delivery,KB-DEL-01,chat,low,SG,account_portal,2026-07-14,,,,,refund
+TKT-00441,"please help, my package has not arrived yet!!! Also, my account is locked after too many login attempts.",delivery,KB-DEL-01,chat,high,SG,mobile_app,2026-08-05,,,,,access
+TKT-00442,"Hi, the package arrived but the product is broken I need an update Order ORD-35554.",delivery,KB-DEL-02,email,high,SG,account_portal,2026-03-24,,ORD-35554,,,
+TKT-00443,"can someone check, the item arrived damaged thanks Order ORD-41946. Date Sep 20, 2026.",delivery,KB-DEL-02,email,medium,US,shopping,2026-07-30,,ORD-41946,,"Sep 20, 2026",
+TKT-00444,urgent: where is my order it should be here already can you check? Order ORD-17077.,delivery,KB-DEL-01,email,medium,GB,shopping,2026-08-16,,ORD-17077,,,
+TKT-00445,"hello team, the item arrived damaged thanks",delivery,KB-DEL-02,email,medium,SG,shopping,2026-07-17,,,,,
+TKT-00446,need help - my delivery contains a different item this is frustrating,delivery,KB-DEL-02,chat,medium,SG,account_portal,2026-04-16,,,,,
+TKT-00447,"can someone check, my package has not arrived yet thanks Order ORD-71900. Date 18/09/2026.",delivery,KB-DEL-01,app,low,SG,shopping,2026-08-03,,ORD-71900,,18/09/2026,
+TKT-00448,"Hi, the item arrived damaged thanks",delivery,KB-DEL-02,app,high,GB,account_portal,2026-03-17,,,,,
+TKT-00449,"Hi, where is my order it should be here already this is frustrating Order ORD-59829.",delivery,KB-DEL-01,app,medium,GB,account_portal,2026-07-06,,ORD-59829,,,
+TKT-00450,"can someone check, my package has not arrived yet!!! Order ORD-30899.",delivery,KB-DEL-01,email,low,US,shopping,2026-06-23,,ORD-30899,,,
+TKT-00451,"hello team, my delivery contains a different item I need an update Order ORD-54686.",delivery,KB-DEL-02,email,high,US,shopping,2026-05-01,,ORD-54686,,,
+TKT-00452,"my card was charged twice for the same purchase. Also, hello team, the item arrived damaged asap",delivery,KB-DEL-02,chat,medium,GB,mobile_app,2026-03-26,,,,,billing
+TKT-00453,need help - my package has not arrived yet thanks Order ORD-60781. Date 18/09/2026.,delivery,KB-DEL-01,email,high,US,account_portal,2026-03-25,,ORD-60781,,18/09/2026,
+TKT-00454,"hello team, I received the wrong product thanks Order ORD-54002. Date Sep 20, 2026.",delivery,KB-DEL-02,app,medium,IN,mobile_app,2026-05-24,,ORD-54002,,"Sep 20, 2026",
+TKT-00455,need help - where is my order it should be here already please Order ORD-98725.,delivery,KB-DEL-01,email,low,IN,mobile_app,2026-08-18,,ORD-98725,,,
+TKT-00456,"Hi, my delivry contains a different item!!!",delivery,KB-DEL-02,chat,medium,US,credit_card,2026-03-16,,,,,
+TKT-00457,"please help, the delivery is late and traking has not moved!!! Order ORD-25580. Also, the merchant says refunded but I cannot see it.",delivery,KB-DEL-01,email,medium,SG,credit_card,2026-06-04,,ORD-25580,,,refund
+TKT-00458,"please help, tracking says shipped but nothing arrived please Order ORD-37103. Also, I think this purchase was debited twice.",delivery,KB-DEL-01,chat,high,GB,shopping,2026-04-11,,ORD-37103,,,billing
+TKT-00459,"can someone check, the package arrived but the product is broken Order ORD-79659.",delivery,KB-DEL-02,chat,low,IN,shopping,2026-03-30,,ORD-79659,,,
+TKT-00460,need help - tracking says shipped but nothing arrived this is frustrating Order ORD-26258.,delivery,KB-DEL-01,chat,medium,SG,credit_card,2026-03-29,,ORD-26258,,,
+TKT-00461,"hello team, my delivery contains a different item asap Order ORD-37187.",delivery,KB-DEL-02,app,medium,IN,credit_card,2026-02-02,,ORD-37187,,,
+TKT-00462,the item arrived damaged asap Order ORD-72512. Date 12 Sep 2026.,delivery,KB-DEL-02,email,low,GB,credit_card,2026-01-05,,ORD-72512,,12 Sep 2026,
+TKT-00463,"please help, where is my order it should be here already I need an update Order ORD-20341.",delivery,KB-DEL-01,chat,medium,GB,credit_card,2026-05-23,,ORD-20341,,,
+TKT-00464,"can someone check, my delivry contains a different item this is frustrating",delivery,KB-DEL-02,email,low,US,account_portal,2026-06-27,,,,,
+TKT-00465,"please help, tracking says shipped but nothing arrived!!!",delivery,KB-DEL-01,email,high,GB,shopping,2026-02-08,,,,,
+TKT-00466,I think this purchase was debited twice please Amount $49.99.,billing,KB-BILL-01,email,low,SG,mobile_app,2026-03-11,$49.99,,,,
+TKT-00467,"change my communication preferences. Also, please help, I do not recognize this merchant charge!!! Amount ₹499.",billing,KB-BILL-02,chat,low,US,account_portal,2026-04-11,₹499,,,,account
+TKT-00468,"I forgot my password and cannot sign in. Also, need help - the merchant payment appears two times Amount £25.",billing,KB-BILL-01,app,low,US,credit_card,2026-06-10,£25,,,,access
+TKT-00469,"need help - the reversal has not reached my card yet can you check? Amount ₹1,299.",refund,KB-REF-01,chat,medium,GB,credit_card,2026-04-27,"₹1,299",,,,
+TKT-00470,urgent: two factor authentication stopped working can you check? Email user72@example.com.,access,KB-ACC-02,chat,low,GB,shopping,2026-06-28,,,user72@example.com,,
+TKT-00471,"data synchronization is not working. Also, need help - my verification code keeps showing invalid I need an update Email user76@example.com.",access,KB-ACC-02,app,low,SG,shopping,2026-05-15,,,user76@example.com,,technical
+TKT-00472,"Hi, the dashboard keeps timing out can you check? Also, my delivery contains a different item.",technical,KB-TECH-02,email,high,GB,shopping,2026-07-07,,,,,delivery
+TKT-00473,urgent: I received the wrong product thanks Order ORD-79816.,delivery,KB-DEL-02,app,low,SG,account_portal,2026-05-15,,ORD-79816,,,

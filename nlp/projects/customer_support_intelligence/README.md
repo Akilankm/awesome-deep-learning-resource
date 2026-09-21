@@ -1,14 +1,16 @@
 # Customer Support Intelligence — End-to-End NLP Project
 
-This is the flagship project for the NLP track.
+This is the flagship project for the NLP track. It is intentionally **one deep project**, not a collection of shallow demos.
 
 ## Start here
 
-Open and run:
+Open:
 
 `customer_support_intelligence_end_to_end.ipynb`
 
-The notebook is designed to be independently executable from a clean clone using the repository Conda environment.
+The notebook treats the committed CSV files as **ready-made business inputs**. The dataset-construction recipe is intentionally not part of the student-facing codebase: learners must discover patterns through EDA, form hypotheses, validate them, build baselines, inspect errors and justify each modeling decision.
+
+The provenance is still explicit: this is an **educational synthetic/curated dataset**, not a public benchmark or production dataset.
 
 ## Run
 
@@ -21,7 +23,7 @@ python -m ipykernel install --user --name awesome-nlp --display-name "Python (aw
 jupyter lab
 ```
 
-Or execute non-interactively:
+Or execute end to end:
 
 ```bash
 jupyter nbconvert \
@@ -32,81 +34,94 @@ jupyter nbconvert \
   nlp/projects/customer_support_intelligence/customer_support_intelligence_end_to_end.ipynb
 ```
 
-## What the notebook does
-
-The notebook implements the complete lifecycle:
+## Ready-made inputs
 
 ```text
-educational dataset generation
-  → data contract / validation
+data/raw/
+├── support_tickets.csv   # 473 received support tickets
+└── knowledge_base.csv    # 12 support articles
+```
+
+The notebook does **not** generate or overwrite these raw inputs.
+
+During execution it creates inspectable derived data:
+
+```text
+data/interim/cleaned_tickets.csv
+data/processed/train.csv
+data/processed/validation.csv
+data/processed/test.csv
+```
+
+## End-to-end lifecycle
+
+```text
+business problem
+  → receive raw data
+  → data contract
   → EDA
-  → duplicate + leakage analysis
+  → explicit hypotheses
   → normalization
-  → stratified train / validation / test
+  → duplicate/leakage control
+  → stratified train/validation/test
   → majority baseline
   → Bag-of-Words + Naive Bayes
-  → word TF-IDF + Logistic Regression
+  → word TF-IDF + logistic regression
   → word + character TF-IDF
-  → validation-only hyperparameter tuning
-  → final untouched test evaluation
+  → validation-only tuning
+  → untouched final test
+  → slice analysis
   → confidence / abstention
   → error analysis
+  → learned-feature inspection
   → entity extraction
-  → knowledge-base retrieval
+  → knowledge retrieval
   → integrated inference
-  → model serialization + reload verification
+  → serialization + reload verification
   → robustness tests
   → monitoring / drift
   → retraining / promotion policy
 ```
 
-## Educational dataset
+For major stages the notebook explains **what, why, when, how and when not to use the technique**.
 
-There is no hidden download step. The notebook deterministically generates a 473-row support-ticket dataset plus a 12-article knowledge base and materializes them under `data/raw/`.
+## Reference execution
 
-The generated data deliberately includes class imbalance, duplicates, typos, noisy punctuation, mixed-intent examples, amounts, order IDs, emails and dates so that the quality, leakage, error-analysis and information-extraction sections are meaningful.
+The refactored ready-made-data notebook was executed end to end before commit.
 
-See [DATA_DICTIONARY.md](DATA_DICTIONARY.md).
+Classifier:
+- validation macro-F1: **0.9582**
+- final test accuracy: **0.8913**
+- final test macro-F1: **0.8896**
+- final weighted-F1: **0.8908**
+- held-out errors: **10**
 
-## Reproducibility
+The imperfect score is intentional and useful educationally: the error analysis shows that the reference mistakes concentrate in multi-intent messages rather than presenting an unrealistically perfect synthetic benchmark.
 
-The project uses `RANDOM_SEED = 42`. The validated reference run was executed repeatedly with identical metrics and test predictions.
-
-Reference classifier metrics:
-
-- validation macro-F1: **0.9877**
-- final untouched test accuracy: **0.8989**
-- final untouched test macro-F1: **0.8984**
-- final untouched test weighted-F1: **0.8999**
-
-The reference run contains **9 deliberately useful test errors** for error analysis rather than an unrealistically perfect synthetic benchmark.
-
-Retrieval reference results:
+Retrieval:
 
 | Retriever | Recall@1 | Recall@3 | MRR |
 |---|---:|---:|---:|
-| Word TF-IDF | 0.6404 | 0.8539 | 0.7623 |
-| LSA dense | 0.6517 | 0.8427 | 0.7670 |
+| Word TF-IDF | 0.4674 | 0.8370 | 0.6562 |
+| LSA dense | 0.4022 | 0.7500 | 0.6067 |
 
-Entity extraction achieves exact-match F1 of 1.0 on this deliberately structured educational entity schema; the notebook explains why this should not be interpreted as real-world NER performance.
+Entity extraction receives perfect exact-format scores on the controlled educational schema; the notebook explicitly explains why that is **not evidence of real-world NER performance**.
 
-## Generated artifacts
+## Artifacts generated on rerun
 
-A local execution generates:
+- `intent_classifier.joblib`
+- `metrics.json`
+- `model_metadata.json`
+- `model_comparison.csv`
+- `hyperparameter_tuning.csv`
+- `classification_report.csv`
+- `test_predictions.csv`
+- `errors.csv`
+- `top_features_by_class.csv`
+- `entity_extraction_metrics.csv`
+- `retrieval_metrics.csv`
+- `retrieval_predictions.csv`
+- `monitoring_snapshot.csv`
+- `run_manifest.json`
 
-- raw/interim/processed CSV data,
-- `intent_classifier.joblib`,
-- `metrics.json`,
-- model comparison and tuning tables,
-- classification report,
-- test predictions,
-- error-analysis CSV,
-- entity extraction metrics,
-- retrieval metrics/predictions,
-- top features,
-- monitoring snapshot,
-- PNG + SVG figures,
-- model metadata,
-- run manifest.
-
-The committed notebook contains rendered results, and selected lightweight SVGs/metrics are versioned under `artifacts/` for GitHub viewing.
+See [DATA_DICTIONARY.md](DATA_DICTIONARY.md) for field semantics.
