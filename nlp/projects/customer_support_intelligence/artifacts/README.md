@@ -1,5 +1,12 @@
 # Reference-run artifacts
 
-The notebook regenerates the full artifact set on each run. This directory versions a small set of reference-run metrics and lightweight SVG figures so results are visible directly on GitHub.
+This directory keeps compact, human-readable metrics from the validated ready-made-data run.
 
-Binary model artifacts and PNGs are intentionally regenerated locally rather than committed.
+The notebook regenerates the full runtime artifact set when executed locally. Binary model files and generated plots are intentionally not versioned here.
+
+Current reference classifier:
+- test accuracy: **0.8913**
+- test macro-F1: **0.8896**
+- held-out errors: **10**
+
+See `metrics.json`, `retrieval_metrics.csv`, and `entity_extraction_metrics.csv`.
