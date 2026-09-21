@@ -19,4 +19,4 @@ Do not read it as a recipe. At every stage, pause and make a prediction first:
 3. If I change this parameter, what quantity should move?
 4. If the result does not move as expected, which layer should I debug?
 
-The flagship notebook contains visual maps for the overall reasoning loop, representation changes, error-debugging flow, and production feedback.
+The flagship notebook uses compact decision tables and explicit reasoning checkpoints for representation changes, error debugging, confidence policy, and production feedback.

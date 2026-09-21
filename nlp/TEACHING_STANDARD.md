@@ -1,39 +1,29 @@
-# NLP Teaching Standard — Causal, Visual, Engineering-First
+# NLP Teaching Standard
 
-The NLP track is designed to build **predictive mental models**, not only executable familiarity.
+The goal is **predictive engineering intuition**, not notebook completion.
+
+A learner should be able to state:
+
+> If I change this control, I expect this representation or metric to move in this direction, because this mechanism changes.
+
+## Required learning loop
+
+1. **Mental model** — what enters, what transformation happens, what comes out.
+2. **Control → effect** — change one thing and predict the consequence.
+3. **Executed evidence** — run the example and inspect intermediate state.
+4. **Interpretation** — explain why the observed result did or did not match the prediction.
+5. **Boundary conditions** — when the technique helps, when it does not, and what fails first.
+6. **Debugging order** — identify the failing layer before increasing complexity.
+
+## Visual policy
+
+A diagram is not automatically better than a table or executed plot.
+
+- Use open-license external reference diagrams for established architectures when they are clearer and more polished.
+- Use equations, tables and executed plots for weighting, preprocessing, metrics and data behavior.
+- Do not create decorative diagrams merely to fill space.
+- Keep attribution in [VISUAL_REFERENCES.md](VISUAL_REFERENCES.md).
 
 ## Success criterion
 
-A learner should be able to say **before running code**:
-
-> “If I change this input, parameter, representation or threshold, I expect this downstream quantity to change in this direction, for this reason.”
-
-## Required structure for concept notebooks
-
-1. **Visual causal map** — input → mechanism → representation/state → output, plus control knob and failure lens.
-2. **Change map** — explicit “change X → Y changes → consequence” relationships.
-3. **Predict before running** — questions that force a hypothesis before seeing output.
-4. **Mechanism, not API** — show the transformation the library call performs conceptually.
-5. **When / when not** — conditions where the technique is useful and conditions where it misleads.
-6. **Failure lens** — what breaks, how to detect it, and the next debugging question.
-7. **Engineering takeaway** — a reusable rule of thumb.
-
-## The mental-model loop
-
-```text
-observe
-  ↓
-build a causal hypothesis
-  ↓
-change one control
-  ↓
-predict downstream effect
-  ↓
-run / measure
-  ↓
-compare prediction with reality
-  ↓
-update mental model
-```
-
-This is the intended learning loop across the repository.
+Students should leave a notebook able to **anticipate behavior before execution** and explain the observed result after execution.
