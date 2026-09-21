@@ -53,16 +53,17 @@ data/processed/validation.csv
 data/processed/test.csv
 ```
 
-## Visual engineering learning mode
+## How to study the project
 
-The notebook is not intended to be consumed as **run cell → see result**. It includes causal visual maps that connect:
+Treat each stage as an engineering decision:
 
-- **raw data → hypothesis → representation → model behavior**,
-- **normalization / word n-grams / character n-grams / regularization → downstream effects**,
-- **wrong prediction → label vs feature vs boundary vs automation-policy debugging**,
-- **live traffic → predictions → operations → feedback → retrain/redesign decision**.
+1. form a hypothesis from the data,
+2. predict what a representation/model change should do,
+3. run the experiment,
+4. compare expected vs observed behavior,
+5. debug the layer that actually failed.
 
-The success criterion is that a learner can predict what should happen when a control changes **before** executing the cell.
+The notebook uses compact decision tables instead of decorative diagrams for the project workflow.
 
 ## End-to-end lifecycle
 
