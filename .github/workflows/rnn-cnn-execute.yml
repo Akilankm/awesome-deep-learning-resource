@@ -39,6 +39,26 @@ jobs:
         shell: bash -el {0}
         run: python scripts/build_rnn_cnn_curriculum.py
 
+      - name: Normalize generated text files
+        shell: bash -el {0}
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          paths = [Path("README.md")]
+          for root in [Path("RNN"), Path("CNN")]:
+              paths.extend(root.rglob("*.md"))
+              paths.extend(root.rglob("*.yml"))
+              paths.extend(root.rglob("*.sha256"))
+
+          for path in paths:
+              if path.exists():
+                  text = path.read_text(encoding="utf-8")
+                  if "\\n" in text:
+                      path.write_text(text.replace("\\n", "\n"), encoding="utf-8")
+                      print("normalized", path)
+          PY
+
       - name: Create RNN Conda environment
         shell: bash -el {0}
         run: conda env create -f RNN/environment.yml
