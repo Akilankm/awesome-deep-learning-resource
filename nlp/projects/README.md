@@ -9,3 +9,14 @@ This directory contains project-style learning artifacts that apply the concepts
 The project is intentionally centered on **one deeply documented notebook** rather than many shallow projects.
 
 The raw corpus is disclosed as educational synthetic/curated data, but the construction recipe is intentionally absent from the student-facing code so learners must discover patterns through analysis.
+
+## How to use the flagship project
+
+Do not read it as a recipe. At every stage, pause and make a prediction first:
+
+1. What signal do I think exists?
+2. Which transformation will preserve or destroy that signal?
+3. If I change this parameter, what quantity should move?
+4. If the result does not move as expected, which layer should I debug?
+
+The flagship notebook contains visual maps for the overall reasoning loop, representation changes, error-debugging flow, and production feedback.
