@@ -22,41 +22,31 @@ production implication
 
 The committed notebooks contain executed outputs so they remain useful when viewed directly on GitHub. After cloning, run them with the Conda environment below to reproduce and extend the experiments.
 
-## How to study these notebooks — the engineering imagination loop
+## How to study these notebooks
 
-The notebooks are intentionally designed so you **predict before executing**.
-
-For each concept:
+The notebooks follow a consistent engineering rhythm:
 
 ```text
-see the visual causal map
+understand the mechanism
         ↓
-identify the control knob
+predict what a change should do
         ↓
-predict what representation/state will change
+execute the example
         ↓
-predict the downstream behavior
+inspect the representation/output
         ↓
-run the existing code
-        ↓
-compare expectation vs result
+compare prediction with evidence
         ↓
 debug the mismatch
-        ↓
-update your mental model
 ```
 
-Every concept notebook now includes:
+Each concept notebook now uses a clean **mental model**, a cause/effect table, and a **think-before-running** section. Architecture diagrams are used selectively from open-license reference sources rather than forcing a custom illustration into every topic.
 
-- a concept-specific visual engineering mindmap,
-- a **change → immediate effect → downstream consequence** table,
-- **predict before you run** questions,
-- when-to-use / when-not-to-use guidance,
-- a debugging lens.
+See:
 
-The objective is not to memorize APIs. It is to develop the ability to anticipate system behavior when one engineering choice changes.
-
-See [NLP Teaching Standard](TEACHING_STANDARD.md) and the [mindmap assets](assets/mindmaps/).
+- [Notebook presentation standard](NOTEBOOK_STYLE.md)
+- [Teaching standard](TEACHING_STANDARD.md)
+- [Curated visual references and licenses](VISUAL_REFERENCES.md)
 
 ## Create the Conda environment
 
