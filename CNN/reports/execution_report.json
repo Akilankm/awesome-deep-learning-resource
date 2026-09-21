@@ -1,0 +1,104 @@
+[
+  {
+    "notebook": "CNN/notebooks/00_cnn_learning_map.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/01_image_tensors.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/02_convolution_intuition.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/03_kernels_and_feature_maps.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/04_stride_padding_and_output_shapes.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/05_pooling_and_receptive_fields.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/06_conv2d_tensorflow.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/07_building_first_cnn.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/08_cnn_training_pipeline.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/09_batchnorm_dropout.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/10_data_augmentation.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/11_deeper_cnn_architectures.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/12_transfer_learning.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/13_feature_maps_and_gradcam.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/14_error_analysis_and_calibration.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/notebooks/15_cnn_inference_and_monitoring.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "CNN/projects/fashion_mnist_classifier/00_end_to_end_fashion_mnist.ipynb",
+    "code_cells": 13,
+    "executed": 13,
+    "output_cells": 13
+  }
+]

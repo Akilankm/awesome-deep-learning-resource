@@ -1,0 +1,7 @@
+{
+  "selected_model": "SimpleRNN",
+  "baseline_mae": 0.5293416976928711,
+  "baseline_rmse": 0.7634487362697214,
+  "test_mae": 0.6959933638572693,
+  "test_rmse": 0.9248584059004996
+}

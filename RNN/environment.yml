@@ -1,0 +1,27 @@
+name: awesome-rnn
+
+
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip=24.3
+  - numpy=2.0
+  - pandas=2.2
+  - scipy=1.14
+  - scikit-learn=1.6
+  - matplotlib=3.9
+  - plotly=5.24
+  - ipywidgets=8.1
+  - jupyterlab=4.3
+  - notebook=7.3
+  - ipykernel=6.29
+  - nbformat=5.10
+  - nbclient=0.10
+  - nbconvert=7.16
+  - pyarrow=18
+  - pyyaml=6.0
+  - tqdm=4.67
+  - pillow=11
+  - pip:
+      - tensorflow==2.18.1

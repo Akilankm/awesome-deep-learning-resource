@@ -1,0 +1,6 @@
+{
+  "selected_model": "CNN",
+  "test_accuracy": 0.8546666666666667,
+  "ece": 0.020532834649085972,
+  "validation_accuracy": 0.8495000004768372
+}

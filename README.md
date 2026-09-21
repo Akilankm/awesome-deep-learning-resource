@@ -92,3 +92,21 @@ data
   → retraining
   → business action
 ```
+
+<!-- RNN_CNN_TRACKS -->
+## Recurrent Neural Networks (TensorFlow/Keras)
+The [`RNN/`](RNN/) track contains executed concept notebooks and a complete Jena-climate forecasting project. It covers sequence tensors, windowing, recurrence, BPTT, gradient pathologies, LSTM, GRU, architecture patterns, evaluation, serialization and monitoring.
+
+- [RNN run guide](RNN/README.md)
+- [RNN Conda environment](RNN/environment.yml)
+- [RNN notebooks](RNN/notebooks/)
+- [End-to-end Jena forecasting project](RNN/projects/jena_climate_forecasting/)
+
+## Convolutional Neural Networks (TensorFlow/Keras)
+The [`CNN/`](CNN/) track contains executed concept notebooks and a complete Fashion-MNIST project. It covers image tensors, manual convolution, kernels, padding/stride, pooling, Conv2D, regularization, augmentation, transfer learning, Grad-CAM, calibration, serialization and monitoring.
+
+- [CNN run guide](CNN/README.md)
+- [CNN Conda environment](CNN/environment.yml)
+- [CNN notebooks](CNN/notebooks/)
+- [End-to-end Fashion-MNIST project](CNN/projects/fashion_mnist_classifier/)
+<!-- /RNN_CNN_TRACKS -->

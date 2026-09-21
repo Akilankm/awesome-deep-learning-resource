@@ -1,0 +1,12 @@
+{
+  "seed": 42,
+  "hourly_rows": 8000,
+  "lookback_hours": 24,
+  "batch_size": 64,
+  "epochs": 2,
+  "features": [
+    "T (degC)",
+    "p (mbar)",
+    "rho (g/m**3)"
+  ]
+}

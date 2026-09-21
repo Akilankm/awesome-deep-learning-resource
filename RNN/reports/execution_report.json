@@ -1,0 +1,98 @@
+[
+  {
+    "notebook": "RNN/notebooks/00_rnn_learning_map.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/01_sequence_data_and_shapes.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/02_time_series_windowing.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/03_understanding_recurrence.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/04_simple_rnn_tensorflow.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/05_hidden_state_and_unrolling.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/06_backpropagation_through_time.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/07_vanishing_and_exploding_gradients.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/08_lstm_intuition_and_tensorflow.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/09_gru_intuition_and_tensorflow.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/10_sequence_architectures.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/11_stacked_bidirectional_rnn.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/12_regularization_and_training.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/13_forecasting_evaluation.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/notebooks/14_rnn_inference_and_monitoring.ipynb",
+    "code_cells": 3,
+    "executed": 3,
+    "output_cells": 3
+  },
+  {
+    "notebook": "RNN/projects/jena_climate_forecasting/00_end_to_end_jena_forecasting.ipynb",
+    "code_cells": 12,
+    "executed": 12,
+    "output_cells": 12
+  }
+]

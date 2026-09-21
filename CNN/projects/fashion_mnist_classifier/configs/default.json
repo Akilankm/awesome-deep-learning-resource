@@ -1,0 +1,8 @@
+{
+  "seed": 42,
+  "train_samples": 12000,
+  "validation_samples": 2000,
+  "test_samples": 3000,
+  "batch_size": 64,
+  "epochs": 2
+}
