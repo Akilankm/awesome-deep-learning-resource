@@ -9,7 +9,7 @@ def make_vectorizer(vocabulary, sequence_length: int):
         standardize="lower_and_strip_punctuation",
         name="text_vectorization",
     )
-    layer.set_vocabulary(vocabulary)
+    layer.set_vocabulary(vocabulary[2:])
     return layer
 
 def build_sentence_model(kind: str, vocabulary, sequence_length: int=50,
