@@ -4,12 +4,10 @@ on:
   push:
     branches: [master]
     paths:
-      - "tools/builder_payload/**"
-      - "tools/build_rnn_cnn_curriculum.py"
+      - "scripts/build_rnn_cnn_curriculum.py"
       - ".github/workflows/rnn-cnn-execute.yml"
       - "RNN/**"
       - "CNN/**"
-      - "scripts/**"
       - "README.md"
   workflow_dispatch:
 
@@ -32,55 +30,53 @@ jobs:
           auto-activate-base: true
           miniconda-version: "latest"
 
-      - name: Reconstruct curriculum builder and generate files
+      - name: Install builder dependencies
         shell: bash -el {0}
         run: |
-          python - <<'PY'
-          from pathlib import Path
-          import base64
-          import zlib
+          conda install -y -c conda-forge python=3.11 numpy pandas scikit-learn nbformat
 
-          parts = sorted(Path("tools/builder_payload").glob("part*.b64"))
-          if not parts:
-              raise SystemExit("No curriculum builder payload found.")
-          payload = "".join(p.read_text(encoding="utf-8").strip() for p in parts)
-          source = zlib.decompress(base64.b64decode(payload))
-          target = Path("tools/build_rnn_cnn_curriculum.py")
-          target.parent.mkdir(parents=True, exist_ok=True)
-          target.write_bytes(source)
-          print(f"Reconstructed {target} ({len(source)} bytes)")
-          PY
-          python tools/build_rnn_cnn_curriculum.py
+      - name: Generate RNN and CNN source tree
+        shell: bash -el {0}
+        run: python scripts/build_rnn_cnn_curriculum.py
 
       - name: Create RNN Conda environment
         shell: bash -el {0}
         run: conda env create -f RNN/environment.yml
 
+      - name: Register RNN kernel
+        shell: bash -el {0}
+        run: conda run -n awesome-rnn python -m ipykernel install --user --name python3 --display-name "Python 3"
+
       - name: Execute all RNN notebooks
         shell: bash -el {0}
-        run: |
-          conda run -n awesome-rnn python scripts/execute_notebooks.py             RNN/notebooks RNN/projects             --report RNN/reports/execution_report.json
+        run: conda run -n awesome-rnn python RNN/scripts/execute_notebooks.py RNN
+
+      - name: Verify RNN notebook outputs
+        shell: bash -el {0}
+        run: conda run -n awesome-rnn python RNN/scripts/verify_notebooks.py RNN
 
       - name: Create CNN Conda environment
         shell: bash -el {0}
         run: conda env create -f CNN/environment.yml
 
+      - name: Register CNN kernel
+        shell: bash -el {0}
+        run: conda run -n awesome-cnn python -m ipykernel install --user --name python3 --display-name "Python 3"
+
       - name: Execute all CNN notebooks
         shell: bash -el {0}
-        run: |
-          conda run -n awesome-cnn python scripts/execute_notebooks.py             CNN/notebooks CNN/projects             --report CNN/reports/execution_report.json
+        run: conda run -n awesome-cnn python CNN/scripts/execute_notebooks.py CNN
 
-      - name: Verify every notebook is executed and error free
+      - name: Verify CNN notebook outputs
         shell: bash -el {0}
-        run: conda run -n awesome-cnn python scripts/verify_notebooks.py
+        run: conda run -n awesome-cnn python CNN/scripts/verify_notebooks.py CNN
 
-      - name: Commit rendered notebooks, results, and artifacts
-        shell: bash -el {0}
+      - name: Commit rendered notebooks, reports, and model artifacts
+        shell: bash
         run: |
-          rm -rf tools/builder_payload
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add README.md RNN CNN .github/workflows/rnn_cnn_notebooks.yml
           if git diff --cached --quiet; then
             echo "No generated changes to commit."
           else
