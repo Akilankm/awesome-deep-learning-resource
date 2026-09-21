@@ -1,0 +1,18 @@
+{
+  "random_seed": 42,
+  "selected_representation": "hybrid_tfidf_logreg",
+  "selected_C": 0.25,
+  "validation_macro_f1": 0.9877031181379007,
+  "test_accuracy": 0.898876404494382,
+  "test_macro_f1": 0.8983837574300407,
+  "test_weighted_f1": 0.899909274897062,
+  "production_threshold": 0.6,
+  "classes": [
+    "access",
+    "account",
+    "billing",
+    "delivery",
+    "refund",
+    "technical"
+  ]
+}
