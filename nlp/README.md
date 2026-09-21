@@ -112,14 +112,14 @@ These are educational datasets designed to make every stage inspectable. They ar
 
 The concept track is complemented by one deep project under [`projects/customer_support_intelligence/`](projects/customer_support_intelligence/).
 
-The project uses **one executed notebook** to cover the complete lifecycle from educational dataset generation through EDA, leakage prevention, splitting, baselines, model selection, final evaluation, entity extraction, retrieval, serialization, inference, robustness, monitoring and retraining policy.
+The project uses **one executed notebook** and a committed ready-made educational dataset to cover the complete lifecycle from receiving raw data through EDA, hypothesis formation, leakage prevention, splitting, baselines, model selection, final evaluation, slice/error analysis, entity extraction, retrieval, serialization, inference, robustness, monitoring and retraining policy. The dataset construction recipe is intentionally not exposed in the student-facing notebook.
 
 Start here:
 
 - [Project overview](projects/customer_support_intelligence/README.md)
 - [End-to-end executed notebook](projects/customer_support_intelligence/customer_support_intelligence_end_to_end.ipynb)
 - [Dataset dictionary](projects/customer_support_intelligence/DATA_DICTIONARY.md)
-- [Reference metrics and rendered visuals](projects/customer_support_intelligence/artifacts/)
+- [Reference execution metrics](projects/customer_support_intelligence/artifacts/)
 
 Run it from the repository root after activating `awesome-nlp`:
 
