@@ -1,105 +1,58 @@
-name: Execute TensorFlow RNN and CNN curriculum
+name: Validate TensorFlow RNN and CNN curriculum
 
 on:
   push:
     branches: [master]
     paths:
-      - "scripts/build_rnn_cnn_curriculum.py"
-      - ".github/workflows/rnn-cnn-execute.yml"
       - "RNN/**"
       - "CNN/**"
-      - "README.md"
+      - "scripts/execute_notebooks.py"
+      - "scripts/verify_notebooks.py"
+      - ".github/workflows/rnn-cnn-execute.yml"
+  pull_request:
+    paths:
+      - "RNN/**"
+      - "CNN/**"
+      - "scripts/execute_notebooks.py"
+      - "scripts/verify_notebooks.py"
+      - ".github/workflows/rnn-cnn-execute.yml"
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  build-execute-verify:
-    if: ${{ github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[skip ci]') }}
+  rnn:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
         with:
-          fetch-depth: 0
+          environment-file: RNN/environment.yml
+          activate-environment: awesome-rnn
+          auto-activate-base: false
+      - name: Register kernel
+        shell: bash -el {0}
+        run: python -m ipykernel install --user --name python3 --display-name "Python 3"
+      - name: Execute RNN curriculum
+        shell: bash -el {0}
+        run: python scripts/execute_notebooks.py RNN/notebooks RNN/projects --report RNN/reports/ci_execution_report.json
+      - name: Verify all notebook outputs
+        shell: bash -el {0}
+        run: python scripts/verify_notebooks.py
 
-      - name: Set up Miniconda
-        uses: conda-incubator/setup-miniconda@v3
+  cnn:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
         with:
-          auto-activate-base: true
-          miniconda-version: "latest"
-
-      - name: Install builder dependencies
+          environment-file: CNN/environment.yml
+          activate-environment: awesome-cnn
+          auto-activate-base: false
+      - name: Register kernel
         shell: bash -el {0}
-        run: |
-          conda install -y -c conda-forge python=3.11 numpy pandas scikit-learn nbformat
-
-      - name: Generate RNN and CNN source tree
+        run: python -m ipykernel install --user --name python3 --display-name "Python 3"
+      - name: Execute CNN curriculum
         shell: bash -el {0}
-        run: python scripts/build_rnn_cnn_curriculum.py
-
-      - name: Normalize generated text files
+        run: python scripts/execute_notebooks.py CNN/notebooks CNN/projects --report CNN/reports/ci_execution_report.json
+      - name: Verify all notebook outputs
         shell: bash -el {0}
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-
-          paths = [Path("README.md")]
-          for root in [Path("RNN"), Path("CNN")]:
-              paths.extend(root.rglob("*.md"))
-              paths.extend(root.rglob("*.yml"))
-              paths.extend(root.rglob("*.sha256"))
-
-          for path in paths:
-              if path.exists():
-                  text = path.read_text(encoding="utf-8")
-                  if "\\n" in text:
-                      path.write_text(text.replace("\\n", "\n"), encoding="utf-8")
-                      print("normalized", path)
-          PY
-
-      - name: Create RNN Conda environment
-        shell: bash -el {0}
-        run: conda env create -f RNN/environment.yml
-
-      - name: Register RNN kernel
-        shell: bash -el {0}
-        run: conda run -n awesome-rnn python -m ipykernel install --user --name python3 --display-name "Python 3"
-
-      - name: Execute all RNN notebooks
-        shell: bash -el {0}
-        run: conda run -n awesome-rnn python RNN/scripts/execute_notebooks.py RNN
-
-      - name: Verify RNN notebook outputs
-        shell: bash -el {0}
-        run: conda run -n awesome-rnn python RNN/scripts/verify_notebooks.py RNN
-
-      - name: Create CNN Conda environment
-        shell: bash -el {0}
-        run: conda env create -f CNN/environment.yml
-
-      - name: Register CNN kernel
-        shell: bash -el {0}
-        run: conda run -n awesome-cnn python -m ipykernel install --user --name python3 --display-name "Python 3"
-
-      - name: Execute all CNN notebooks
-        shell: bash -el {0}
-        run: conda run -n awesome-cnn python CNN/scripts/execute_notebooks.py CNN
-
-      - name: Verify CNN notebook outputs
-        shell: bash -el {0}
-        run: conda run -n awesome-cnn python CNN/scripts/verify_notebooks.py CNN
-
-      - name: Commit rendered notebooks, reports, and model artifacts
-        shell: bash
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md RNN CNN .github/workflows/rnn_cnn_notebooks.yml
-          if git diff --cached --quiet; then
-            echo "No generated changes to commit."
-          else
-            git commit -m "Execute TensorFlow RNN/CNN curriculum [skip ci]"
-            git push origin HEAD:master
-          fi
+        run: python scripts/verify_notebooks.py
