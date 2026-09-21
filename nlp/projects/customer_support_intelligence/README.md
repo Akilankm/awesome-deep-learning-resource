@@ -53,6 +53,17 @@ data/processed/validation.csv
 data/processed/test.csv
 ```
 
+## Visual engineering learning mode
+
+The notebook is not intended to be consumed as **run cell → see result**. It includes causal visual maps that connect:
+
+- **raw data → hypothesis → representation → model behavior**,
+- **normalization / word n-grams / character n-grams / regularization → downstream effects**,
+- **wrong prediction → label vs feature vs boundary vs automation-policy debugging**,
+- **live traffic → predictions → operations → feedback → retrain/redesign decision**.
+
+The success criterion is that a learner can predict what should happen when a control changes **before** executing the cell.
+
 ## End-to-end lifecycle
 
 ```text
