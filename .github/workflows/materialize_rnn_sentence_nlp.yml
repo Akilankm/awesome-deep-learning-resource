@@ -10,6 +10,10 @@ on:
       - ".github/workflows/materialize_rnn_sentence_nlp.yml"
   workflow_dispatch:
 
+concurrency:
+  group: materialize-rnn-sentence-nlp
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
