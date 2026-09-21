@@ -1,0 +1,11 @@
+{
+  "seed": 42,
+  "max_tokens": 6000,
+  "sequence_length": 50,
+  "embedding_dim": 32,
+  "recurrent_units": 32,
+  "batch_size": 64,
+  "epochs": 10,
+  "test_fraction": 0.15,
+  "validation_fraction": 0.15
+}
