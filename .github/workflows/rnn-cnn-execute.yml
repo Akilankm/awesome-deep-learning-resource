@@ -18,6 +18,10 @@ on:
       - ".github/workflows/rnn-cnn-execute.yml"
   workflow_dispatch:
 
+concurrency:
+  group: rnn-cnn-validation-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   rnn:
     runs-on: ubuntu-latest
