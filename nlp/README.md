@@ -108,6 +108,30 @@ These are educational datasets designed to make every stage inspectable. They ar
 | 28 | `28_modern_nlp_task_heads.ipynb` | pretrained task heads |
 | 29 | `29_responsible_robust_nlp.ipynb` | privacy, robustness, responsible NLP |
 
+## Flagship project
+
+The concept track is complemented by one deep project under [`projects/customer_support_intelligence/`](projects/customer_support_intelligence/).
+
+The project uses **one executed notebook** to cover the complete lifecycle from educational dataset generation through EDA, leakage prevention, splitting, baselines, model selection, final evaluation, entity extraction, retrieval, serialization, inference, robustness, monitoring and retraining policy.
+
+Start here:
+
+- [Project overview](projects/customer_support_intelligence/README.md)
+- [End-to-end executed notebook](projects/customer_support_intelligence/customer_support_intelligence_end_to_end.ipynb)
+- [Dataset dictionary](projects/customer_support_intelligence/DATA_DICTIONARY.md)
+- [Reference metrics and rendered visuals](projects/customer_support_intelligence/artifacts/)
+
+Run it from the repository root after activating `awesome-nlp`:
+
+```bash
+jupyter nbconvert \
+  --to notebook \
+  --execute \
+  --inplace \
+  --ExecutePreprocessor.timeout=300 \
+  nlp/projects/customer_support_intelligence/customer_support_intelligence_end_to_end.ipynb
+```
+
 ## Re-run all notebooks
 
 From the repository root, after activating `awesome-nlp`:

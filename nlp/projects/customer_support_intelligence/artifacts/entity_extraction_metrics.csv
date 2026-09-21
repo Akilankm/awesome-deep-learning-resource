@@ -1,0 +1,5 @@
+entity,tp,fp,fn,precision,recall,f1
+amount,109,0,0,1.0,1.0,1.0
+order_id,57,0,0,1.0,1.0,1.0
+email,62,0,0,1.0,1.0,1.0
+event_date,93,0,0,1.0,1.0,1.0

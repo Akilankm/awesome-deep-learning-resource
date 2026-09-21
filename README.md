@@ -22,6 +22,7 @@ Start here:
 - [Conda environment](nlp/environment.yml)
 - [Local NLP datasets](nlp/data/)
 - [Optional pretrained NLP requirements](nlp/requirements-optional-transformers.txt)
+- [Flagship end-to-end NLP project](nlp/projects/customer_support_intelligence/README.md)
 
 Create the NLP environment from the repository root:
 
