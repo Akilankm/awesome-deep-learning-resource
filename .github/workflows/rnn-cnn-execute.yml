@@ -1,0 +1,89 @@
+name: Execute TensorFlow RNN and CNN curriculum
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "tools/builder_payload/**"
+      - "tools/build_rnn_cnn_curriculum.py"
+      - ".github/workflows/rnn-cnn-execute.yml"
+      - "RNN/**"
+      - "CNN/**"
+      - "scripts/**"
+      - "README.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-execute-verify:
+    if: ${{ github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[skip ci]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-activate-base: true
+          miniconda-version: "latest"
+
+      - name: Reconstruct curriculum builder and generate files
+        shell: bash -el {0}
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64
+          import zlib
+
+          parts = sorted(Path("tools/builder_payload").glob("part*.b64"))
+          if not parts:
+              raise SystemExit("No curriculum builder payload found.")
+          payload = "".join(p.read_text(encoding="utf-8").strip() for p in parts)
+          source = zlib.decompress(base64.b64decode(payload))
+          target = Path("tools/build_rnn_cnn_curriculum.py")
+          target.parent.mkdir(parents=True, exist_ok=True)
+          target.write_bytes(source)
+          print(f"Reconstructed {target} ({len(source)} bytes)")
+          PY
+          python tools/build_rnn_cnn_curriculum.py
+
+      - name: Create RNN Conda environment
+        shell: bash -el {0}
+        run: conda env create -f RNN/environment.yml
+
+      - name: Execute all RNN notebooks
+        shell: bash -el {0}
+        run: |
+          conda run -n awesome-rnn python scripts/execute_notebooks.py             RNN/notebooks RNN/projects             --report RNN/reports/execution_report.json
+
+      - name: Create CNN Conda environment
+        shell: bash -el {0}
+        run: conda env create -f CNN/environment.yml
+
+      - name: Execute all CNN notebooks
+        shell: bash -el {0}
+        run: |
+          conda run -n awesome-cnn python scripts/execute_notebooks.py             CNN/notebooks CNN/projects             --report CNN/reports/execution_report.json
+
+      - name: Verify every notebook is executed and error free
+        shell: bash -el {0}
+        run: conda run -n awesome-cnn python scripts/verify_notebooks.py
+
+      - name: Commit rendered notebooks, results, and artifacts
+        shell: bash -el {0}
+        run: |
+          rm -rf tools/builder_payload
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "Execute TensorFlow RNN/CNN curriculum [skip ci]"
+            git push origin HEAD:master
+          fi
