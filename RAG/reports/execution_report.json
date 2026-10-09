@@ -1,0 +1,38 @@
+[
+  {
+    "notebook": "00_system_map.ipynb",
+    "code_cells": 3,
+    "outputs": 3,
+    "status": "passed"
+  },
+  {
+    "notebook": "01_ingest_and_chunk.ipynb",
+    "code_cells": 3,
+    "outputs": 3,
+    "status": "passed"
+  },
+  {
+    "notebook": "02_retrieve_and_rank.ipynb",
+    "code_cells": 4,
+    "outputs": 4,
+    "status": "passed"
+  },
+  {
+    "notebook": "03_grounded_generation.ipynb",
+    "code_cells": 4,
+    "outputs": 4,
+    "status": "passed"
+  },
+  {
+    "notebook": "04_evaluation.ipynb",
+    "code_cells": 4,
+    "outputs": 4,
+    "status": "passed"
+  },
+  {
+    "notebook": "05_capstone.ipynb",
+    "code_cells": 3,
+    "outputs": 3,
+    "status": "passed"
+  }
+]
