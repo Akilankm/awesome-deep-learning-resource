@@ -2,6 +2,16 @@
 
 > **Branch:** `rag-end-to-end-curriculum`. This track is isolated from the ANN, CNN, RNN and NLP material on `master`.
 
+## Enterprise LangChain track
+
+After the six foundations notebooks, build a real-world-style **BFSI Risk & Compliance Policy Copilot** with LangChain and ChromaDB. It uses fictional policy files, secure pre-retrieval tenant/role/date filters, source citations, retrieval evaluation, and an optional genuine Ollama embedding + chat model pipeline.
+
+- [Enterprise project and two runtime modes](enterprise/README.md)
+- [06 · Permissions, tenants, outdated versions](notebooks/06_bfsi_access_control.ipynb)
+- [07 · LangChain/LCEL + optional Ollama generation](notebooks/07_bfsi_langchain_end_to_end.ipynb)
+
+Offline notebooks are fully executed and rendered. **True Ollama LLM inference remains opt-in and is not claimed as tested by CI.**
+
 ## Student learning contract
 
 Understand **what changes, why it changes, and how to prove it**. Each notebook provides a concept, a mental model, runnable cells, a change→effect challenge, a visible output, and interpretation. The fictional support-policy dataset is stored locally and needs **no API key, vector database, or download** for the core lessons.
