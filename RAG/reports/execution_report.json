@@ -34,5 +34,17 @@
     "code_cells": 3,
     "outputs": 3,
     "status": "passed"
+  },
+  {
+    "notebook": "06_bfsi_access_control.ipynb",
+    "code_cells": 6,
+    "outputs": 6,
+    "status": "passed"
+  },
+  {
+    "notebook": "07_bfsi_langchain_end_to_end.ipynb",
+    "code_cells": 6,
+    "outputs": 6,
+    "status": "passed"
   }
 ]
