@@ -13,3 +13,8 @@ dependencies:
   - nbclient>=0.10,<1
   - pytest>=8,<10
   - pip
+  - pip:
+      - "langchain-core>=1.0,<2"
+      - "langchain-chroma>=1.0,<2"
+      - "langchain-text-splitters>=1.0,<2"
+      - "langchain-ollama>=1.0,<2"

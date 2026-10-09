@@ -1,0 +1,11 @@
+{"question":"What evidence is mandatory before activating an account?","tenant_id":"northstar-bank","role":"employee","gold_policy_ids":["KYC-2026"]}
+{"question":"Where do employees report suspected account compromise?","tenant_id":"northstar-bank","role":"employee","gold_policy_ids":["INCIDENT-2026"]}
+{"question":"What reviewer is required for credit risk limit overrides?","tenant_id":"northstar-bank","role":"risk","gold_policy_ids":["RISK-2026"]}
+{"question":"Who validates a material model update before rollout?","tenant_id":"northstar-bank","role":"risk","gold_policy_ids":["MODEL-2026"]}
+{"question":"How quickly is an AML suspicious alert triaged?","tenant_id":"northstar-bank","role":"compliance","gold_policy_ids":["AML-2026"]}
+{"question":"What happens with a suspected sanctions list match?","tenant_id":"northstar-bank","role":"compliance","gold_policy_ids":["SANCTIONS-2026"]}
+{"question":"Where must customer data exports be routed?","tenant_id":"northstar-bank","role":"compliance","gold_policy_ids":["RETENTION-2026"]}
+{"question":"How is HarborCase KYC performed?","tenant_id":"harbor-finance","role":"employee","gold_policy_ids":["HARBOR-KYC-2026"]}
+{"question":"How quickly is an AML suspicious alert triaged?","tenant_id":"northstar-bank","role":"employee","gold_policy_ids":[]}
+{"question":"What is the HarborCase identity process?","tenant_id":"northstar-bank","role":"employee","gold_policy_ids":[]}
+{"question":"What is the CEO's favorite basketball team?","tenant_id":"northstar-bank","role":"employee","gold_policy_ids":[]}
