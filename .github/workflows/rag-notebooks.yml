@@ -1,0 +1,48 @@
+name: Execute and publish RAG curriculum notebooks
+on:
+  push:
+    branches: [rag-end-to-end-curriculum]
+    paths:
+      - "RAG/**"
+      - ".github/workflows/rag-notebooks.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rag-execution-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  execute-and-publish:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: rag-end-to-end-curriculum
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: RAG/environment.yml
+          activate-environment: awesome-rag
+          auto-activate-base: false
+      - name: Unit tests
+        shell: bash -el {0}
+        run: python -m pytest -q RAG/tests
+      - name: Execute all RAG notebooks with a live Python kernel
+        shell: bash -el {0}
+        run: python RAG/scripts/execute_notebooks.py
+      - name: Verify persisted notebook code and outputs
+        shell: bash -el {0}
+        run: python RAG/scripts/verify_notebooks.py
+      - name: Commit rendered output and test report to dedicated RAG branch
+        shell: bash -el {0}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add RAG/notebooks RAG/reports/execution_report.json
+          if ! git diff --cached --quiet; then
+            git commit -m "docs(rag): publish executed notebook results [skip ci]"
+            git push origin HEAD:rag-end-to-end-curriculum
+          fi
